@@ -49,6 +49,15 @@ DOMINANCE_HIGH = 0.80       # >= this fraction from one change => mutation-speci
 DOMINANCE_LOW = 0.50        # <  this fraction from one change => position-specific
 
 
+def o7_applicable(reference_aa, variant_aa):
+    """O7 is reserved for missense and small in-frame insertion/deletion variants
+    (SVIG-UK Supplementary Figure 1, notes 4 and 13). A nonsense change is O2
+    territory and O2 + O7 is not a permitted combination; a stop-loss change is
+    O9 territory. Both are excluded from O7 scoring here, though their counts
+    still contribute to the published position total, as they do on the website."""
+    return variant_aa != "*" and reference_aa != "*"
+
+
 def o7_tier(change_count, position_total):
     """SVIG-UK O7 strength/points achievable from cancerhotspots.org alone."""
     if change_count >= O7_CHANGE_HIGH:
@@ -126,7 +135,14 @@ def build_allele_table(alleles, pos):
     df["n_msk"] = df["n_msk"].astype(int)
     df["n_retro"] = df["n_retro"].astype(int)
 
-    tiers = [o7_tier(c, t) for c, t in zip(df["change_count"], df["position_total_count"])]
+    df["o7_applicable"] = [
+        o7_applicable(r, v) for r, v in zip(df["reference_aa"], df["variant_aa"])
+    ]
+    tiers = [
+        o7_tier(c, t) if ok else ("Not applicable (nonsense/stop-loss)", 0)
+        for c, t, ok in zip(df["change_count"], df["position_total_count"],
+                            df["o7_applicable"])
+    ]
     df["o7_strength"] = [t[0] for t in tiers]
     df["o7_points"] = [t[1] for t in tiers]
 
@@ -215,7 +231,8 @@ def main():
     allele_out = alleles[[
         "hugo_symbol", "amino_acid_position", "reference_aa", "variant_aa",
         "change_count", "position_total_count", "same_change_fraction",
-        "n_unique_changes", "o7_strength", "o7_points", "msk_fraction",
+        "n_unique_changes", "o7_applicable", "o7_strength", "o7_points",
+        "msk_fraction",
     ]].sort_values(["change_count"], ascending=False)
     allele_out.to_csv(RESULTS / "04_per_allele_o7_tiers.tsv", sep="\t", index=False)
 
@@ -224,7 +241,8 @@ def main():
         "hugo_symbol", "amino_acid_position", "reference_aa", "variant_aa",
         "change_count", "position_total_count", "same_change_fraction",
         "n_unique_changes", "substitutions", "residual_count", "residual_n_changes",
-        "residual_max_change_count", "hotspot_character", "o7_strength", "o7_points",
+        "residual_max_change_count", "hotspot_character", "o7_applicable",
+        "o7_strength", "o7_points",
         "independent_positional_evidence", "recommended_o4_o7_handling",
         "independent_positional_evidence_strict", "recommended_o4_o7_handling_strict",
         "n_msk", "n_retro", "msk_fraction",
@@ -356,6 +374,7 @@ def main():
         ("Amino-acid changes reaching O7_moderate (+2)", int((scored_all["o7_strength"] == "Moderate").sum())),
         ("Amino-acid changes reaching O7_supporting (+1)", int((scored_all["o7_strength"] == "Supporting").sum())),
         ("Amino-acid changes not meeting any O7 tier", int((scored_all["o7_strength"] == "Not met").sum())),
+        ("Amino-acid changes ineligible for O7 (nonsense/stop-loss)", int((~scored_all["o7_applicable"]).sum())),
         ("O7-scoring changes with independent positional evidence", int(scored_all.loc[scored_all["o7_points"] > 0, "independent_positional_evidence"].sum())),
         ("O7-scoring changes recommended for a +4 cap", int((~scored_all.loc[scored_all["o7_points"] > 0, "independent_positional_evidence"]).sum())),
         ("O7-scoring changes independent under the strict test", int(scored_all.loc[scored_all["o7_points"] > 0, "independent_positional_evidence_strict"].sum())),
