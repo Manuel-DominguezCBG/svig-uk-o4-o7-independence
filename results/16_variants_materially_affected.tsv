@@ -1,0 +1,11 @@
+hugo_symbol	amino_acid_position	reference_aa	variant_aa	change_count	position_total_count	n_unique_changes	cosmic_samples_mutated	msk_fraction	o7_strength	o4_strength__genie_literal	svig_uk_assessment	protected_by_O1
+AKT1	17	E	K	148	149	2	895.0	0.6376	Strong	Strong		False
+EGFR	858	L	R	144	144	1	2872.0	0.7917	Strong	Strong	Oncogenic	True
+FGFR3	249	S	C	114	114	1	1582.0	0.6404	Strong	Strong		False
+U2AF1	34	S	F	81	85	2	340.0	0.5059	Strong	Strong	Oncogenic	True
+PIK3CA	88	R	Q	75	75	1	357.0	0.3867	Strong	Strong		False
+EGFR	790	T	M	59	60	2	472.0	0.9667	Strong	Strong	Oncogenic	True
+GNA11	209	Q	L	57	59	3	446.0	0.322	Strong	Strong		False
+SF3B1	700	K	E	57	59	3	811.0	0.339	Strong	Strong	Oncogenic	True
+TP53	237	M	I	55	64	3	348.0	0.4375	Strong	Strong		False
+PIK3CA	726	E	K	53	55	2	167.0	0.4909	Strong	Strong		False
