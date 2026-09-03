@@ -1,0 +1,7 @@
+metric	value
+Amino-acid changes in the CancerHotspots analysis set	2918.0
+Matched to a COSMIC CMC protein-level substitution	2570.0
+Match rate (%)	88.1
+Spearman rho: CancerHotspots count vs COSMIC count	0.826
+Pearson r on log10 counts	0.854
+Spearman rho, restricted to changes reaching O7 moderate or strong	0.757

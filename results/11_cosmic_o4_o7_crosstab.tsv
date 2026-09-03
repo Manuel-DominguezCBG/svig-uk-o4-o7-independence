@@ -1,0 +1,9 @@
+o4_threshold_scheme	o4_strength	o7_Strong	o7_Moderate	o7_Supporting	o7_Not met
+genie_literal	Strong	195	192	663	76
+genie_literal	Moderate	1	1	334	131
+genie_literal	Not met	0	0	200	538
+genie_literal	Absent/not counted	2	12	136	190
+cosmic_adjusted	Strong	185	118	82	5
+cosmic_adjusted	Moderate	10	65	305	13
+cosmic_adjusted	Not met	1	10	810	727
+cosmic_adjusted	Absent/not counted	2	12	136	190
