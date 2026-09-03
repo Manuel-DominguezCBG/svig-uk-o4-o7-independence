@@ -1,4 +1,6 @@
-# CancerHotspots and SVIG-UK O7: assessing evidence independence from O4
+# Are O4 and O7 independent lines of evidence?
+
+`svig-uk-o4-o7-independence`
 
 Analysis supporting a proposed amendment to the ACGS/SVIG-UK guidelines for the
 classification of oncogenicity of somatic variants (v1.1, 26/05/2026), concerning
@@ -12,6 +14,9 @@ combined O4 + O7 contribution be capped?
 
 Requested by Kevin Baker (Principal Clinical Scientist, Oncology; Wessex Genomics
 Laboratory Service, Salisbury). Analysis by Manuel Dominguez Becerra.
+
+The written report for SVIG-UK is [docs/report.html](docs/report.html), published at
+<https://claude.ai/code/artifact/a7011889-489d-4d9d-8bf0-258d0c4030be>.
 
 ---
 
