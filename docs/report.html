@@ -1,0 +1,1030 @@
+<title>Are O4 and O7 Independent?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+
+<style>
+  :root {
+    --paper:      #F6F8F8;
+    --surface:    #FFFFFF;
+    --surface-2:  #EDF1F1;
+    --ink:        #16202A;
+    --ink-2:      #4E5F69;
+    --ink-3:      #83959E;
+    --rule:       #DCE3E3;
+    --rule-soft:  #E9EEEE;
+    --oxide:      #A33A2B;
+    --oxide-soft: #F2E3E0;
+    --verd:       #2F6E62;
+    --verd-mute:  #AFC8C2;
+    --amber:      #8A6320;
+
+    --serif: "Spectral", "Iowan Old Style", Georgia, "Times New Roman", serif;
+    --sans:  "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    --mono:  "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+    --measure: 68ch;
+    --gutter: clamp(1.25rem, 5vw, 4rem);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:      #12181B;
+      --surface:    #1A2126;
+      --surface-2:  #212A30;
+      --ink:        #E7EDEE;
+      --ink-2:      #B0BEC4;
+      --ink-3:      #7E8F97;
+      --rule:       #2C363B;
+      --rule-soft:  #232C31;
+      --oxide:      #D97A66;
+      --oxide-soft: #3A2621;
+      --verd:       #7FC4B2;
+      --verd-mute:  #2E4B46;
+      --amber:      #C79A4E;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper:      #12181B;
+    --surface:    #1A2126;
+    --surface-2:  #212A30;
+    --ink:        #E7EDEE;
+    --ink-2:      #B0BEC4;
+    --ink-3:      #7E8F97;
+    --rule:       #2C363B;
+    --rule-soft:  #232C31;
+    --oxide:      #D97A66;
+    --oxide-soft: #3A2621;
+    --verd:       #7FC4B2;
+    --verd-mute:  #2E4B46;
+    --amber:      #C79A4E;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .sheet {
+    max-width: calc(var(--measure) + 2 * var(--gutter));
+    margin: 0 auto;
+    padding: clamp(2.5rem, 7vw, 5.5rem) var(--gutter) 5rem;
+  }
+
+  /* ---------- masthead ---------- */
+
+  .eyebrow {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  .masthead { border-bottom: 2px solid var(--ink); padding-bottom: 1.75rem; }
+
+  .masthead h1 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(2rem, 5.5vw, 2.9rem);
+    line-height: 1.12;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+    margin: 0.75rem 0 0.5rem;
+  }
+
+  .standfirst {
+    font-size: 1.12rem;
+    color: var(--ink-2);
+    font-style: italic;
+    margin: 0 0 1.6rem;
+    max-width: 58ch;
+    text-wrap: pretty;
+  }
+
+  .byline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr));
+    gap: 1rem 1.75rem;
+    font-family: var(--sans);
+    font-size: 0.83rem;
+    line-height: 1.5;
+  }
+  .byline div { display: flex; flex-direction: column; gap: 0.18rem; }
+  .byline dt, .byline .k {
+    font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--ink-3);
+  }
+  .byline .v { color: var(--ink-2); }
+
+  /* ---------- headline figures ---------- */
+
+  .glance {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+    margin: 2.75rem 0 3rem;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .glance > div {
+    padding: 1.35rem 1.5rem 1.5rem 0;
+    border-right: 1px solid var(--rule-soft);
+  }
+  .glance > div:last-child { border-right: 0; padding-right: 0; }
+  @media (max-width: 620px) {
+    .glance > div {
+      border-right: 0;
+      border-bottom: 1px solid var(--rule-soft);
+      padding-right: 0;
+    }
+    .glance > div:last-child { border-bottom: 0; }
+  }
+  .glance .num {
+    font-family: var(--serif);
+    font-size: 2.35rem;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    font-variant-numeric: tabular-nums;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  .glance .lbl {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    line-height: 1.45;
+    color: var(--ink-2);
+    display: block;
+  }
+
+  /* ---------- structure ---------- */
+
+  section { margin-top: 3.25rem; }
+
+  h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 1.42rem;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    margin: 0 0 0.35rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid var(--rule);
+  }
+  h2 .n {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--oxide);
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  h3 {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.005em;
+    margin: 2rem 0 0.4rem;
+    color: var(--ink);
+  }
+
+  p { margin: 0 0 1.05rem; text-wrap: pretty; }
+  p.lead { font-size: 1.06rem; }
+
+  a { color: var(--oxide); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:focus-visible { outline: 2px solid var(--oxide); outline-offset: 3px; border-radius: 2px; }
+
+  strong { font-weight: 600; }
+  em.term { font-style: normal; font-family: var(--sans); font-size: 0.9em; font-weight: 500; }
+
+  code, .hgvs, .code {
+    font-family: var(--mono);
+    font-size: 0.88em;
+    font-weight: 400;
+  }
+
+  ul, ol { margin: 0 0 1.15rem; padding-left: 1.35rem; }
+  li { margin-bottom: 0.5rem; }
+  li::marker { color: var(--ink-3); }
+
+  /* ---------- quotes from the guideline ---------- */
+
+  blockquote {
+    margin: 1.4rem 0;
+    padding: 0.15rem 0 0.15rem 1.35rem;
+    border-left: 3px solid var(--verd-mute);
+    color: var(--ink-2);
+    font-size: 0.98rem;
+  }
+  blockquote p:last-child { margin-bottom: 0; }
+  blockquote cite {
+    display: block;
+    font-family: var(--sans);
+    font-style: normal;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-top: 0.6rem;
+  }
+
+  /* ---------- callout ---------- */
+
+  .callout {
+    margin: 1.75rem 0;
+    padding: 1.35rem 1.5rem;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--oxide);
+  }
+  .callout .eyebrow { color: var(--oxide); margin-bottom: 0.55rem; display: block; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  .amendment {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--verd);
+    padding: 1.5rem;
+    margin: 1.75rem 0;
+  }
+  .amendment .eyebrow { color: var(--verd); margin-bottom: 0.6rem; display: block; }
+  .amendment p:last-child { margin-bottom: 0; }
+
+  /* ---------- tables & figures ---------- */
+
+  figure { margin: 2.25rem 0; }
+
+  .wide { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 34rem;
+    font-family: var(--sans);
+    font-size: 0.83rem;
+    line-height: 1.4;
+  }
+  caption { display: none; }
+  th, td {
+    text-align: left;
+    padding: 0.62rem 0.9rem 0.62rem 0;
+    border-bottom: 1px solid var(--rule-soft);
+    vertical-align: top;
+  }
+  thead th {
+    font-weight: 600;
+    font-size: 0.7rem;
+    letter-spacing: 0.075em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    border-bottom: 1px solid var(--ink-2);
+    padding-bottom: 0.5rem;
+  }
+  tbody tr:last-child td { border-bottom: 1px solid var(--rule); }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; padding-right: 1.1rem; }
+  th.num { text-align: right; }
+  td .hgvs { font-size: 0.88rem; }
+  tr.emph td { background: var(--oxide-soft); }
+  tr.total td { font-weight: 600; color: var(--ink); }
+
+  .tag {
+    font-family: var(--sans);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0.15rem 0.45rem;
+    border: 1px solid currentColor;
+    white-space: nowrap;
+  }
+  .tag.cap { color: var(--oxide); }
+  .tag.ok  { color: var(--verd); }
+
+  figcaption {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    line-height: 1.5;
+    color: var(--ink-2);
+    margin-top: 0.85rem;
+    padding-top: 0.65rem;
+    border-top: 1px solid var(--rule-soft);
+  }
+  figcaption b {
+    color: var(--ink);
+    font-weight: 600;
+    letter-spacing: 0.03em;
+  }
+
+  /* ---------- charts ---------- */
+
+  .chart { width: 100%; height: auto; display: block; }
+  .chart .bar-strong { fill: var(--verd); }
+  .chart .bar-mute   { fill: var(--verd-mute); }
+  .chart .cat {
+    font-family: var(--sans); font-size: 12px; font-weight: 500; fill: var(--ink-2);
+  }
+  .chart .val {
+    font-family: var(--sans); font-size: 12px; font-weight: 600; fill: var(--ink);
+    font-variant-numeric: tabular-nums;
+  }
+  .chart .axis { stroke: var(--rule); stroke-width: 1; }
+  .chart .note { font-family: var(--sans); font-size: 11px; fill: var(--ink-3); }
+
+  .legend {
+    display: flex; flex-wrap: wrap; gap: 1.1rem;
+    font-family: var(--sans); font-size: 0.75rem; color: var(--ink-2);
+    margin-top: 0.9rem;
+  }
+  .legend span { display: inline-flex; align-items: center; gap: 0.42rem; }
+  .swatch { width: 11px; height: 11px; display: inline-block; }
+  .swatch.s { background: var(--verd); }
+  .swatch.m { background: var(--verd-mute); }
+
+  /* ---------- footer ---------- */
+
+  .colophon {
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--ink);
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    line-height: 1.6;
+    color: var(--ink-2);
+  }
+  .colophon h2 {
+    border: 0; padding: 0; font-family: var(--sans); font-size: 0.72rem;
+    font-weight: 600; letter-spacing: 0.11em; text-transform: uppercase;
+    color: var(--ink-3); margin: 0 0 0.8rem;
+  }
+  .colophon section { margin-top: 1.9rem; }
+  .colophon p { margin-bottom: 0.8rem; }
+  .refs { list-style: none; padding: 0; }
+  .refs li {
+    padding-left: 2.1rem; text-indent: -2.1rem; margin-bottom: 0.55rem;
+  }
+  .refs .rn { color: var(--ink-3); font-weight: 600; }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+</style>
+
+<article class="sheet">
+
+  <header class="masthead">
+    <span class="eyebrow">SVIG-UK v1.1 &middot; Evidence code review</span>
+    <h1>Are O4 and O7 independent lines of evidence?</h1>
+    <p class="standfirst">An analysis of CancerHotspots and COSMIC against the SVIG-UK oncogenicity
+      framework, and a proposal for capping the combined contribution of variant
+      recurrence and hotspot evidence.</p>
+
+    <div class="byline">
+      <div><span class="k">Prepared for</span><span class="v">Kevin Baker, Principal Clinical Scientist (Oncology), Wessex Genomics Laboratory Service (Salisbury)</span></div>
+      <div><span class="k">Analysis</span><span class="v">Manuel Dominguez Becerra</span></div>
+      <div><span class="k">Date &middot; version</span><span class="v">3 September 2026 &middot; v1.0</span></div>
+      <div><span class="k">Status</span><span class="v">For discussion by SVIG-UK. GENIE-based confirmation pending.</span></div>
+    </div>
+  </header>
+
+  <div class="glance">
+    <div>
+      <span class="num">46.8%</span>
+      <span class="lbl">of the mutation observations underpinning CancerHotspots come from MSK&#8209;IMPACT, a GENIE contributing centre</span>
+    </div>
+    <div>
+      <span class="num">98.5%</span>
+      <span class="lbl">of amino-acid changes reaching O7_strong also reach O4_strong on an independent database</span>
+    </div>
+    <div>
+      <span class="num">10</span>
+      <span class="lbl">amino-acid changes would drop from +8 to +4 under the proposed cap &mdash; four already covered by O1</span>
+    </div>
+  </div>
+
+  <section id="summary">
+    <h2><span class="n">Summary</span>The short answer</h2>
+
+    <p class="lead">O4 and O7 are <strong>not</strong> fully independent, and the dependency is
+      larger and more structural than the shared-cohort argument alone suggests. There are two
+      distinct channels of double counting, and they call for different remedies.</p>
+
+    <ol>
+      <li><strong>A shared-cohort channel.</strong> Just under half of the mutation
+        observations that make a CancerHotspots residue statistically significant come from
+        MSK&#8209;IMPACT, which is also a GENIE contributing centre. For a typical hotspot,
+        roughly half the observations behind O7 are the same patient observations an analyst
+        then counts in GENIE for O4.</li>
+      <li><strong>A definitional channel.</strong> Every route to O7 through
+        cancerhotspots.org in SVIG-UK v1.1 is gated on the count of <em>the same amino-acid
+        change</em> &mdash; which is precisely what O4 measures. This holds irrespective of
+        cohort overlap, and it is the finding we would put before the group first.</li>
+      <li>The coupling is measured, not assumed. Using COSMIC as an independent stand-in for
+        GENIE, <strong>195 of the 198 amino-acid changes reaching O7_strong (98.5%) also reach
+        O4_strong</strong>. At the top of the scale the two codes fire together almost
+        deterministically.</li>
+      <li><strong>Capping Cancer Hotspots at supporting across the board is not the right
+        fix.</strong> It would discard genuine positional evidence at the ~18% of hotspot
+        residues that are mutated across many different substitutions &mdash; KRAS p.G12,
+        NRAS p.Q61, TP53 p.R273.</li>
+      <li><strong>The conditional cap proposed by KRB is the right shape, it can be made
+        operational, and its impact is small and targeted.</strong> It would leave the score of
+        roughly 85% of hotspot changes untouched and drop only ten from +8 to +4, four of which
+        are already covered by O1 and therefore unaffected in practice.</li>
+    </ol>
+  </section>
+
+  <section id="background">
+    <h2><span class="n">Section 1</span>The question, and why it is not obvious</h2>
+
+    <p>O4 and O7 are intended to capture different things. O4 measures recurrence and enrichment
+      of a specific variant in a large somatic dataset. O7 asks whether the residue is a
+      statistically significant mutational hotspot or lies in a critical functional region. On
+      that reading they are separable lines of evidence, and Supplementary Figure 1 of SVIG-UK
+      v1.1 permits them to be combined without restriction &mdash; up to +8 points.</p>
+
+    <p>The concern is that both are frequently satisfied by the same underlying patient
+      observations. Cancer Hotspots is not a simple case-counting database; it applies a
+      statistical model that accounts for mutability at a given amino acid and for
+      gene- and position-specific mutation rates.<sup>1,2</sup> But if the residue's
+      significance is driven largely by the same cases that are counted in GENIE, then awarding
+      +4 for O4 and +4 for O7 gives +8 points from what is, biologically, partly one signal of
+      positive selection.</p>
+
+    <p>The guideline is alert to this. Its O7 section already ends with an instruction to
+      exclude the overlapping cohorts:</p>
+
+    <blockquote>
+      <p>&ldquo;MSK and the TCGA should be excluded from this count to enable the use of
+        Cancer Hotspots (O7) without double counting evidence.&rdquo;</p>
+      <cite>SVIG-UK v1.1, main text, O7</cite>
+    </blockquote>
+
+    <p>The intent is exactly the one under discussion. But the sentence sits at the end of a
+      paragraph about in&nbsp;silico protein modelling and DECIPHER plots, so &ldquo;this
+      count&rdquo; has no unambiguous antecedent; and read as an instruction to exclude MSK and
+      TCGA cases from the O4 count it is not practicable, since TCGA is not in GENIE and the
+      GENIE portal offers no per-centre view aligned to the CancerHotspots cohort. The
+      mitigation exists on paper but cannot be executed at the bench.</p>
+
+    <p>This report sets out to establish, from the data, how large the overlap actually is,
+      whether it matters, and what a workable remedy would look like.</p>
+  </section>
+
+  <section id="data">
+    <h2><span class="n">Section 2</span>What was analysed</h2>
+
+    <p>Three resources were used, all at the level of the amino-acid change, which is the level
+      at which SVIG-UK is written.</p>
+
+    <h3>Cancer Hotspots</h3>
+    <p>Both published releases were merged: Chang <em>et&nbsp;al.</em> 2016<sup>1</sup>
+      (459 residues) and Chang <em>et&nbsp;al.</em> 2018<sup>2</sup> (1,110 single-residue
+      positions across 24,592 tumours, plus 55 in-frame indel regions). For each hotspot
+      residue the resource publishes the total mutation count and the count for each individual
+      amino-acid change &mdash; for example NRAS p.Q61 carries 422 mutations distributed as
+      <span class="hgvs">Q61R:204 | Q61K:142 | Q61L:46 | Q61H:27 | Q61P:2 | Q61*:1</span>.</p>
+
+    <p>Critically, the 2018 release also reports, for every residue, how that total splits
+      between <strong>MSK&#8209;IMPACT</strong> and <strong>retrospective public
+      cohorts</strong> (largely TCGA). This split is what makes the O4/O7 overlap directly
+      measurable rather than a matter of argument. It was verified that the two components
+      reconstitute the published total for all 3,004 rows.</p>
+
+    <p>The primary analysis set is the 2018 single-residue table restricted to protein-coding
+      positions: <strong>1,024 residues and 2,918 distinct amino-acid changes</strong>. Splice
+      hotspots (86 positions) are excluded because O7 does not apply to them, and within the
+      analysis set a further 247 nonsense or stop-loss changes are marked ineligible for O7,
+      which is reserved for missense and small in-frame variants. That leaves
+      <strong>1,736 changes that score O7 at some strength</strong> from cancerhotspots.org.</p>
+
+    <h3>COSMIC Cancer Mutation Census</h3>
+    <p>GENIE was not available for this analysis. SVIG-UK explicitly permits COSMIC as an
+      alternative resource for O4, and the Cancer Mutation Census (v104) publishes a
+      per-substitution sample count drawn from a cohort that is largely <em>not</em> the
+      CancerHotspots cohort. It is used here to measure how often O4 and O7 fire on the same
+      variant &mdash; not to make classification calls on individual variants.</p>
+
+    <h3>SVIG-UK Canonical Variants List</h3>
+    <p>The O1 list (Supplementary Table 3) was used to establish which of the affected variants
+      are already covered by standalone evidence, and therefore unaffected by any change to
+      O4/O7 scoring.</p>
+
+    <div class="callout">
+      <span class="eyebrow">Data integrity</span>
+      <p>The analysis is built on the supplementary workbooks published with the papers, but an
+        analyst applying O7 reads the website. The parsed workbook was therefore cross-checked
+        against a cancerhotspots.org API export: <strong>all 3,004 amino-acid changes match,
+        with 100% agreement on both the per-change counts and the residue totals</strong>. The
+        figures modelled here are the figures seen at the bench.</p>
+    </div>
+  </section>
+
+  <section id="msk">
+    <h2><span class="n">Section 3</span>How much of Cancer Hotspots is MSK?</h2>
+
+    <p>Across the 1,024 protein-coding hotspot residues, 25,814 mutation observations underpin
+      the hotspot calls. Of these, <strong>12,087 (46.8%) come from MSK&#8209;IMPACT</strong>
+      and 13,727 (53.2%) from retrospective public cohorts.</p>
+
+    <div class="wide">
+      <table>
+        <caption>MSK-IMPACT contribution to the CancerHotspots evidence base</caption>
+        <thead>
+          <tr><th>Measure</th><th class="num">Value</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Hotspot residues analysed</td><td class="num">1,024</td></tr>
+          <tr><td>Mutation observations underpinning them</td><td class="num">25,814</td></tr>
+          <tr><td>Contributed by MSK&#8209;IMPACT</td><td class="num">12,087 (46.8%)</td></tr>
+          <tr><td>Contributed by retrospective / public cohorts</td><td class="num">13,727 (53.2%)</td></tr>
+          <tr><td>Median per-residue MSK fraction</td><td class="num">44.4%</td></tr>
+          <tr class="emph"><td>Residues where MSK contributes &ge;&nbsp;50% of the evidence</td><td class="num">432 (42.2%)</td></tr>
+          <tr class="emph"><td>Residues where MSK contributes &ge;&nbsp;75%</td><td class="num">88 (8.6%)</td></tr>
+          <tr><td>Residues where MSK contributes 100%</td><td class="num">22 (2.1%)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <figure>
+      <svg class="chart" viewBox="0 0 660 214" role="img"
+           aria-label="Bar chart. Hotspot residues by the share of their evidence contributed by MSK-IMPACT: 0 to 25 per cent, 180 residues; 25 to 50 per cent, 412; 50 to 75 per cent, 344; 75 to 100 per cent, 88.">
+        <line class="axis" x1="118" y1="14" x2="118" y2="182"></line>
+
+        <text class="cat" x="110" y="35" text-anchor="end">0&ndash;25%</text>
+        <rect class="bar-mute" x="118" y="22" width="196" height="20"></rect>
+        <text class="val" x="324" y="37">180</text>
+
+        <text class="cat" x="110" y="79" text-anchor="end">25&ndash;50%</text>
+        <rect class="bar-mute" x="118" y="66" width="449" height="20"></rect>
+        <text class="val" x="577" y="81">412</text>
+
+        <text class="cat" x="110" y="123" text-anchor="end">50&ndash;75%</text>
+        <rect class="bar-strong" x="118" y="110" width="375" height="20"></rect>
+        <text class="val" x="503" y="125">344</text>
+
+        <text class="cat" x="110" y="167" text-anchor="end">75&ndash;100%</text>
+        <rect class="bar-strong" x="118" y="154" width="96" height="20"></rect>
+        <text class="val" x="224" y="169">88</text>
+
+        <text class="note" x="118" y="203">Hotspot residues (n = 1,024), banded by MSK-IMPACT share of evidence</text>
+      </svg>
+      <div class="legend">
+        <span><i class="swatch s"></i>MSK supplies the majority of the evidence (432 residues, 42.2%)</span>
+        <span><i class="swatch m"></i>MSK is a minority contributor</span>
+      </div>
+      <figcaption><b>Figure 1.</b> The overlap is not uniform, which is why a flat downgrade of
+        O7 would be too crude. Bands are left-closed, so the two emphasised bands sum to the
+        &ldquo;&ge;&nbsp;50%&rdquo; figure quoted above.</figcaption>
+    </figure>
+
+    <p>Two of the most frequently assessed lung variants sit at the extreme.
+      <span class="hgvs">EGFR p.T790M</span> rests on 60 mutations at the residue, of which
+      <strong>58 (96.7%) are MSK</strong>; <span class="hgvs">EGFR p.L858R</span> on 144, of
+      which 114 (79.2%) are MSK. Conversely, the retrospective component is <em>not</em> in
+      GENIE, so roughly half of the hotspot evidence is genuinely independent of a GENIE case
+      count. The degree of overlap is measurable per residue, not constant.</p>
+  </section>
+
+  <section id="definitional">
+    <h2><span class="n">Section 4</span>O7&rsquo;s thresholds are variant-level, not positional</h2>
+
+    <p>This is the finding that does not depend on any cohort-overlap argument, and it is
+      visible on the face of Supplementary Table 1. Read the cancerhotspots.org tiers as an
+      analyst applies them:</p>
+
+    <div class="wide">
+      <table>
+        <caption>O7 criteria via cancerhotspots.org, SVIG-UK v1.1 Supplementary Table 1</caption>
+        <thead>
+          <tr><th>Strength</th><th>Requirement at the residue</th><th>Requirement for the same amino-acid change</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Strong <span class="hgvs">[+4]</span></td><td>&ge;&nbsp;50 entries</td><td>&ge;&nbsp;10 entries</td></tr>
+          <tr><td>Moderate <span class="hgvs">[+2]</span></td><td>&lt;&nbsp;50 entries</td><td>&ge;&nbsp;10 entries</td></tr>
+          <tr><td>Supporting <span class="hgvs">[+1]</span></td><td><em>none</em></td><td>2&ndash;9 entries</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Every tier is gated on the recurrence count of the exact same amino-acid change. The
+      supporting tier is defined on nothing else. The positional count only ever arbitrates
+      between strong and moderate &mdash; it never, on its own, admits O7.</p>
+
+    <p>O4&rsquo;s missense thresholds are &gt;&nbsp;10 entries for strong and 5&ndash;10 for
+      moderate. So the &ge;&nbsp;10 same-change requirement that lifts O7 above supporting sits
+      almost exactly on O4&rsquo;s strong threshold. A variant scoring O7_strong from
+      cancerhotspots.org has, by construction, satisfied a recurrence test nearly identical to
+      the one that gave it O4_strong &mdash; on a patient set that is around 47% shared.</p>
+
+    <p>Conceptually, O4 and O7 can be independent. As currently specified, the
+      cancerhotspots.org route to O7 does not measure the positional signal in isolation.</p>
+  </section>
+
+  <section id="positional">
+    <h2><span class="n">Section 5</span>How positional are hotspots in practice?</h2>
+
+    <p>For O7 to carry genuinely positional information, a residue needs to be mutated to
+      several different amino acids. It frequently is not.</p>
+
+    <figure>
+      <svg class="chart" viewBox="0 0 660 214" role="img"
+           aria-label="Bar chart. Hotspot residues by number of distinct amino-acid changes: one change, 213 residues; two changes, 293; three changes, 231; four or more changes, 287.">
+        <line class="axis" x1="118" y1="14" x2="118" y2="182"></line>
+
+        <text class="cat" x="110" y="35" text-anchor="end">1 change</text>
+        <rect class="bar-strong" x="118" y="22" width="326" height="20"></rect>
+        <text class="val" x="454" y="37">213</text>
+
+        <text class="cat" x="110" y="79" text-anchor="end">2 changes</text>
+        <rect class="bar-mute" x="118" y="66" width="449" height="20"></rect>
+        <text class="val" x="577" y="81">293</text>
+
+        <text class="cat" x="110" y="123" text-anchor="end">3 changes</text>
+        <rect class="bar-mute" x="118" y="110" width="354" height="20"></rect>
+        <text class="val" x="482" y="125">231</text>
+
+        <text class="cat" x="110" y="167" text-anchor="end">4+ changes</text>
+        <rect class="bar-mute" x="118" y="154" width="440" height="20"></rect>
+        <text class="val" x="568" y="169">287</text>
+
+        <text class="note" x="118" y="203">Hotspot residues (n = 1,024), by count of distinct amino-acid substitutions</text>
+      </svg>
+      <div class="legend">
+        <span><i class="swatch s"></i>Single substitution &mdash; O7 adds nothing to O4 (213 residues, 20.8%)</span>
+        <span><i class="swatch m"></i>Two or more substitutions</span>
+      </div>
+      <figcaption><b>Figure 2.</b> One hotspot residue in five is a single amino-acid change.
+        At these positions, &ldquo;the residue is a hotspot&rdquo; and &ldquo;this variant is
+        recurrent&rdquo; are the same statement.</figcaption>
+    </figure>
+
+    <p>The more informative measure is the fraction of a residue&rsquo;s mutations accounted for
+      by its commonest substitution. The median is <strong>0.69</strong> and the mean 0.70.
+      Classifying residues on that fraction:</p>
+
+    <div class="wide">
+      <table>
+        <caption>Hotspot residues by dominance of the commonest substitution</caption>
+        <thead>
+          <tr><th>Character</th><th>Commonest substitution accounts for</th><th class="num">Residues</th><th class="num">%</th></tr>
+        </thead>
+        <tbody>
+          <tr class="emph"><td>Mutation-specific</td><td>&ge;&nbsp;80% of mutations</td><td class="num">417</td><td class="num">40.7</td></tr>
+          <tr><td>Mixed</td><td>50&ndash;80%</td><td class="num">418</td><td class="num">40.8</td></tr>
+          <tr><td>Position-specific</td><td>&lt;&nbsp;50%</td><td class="num">189</td><td class="num">18.5</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Two residues in five are ≥&nbsp;80% dominated by a single change; for those, O7 adds
+      little to O4. But the remaining 18.5% are the opposite case, and they are the reason not
+      to cap Cancer Hotspots across the board. <span class="hgvs">KRAS p.G12</span> carries
+      <strong>ten distinct substitutions over 2,175 mutations</strong>, the commonest (G12D)
+      accounting for only 34.8%. <span class="hgvs">NRAS p.Q61</span> carries six over 422
+      (top 48.3%); <span class="hgvs">TP53 p.R273</span> six over 609 (top 41.2%). At these
+      residues the hotspot designation survives comfortably without the variant under
+      assessment, and O7 is telling the analyst something O4 is not.</p>
+  </section>
+
+  <section id="cosmic">
+    <h2><span class="n">Section 6</span>Testing the coupling against a second database</h2>
+
+    <p>The argument so far is structural. It can be tested. COSMIC CMC provides an O4-style
+      recurrence count drawn from a largely different cohort; 2,570 of the 2,918 hotspot changes
+      (88.1%) match a COSMIC substitution.</p>
+
+    <div class="wide">
+      <table>
+        <caption>Correlation between hotspot and COSMIC recurrence counts</caption>
+        <thead>
+          <tr><th>Comparison</th><th class="num">Coefficient</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Spearman &rho;, CancerHotspots count vs COSMIC count</td><td class="num">0.826</td></tr>
+          <tr><td>Pearson r on log<sub>10</sub> counts</td><td class="num">0.854</td></tr>
+          <tr><td>Spearman &rho;, restricted to changes reaching O7 moderate or strong</td><td class="num">0.757</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The recurrence signal that drives O7 and the recurrence signal that would drive O4 are
+      strongly correlated <em>even across two largely different cohorts</em>. This is the point
+      worth putting to the group: removing the MSK overlap entirely would not make these two
+      codes independent, because they are measuring the same underlying phenomenon &mdash;
+      positive selection on a specific residue change.</p>
+
+    <p>Applying O4&rsquo;s Supplementary Table 1 missense thresholds to the COSMIC counts gives
+      the practical consequence:</p>
+
+    <div class="wide">
+      <table>
+        <caption>O4 (COSMIC proxy) against O7, amino-acid changes</caption>
+        <thead>
+          <tr>
+            <th>O4 strength</th>
+            <th class="num">O7 strong</th><th class="num">O7 moderate</th>
+            <th class="num">O7 supporting</th><th class="num">O7 not met</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="emph"><td>Strong</td><td class="num">195</td><td class="num">192</td><td class="num">663</td><td class="num">76</td></tr>
+          <tr><td>Moderate</td><td class="num">1</td><td class="num">1</td><td class="num">334</td><td class="num">131</td></tr>
+          <tr><td>Not met</td><td class="num">0</td><td class="num">0</td><td class="num">200</td><td class="num">538</td></tr>
+          <tr><td>No COSMIC match</td><td class="num">2</td><td class="num">12</td><td class="num">136</td><td class="num">190</td></tr>
+          <tr class="total"><td>Total</td><td class="num">198</td><td class="num">205</td><td class="num">1,333</td><td class="num">935</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>195 of the 198 changes reaching O7_strong (98.5%) also reach O4_strong</strong>,
+      as do 192 of 205 O7_moderate changes (93.7%). At the top of the scale the two codes fire
+      together almost deterministically. Because the guideline warns that COSMIC thresholds
+      should be higher than GENIE&rsquo;s without specifying them, the analysis was repeated
+      with a conservative scheme (&ge;&nbsp;51 strong, 20&ndash;50 moderate); the coupling
+      holds, with 185 of 198 (93.4%) still reaching O4_strong.</p>
+  </section>
+
+  <section id="cost">
+    <h2><span class="n">Section 7</span>What a cap would actually cost</h2>
+
+    <p>A cap is only worth adopting if its effect is proportionate. Modelled over all 2,918
+      amino-acid changes:</p>
+
+    <div class="wide">
+      <table>
+        <caption>Impact of the proposed conditional cap</caption>
+        <thead>
+          <tr><th>Measure</th><th class="num">O4 thresholds as written</th><th class="num">COSMIC-adjusted thresholds</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Changes scoring both O4 and O7</td><td class="num">1,386</td><td class="num">765</td></tr>
+          <tr><td>Changes currently reaching the full +8</td><td class="num">195</td><td class="num">185</td></tr>
+          <tr><td>Changes reduced at all by the cap</td><td class="num">440 (15.1%)</td><td class="num">104 (3.6%)</td></tr>
+          <tr><td>Mean points lost where capped</td><td class="num">1.34</td><td class="num">1.91</td></tr>
+          <tr class="emph"><td>Changes dropping from +8 to +4</td><td class="num">10</td><td class="num">10</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The cap is <strong>surgical, not disruptive</strong>. It leaves the score of roughly 85%
+      of changes untouched, and only ten amino-acid changes lose the full four points. Those
+      ten, with their status on the Canonical Variants List &mdash; O1 is standalone evidence,
+      so a variant on that list is classified Oncogenic whatever O4 and O7 contribute:</p>
+
+    <div class="wide">
+      <table>
+        <caption>Amino-acid changes dropping from +8 to +4 under the proposed cap</caption>
+        <thead>
+          <tr>
+            <th>Variant</th><th class="num">Change / residue total</th>
+            <th class="num">Distinct changes</th><th class="num">MSK share</th><th>On O1 list</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="hgvs">AKT1 p.E17K</td><td class="num">148 / 149</td><td class="num">2</td><td class="num">63.8%</td><td><span class="tag cap">Affected</span></td></tr>
+          <tr><td class="hgvs">EGFR p.L858R</td><td class="num">144 / 144</td><td class="num">1</td><td class="num">79.2%</td><td><span class="tag ok">O1 &mdash; unaffected</span></td></tr>
+          <tr><td class="hgvs">FGFR3 p.S249C</td><td class="num">114 / 114</td><td class="num">1</td><td class="num">64.0%</td><td><span class="tag cap">Affected</span></td></tr>
+          <tr><td class="hgvs">U2AF1 p.S34F</td><td class="num">81 / 85</td><td class="num">2</td><td class="num">50.6%</td><td><span class="tag ok">O1 &mdash; unaffected</span></td></tr>
+          <tr><td class="hgvs">PIK3CA p.R88Q</td><td class="num">75 / 75</td><td class="num">1</td><td class="num">38.7%</td><td><span class="tag cap">Affected</span></td></tr>
+          <tr><td class="hgvs">EGFR p.T790M</td><td class="num">59 / 60</td><td class="num">2</td><td class="num">96.7%</td><td><span class="tag ok">O1 &mdash; unaffected</span></td></tr>
+          <tr><td class="hgvs">GNA11 p.Q209L</td><td class="num">57 / 59</td><td class="num">3</td><td class="num">32.2%</td><td><span class="tag cap">Affected</span></td></tr>
+          <tr><td class="hgvs">SF3B1 p.K700E</td><td class="num">57 / 59</td><td class="num">3</td><td class="num">33.9%</td><td><span class="tag ok">O1 &mdash; unaffected</span></td></tr>
+          <tr><td class="hgvs">TP53 p.M237I</td><td class="num">55 / 64</td><td class="num">3</td><td class="num">43.8%</td><td><span class="tag cap">Affected</span></td></tr>
+          <tr><td class="hgvs">PIK3CA p.E726K</td><td class="num">53 / 55</td><td class="num">2</td><td class="num">49.1%</td><td><span class="tag cap">Affected</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Four of the ten are already covered by O1, where the cap is moot. That leaves
+      <strong>six variants materially affected</strong>, each of which the group can review
+      individually &mdash; and each of which is precisely the case the proposal is aimed at: a
+      hotspot defined by a single amino-acid change, scored twice.</p>
+
+    <div class="callout">
+      <span class="eyebrow">The trade-off to weigh</span>
+      <p>A four-point reduction is not cosmetic. Against Figure 1C of the guideline it can move
+        a variant from Likely oncogenic (6&ndash;9) to VUS (0&ndash;5) where the rest of the
+        workup is thin. That is the judgement the group needs to make, and it is the reason for
+        recommending the permissive calibration of the independence test below rather than the
+        strict one.</p>
+    </div>
+  </section>
+
+  <section id="proposal">
+    <h2><span class="n">Section 8</span>Proposed amendment</h2>
+
+    <p>This is the amendment suggested by KRB, with the &ldquo;demonstrably supported by
+      multiple independent amino acid changes&rdquo; clause turned into a test that can be
+      applied at the bench from the same web page the analyst is already reading.</p>
+
+    <div class="amendment">
+      <span class="eyebrow">Proposed footnote to the O4 &times; O7 cell, Supplementary Figure 1</span>
+      <p><em>Restriction:</em> where O7 is supported by cancerhotspots.org recurrence of the
+        same amino-acid change used to support O4, the sum of points from O4 and O7 is limited
+        to 4&nbsp;pts (strong). O4 and O7 may be combined in full where the hotspot residue is
+        supported by &ge;&nbsp;10 further mutations arising from other amino-acid changes.</p>
+    </div>
+
+    <h3>The leave-one-variant-out test</h3>
+    <p>Subtract the count for the variant under assessment&rsquo;s own amino-acid change from
+      the residue total. The residue provides independent evidence if the residual is
+      &ge;&nbsp;10 mutations <em>and</em> at least one other amino-acid change at that residue
+      is itself recurrent. The &ge;&nbsp;10 threshold deliberately mirrors the count SVIG-UK
+      already uses to lift O7 above supporting.</p>
+
+    <p>Two calibrations were modelled. The <strong>permissive</strong> test (another change with
+      &ge;&nbsp;2 mutations) leaves 773 of 1,736 O7-scoring changes uncapped (44.5%); the
+      <strong>strict</strong> test (another change with &ge;&nbsp;10 mutations, independently
+      meeting the guideline&rsquo;s own bar) leaves 599 (34.5%). The permissive test is
+      recommended, because the strict test additionally penalises residues such as
+      <span class="hgvs">KIT p.D816</span> where the positional signal is real but the absolute
+      counts are small.</p>
+
+    <h3>Worked examples</h3>
+
+    <div class="wide">
+      <table>
+        <caption>The proposed rule applied to familiar variants</caption>
+        <thead>
+          <tr>
+            <th>Variant</th><th class="num">Change / residue total</th>
+            <th class="num">Distinct changes</th><th class="num">Residual</th><th>Outcome</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="hgvs">EGFR p.L858R</td><td class="num">144 / 144</td><td class="num">1</td><td class="num">0</td><td><span class="tag cap">Cap at +4</span></td></tr>
+          <tr><td class="hgvs">EGFR p.T790M</td><td class="num">59 / 60</td><td class="num">2</td><td class="num">1</td><td><span class="tag cap">Cap at +4</span></td></tr>
+          <tr><td class="hgvs">FGFR3 p.S249C</td><td class="num">114 / 114</td><td class="num">1</td><td class="num">0</td><td><span class="tag cap">Cap at +4</span></td></tr>
+          <tr><td class="hgvs">MYD88 p.L265P</td><td class="num">37 / 37</td><td class="num">1</td><td class="num">0</td><td><span class="tag cap">Cap at +4</span></td></tr>
+          <tr><td class="hgvs">BRAF p.V600E</td><td class="num">833 / 897</td><td class="num">6</td><td class="num">64</td><td><span class="tag ok">Combine, max +8</span></td></tr>
+          <tr><td class="hgvs">PIK3CA p.H1047R</td><td class="num">537 / 647</td><td class="num">4</td><td class="num">110</td><td><span class="tag ok">Combine, max +8</span></td></tr>
+          <tr><td class="hgvs">IDH1 p.R132H</td><td class="num">570 / 766</td><td class="num">6</td><td class="num">196</td><td><span class="tag ok">Combine, max +8</span></td></tr>
+          <tr><td class="hgvs">KRAS p.G12C</td><td class="num">384 / 2,175</td><td class="num">10</td><td class="num">1,791</td><td><span class="tag ok">Combine, max +8</span></td></tr>
+          <tr><td class="hgvs">NRAS p.Q61R</td><td class="num">204 / 422</td><td class="num">6</td><td class="num">218</td><td><span class="tag ok">Combine, max +8</span></td></tr>
+          <tr><td class="hgvs">TP53 p.R273H</td><td class="num">251 / 609</td><td class="num">6</td><td class="num">358</td><td><span class="tag ok">Combine, max +8</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><span class="hgvs">BRAF p.V600E</span> is the instructive borderline. The residue is 92.9%
+      dominated by V600E, so it reads as mutation-specific &mdash; yet 64 mutations across five
+      other changes remain after removing V600E, which is itself hotspot-level recurrence. The
+      rule correctly lets it combine. <span class="hgvs">EGFR p.L858R</span> is the clean
+      opposite: one change, 144 of 144, four-fifths of it MSK. There is no positional evidence
+      there that is not L858R&rsquo;s own recurrence.</p>
+
+    <h3>Two further points for the group</h3>
+
+    <p><strong>The precedent for a cap already exists.</strong> Supplementary Figure 1, note 6
+      reads:</p>
+
+    <blockquote>
+      <p>&ldquo;Restriction: Sum of points awarding from combining O6 and O7 is limited to 4 pts
+        (strong) to avoid double counting key attributes of critical domains / residues which
+        are also often measured by in silico tools.&rdquo;</p>
+      <cite>SVIG-UK v1.1, Supplementary Figure 1, note 6</cite>
+    </blockquote>
+
+    <p>The proposed O4&nbsp;+&nbsp;O7 cap is the same construction applied to a more strongly
+      correlated pair. The O4&nbsp;&times;&nbsp;O7 cell of that matrix carries no footnote at
+      all.</p>
+
+    <p><strong>The existing mitigation should be revised, not left standing alongside a
+      cap.</strong> The &ldquo;MSK and the TCGA should be excluded from this count&rdquo;
+      sentence quoted in Section&nbsp;1 is ambiguous in its placement and impracticable as
+      written. If a cap is adopted, that sentence should be replaced rather than duplicated.</p>
+  </section>
+
+  <section id="recommendation">
+    <h2><span class="n">Section 9</span>Recommendation</h2>
+
+    <ol>
+      <li><strong>Adopt the conditional cap</strong>, with the leave-one-variant-out test as the
+        operational definition of independence, added as a footnote to the
+        O4&nbsp;&times;&nbsp;O7 cell of Supplementary Figure 1 in the form given above.</li>
+      <li><strong>Do not cap Cancer Hotspots at supporting across the board.</strong> It would
+        under-credit the ~18% of residues carrying real positional evidence and weaken
+        classification of genuinely position-driven drivers such as KRAS p.G12. The conditional
+        cap achieves the same protection while changing the score of only 15% of hotspot
+        changes.</li>
+      <li><strong>Revise the &ldquo;MSK and the TCGA should be excluded from this
+        count&rdquo; sentence</strong>, which is ambiguous and not practicable as written.</li>
+      <li><strong>State explicitly that O7 via cancerhotspots.org is, as written, a
+        variant-level test</strong>, and that the positional argument requires evidence of
+        multiple distinct changes at the residue.</li>
+    </ol>
+  </section>
+
+  <section id="limitations">
+    <h2><span class="n">Section 10</span>Limitations and open points</h2>
+
+    <h3>COSMIC is a stand-in for GENIE, not a substitute</h3>
+    <p>GENIE was not available, so the O4 side of Sections 6 and 7 is modelled on COSMIC CMC
+      v104. COSMIC and GENIE differ in composition, ascertainment and duplicate handling, and
+      the guideline warns that COSMIC thresholds should be higher. The COSMIC analysis is
+      evidence about how tightly O4-style and O7-style recurrence track each other, not a
+      prediction of the exact GENIE count any individual variant would return.</p>
+
+    <p>Repeating Section 6 against GENIE is the obvious next step, and it would answer a
+      question nothing else can. GENIE reports the contributing centre for every sample, which
+      would allow the O4 count to be computed <em>with and without MSK</em> for each variant
+      &mdash; that is, it would show directly how many variants change O4 tier when the
+      guideline&rsquo;s own exclusion is applied. That analysis decides between three options:
+      if excluding MSK changes little, the existing mitigation suffices and needs only clearer
+      wording; if it changes a great deal, the cap is the necessary remedy. An access request
+      is in progress.</p>
+
+    <h3>Version currency and choice</h3>
+    <p>CancerHotspots v2 (2018, 24,592 tumours) predates current GENIE releases. The MSK
+      fraction measured here is the MSK share <em>within the hotspot resource</em>, which is
+      the quantity that determines whether the hotspot call and the GENIE count rest on the
+      same patients &mdash; but the absolute overlap with a present-day GENIE query will
+      differ. Separately, the two CancerHotspots releases differ substantially: 459 residues in
+      v1 against 1,024 in v2, with only 252 shared. The website serves v2. Whichever is used
+      should be version-stamped in the report, as the guideline already requires for GENIE.</p>
+
+    <h3>Haematological coverage is a real gap</h3>
+    <p>The guideline notes in general terms that cancerhotspots.org coverage is more limited for
+      haematological malignancies. Quantified against named targets, <span class="hgvs">JAK2
+      p.V617F</span>, <span class="hgvs">MPL p.W515</span>, CALR exon 9, NPM1 exon 12, ASXL1 and
+      SETBP1 are <strong>absent from both the SNV and indel tables</strong> of CancerHotspots
+      v2. O7 is simply unavailable through this resource for several of the most important
+      haematological drivers, which may be worth stating explicitly in the guidance rather than
+      leaving to the analyst to discover.</p>
+
+    <h3>Scope of the analysis set</h3>
+    <p>Splice hotspots (86 residues) are excluded, as O7 does not apply to them. Nonsense and
+      stop-loss changes (247) are marked ineligible for O7, which is reserved for missense and
+      small in-frame variants and cannot be combined with O2; their counts still contribute to
+      the published residue totals, as they do on the website. The 55 in-frame indel regions are
+      ranges rather than single residues, so the &ldquo;distinct changes at a position&rdquo;
+      construction does not transfer, and they are excluded from the tier analysis. Protein-level
+      matching to COSMIC failed for 11.9% of changes, largely because the two resources use
+      different reference transcripts &mdash; <span class="hgvs">MYD88 p.L265P</span> appears as
+      p.L273P in COSMIC, and GNAS p.R201 does not join at all.</p>
+
+    <h3>A textual discrepancy worth correcting</h3>
+    <p>The main text permits O7 at strong for &ldquo;&gt;&nbsp;50 occurrences at the same
+      position&rdquo;; Supplementary Table 1 says &ldquo;&ge;&nbsp;50 entries&rdquo;. These
+      differ at exactly 50. This analysis uses the Supplementary Table wording, which is the
+      operational table.</p>
+  </section>
+
+  <footer class="colophon">
+    <section>
+      <h2>Data sources</h2>
+      <ul class="refs">
+        <li><span class="rn">1.</span> Chang MT, Asthana S, Gao SP, <em>et al.</em> Identifying
+          recurrent mutations in cancer reveals widespread lineage diversity and mutational
+          specificity. <em>Nat Biotechnol</em> 2016;34(2):155&ndash;63.</li>
+        <li><span class="rn">2.</span> Chang MT, Bhattarai TS, Schram AM, <em>et al.</em>
+          Accelerating discovery of functional mutant alleles in cancer. <em>Cancer Discov</em>
+          2018;8(2):174&ndash;83.</li>
+        <li><span class="rn">3.</span> CancerHotspots data are made available under the ODC Open
+          Database License (ODbL). <span class="code">cancerhotspots.org</span></li>
+        <li><span class="rn">4.</span> COSMIC Cancer Mutation Census v104, GRCh37/38. Used under
+          licence; not redistributed.</li>
+        <li><span class="rn">5.</span> ACGS guidelines for the classification of oncogenicity of
+          somatic variants in cancer &mdash; recommendations by SVIG-UK, v1.1, 26 May 2026, and
+          accompanying supplementary material.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Reproducibility</h2>
+      <p>The full analysis is held as a version-controlled repository: source workbooks
+        unmodified, a numbered analysis pipeline, and every table in this report reproducible
+        from a single run. Deliverable tables are provided as TSV and as a combined Excel
+        workbook. The COSMIC archive and any GENIE data are held outside the repository under
+        their respective licences; only derived aggregate counts are retained.</p>
+      <p>Integrity checks are asserted rather than assumed: the per-change counts must sum to
+        the published residue total, the MSK and retrospective components must reconstitute
+        that total, and the parsed workbook is cross-checked against the live
+        cancerhotspots.org export.</p>
+    </section>
+
+    <section>
+      <h2>Acknowledgement required on publication or presentation</h2>
+      <p>Should this work be extended to GENIE, the terms of access require that any resulting
+        publication or presentation cite AACR Project GENIE Consortium, <em>Cancer Discov</em>
+        2017;7(8):818&ndash;31 with the dataset version used, carry the acknowledgement
+        &ldquo;The authors would like to acknowledge the American Association for Cancer
+        Research and its financial and material support in the development of the AACR Project
+        GENIE registry, as well as members of the consortium for their commitment to data
+        sharing. Interpretations are the responsibility of the study authors.&rdquo;, and
+        display the AACR Project GENIE logo on all posters and presentations.</p>
+    </section>
+  </footer>
+
+</article>

@@ -261,7 +261,9 @@ def main():
         ("Positions where MSK contributes >= 75% of the evidence", int((pos["msk_fraction"] >= 0.75).sum())),
         ("Positions where MSK contributes 100% of the evidence", int((pos["msk_fraction"] >= 1.0).sum())),
     ]
-    msk_band = pd.cut(pos["msk_fraction"], [-0.001, .25, .5, .75, 1.0],
+    # Left-closed bands, so the band counts reconcile exactly with the ">= 50%"
+    # and ">= 75%" figures quoted alongside them.
+    msk_band = pd.cut(pos["msk_fraction"], [0, .25, .5, .75, 1.0001], right=False,
                       labels=["0-25%", "25-50%", "50-75%", "75-100%"])
     msk_dist = (msk_band.value_counts().sort_index()
                 .rename_axis("msk_fraction_band").reset_index(name="n_positions"))
