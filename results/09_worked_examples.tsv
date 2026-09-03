@@ -1,0 +1,16 @@
+hugo_symbol	amino_acid_position	variant_aa	in_cancerhotspots_v2	reference_aa	change_count	position_total_count	same_change_fraction	n_unique_changes	substitutions	residual_count	residual_n_changes	residual_max_change_count	hotspot_character	o7_strength	o7_points	independent_positional_evidence	recommended_o4_o7_handling	independent_positional_evidence_strict	recommended_o4_o7_handling_strict	n_msk	n_retro	msk_fraction
+BRAF	600	E	True	V	833.0	897.0	0.9287	6.0	E:833|M:29|K:24|R:4|V:4|G:3	64.0	5.0	29.0	mutation-specific	Strong	4.0	True	O4 + O7 may be combined (max +8)	True	O4 + O7 may be combined (max +8)	287.0	610.0	0.32
+EGFR	858	R	True	L	144.0	144.0	1.0	1.0	R:144	0.0	0.0	0.0	mutation-specific	Strong	4.0	False	Cap combined O4 + O7 at +4	False	Cap combined O4 + O7 at +4	114.0	30.0	0.7917
+EGFR	790	M	True	T	59.0	60.0	0.9833	2.0	M:59|T:1	1.0	1.0	1.0	mutation-specific	Strong	4.0	False	Cap combined O4 + O7 at +4	False	Cap combined O4 + O7 at +4	58.0	2.0	0.9667
+KRAS	12	D	True	G	757.0	2175.0	0.348	10.0	D:757|V:657|C:384|R:166|A:134|S:68|F:6|G:1|I:1|L:1	1418.0	9.0	657.0	position-specific	Strong	4.0	True	O4 + O7 may be combined (max +8)	True	O4 + O7 may be combined (max +8)	1260.0	915.0	0.5793
+KRAS	12	C	True	G	384.0	2175.0	0.1766	10.0	D:757|V:657|C:384|R:166|A:134|S:68|F:6|G:1|I:1|L:1	1791.0	9.0	757.0	position-specific	Strong	4.0	True	O4 + O7 may be combined (max +8)	True	O4 + O7 may be combined (max +8)	1260.0	915.0	0.5793
+KRAS	61	H	True	Q	108.0	190.0	0.5684	7.0	H:108|R:37|L:21|K:20|P:2|A:1|E:1	82.0	6.0	37.0	mixed	Strong	4.0	True	O4 + O7 may be combined (max +8)	True	O4 + O7 may be combined (max +8)	96.0	94.0	0.5053
+NRAS	61	R	True	Q	204.0	422.0	0.4834	6.0	R:204|K:142|L:46|H:27|P:2|*:1	218.0	5.0	142.0	position-specific	Strong	4.0	True	O4 + O7 may be combined (max +8)	True	O4 + O7 may be combined (max +8)	165.0	257.0	0.391
+IDH1	132	H	True	R	570.0	766.0	0.7441	6.0	H:570|C:139|G:28|S:16|L:12|I:1	196.0	5.0	139.0	mixed	Strong	4.0	True	O4 + O7 may be combined (max +8)	True	O4 + O7 may be combined (max +8)	247.0	519.0	0.3225
+PIK3CA	1047	R	True	H	537.0	647.0	0.83	4.0	R:537|L:85|Y:18|Q:7	110.0	3.0	85.0	mutation-specific	Strong	4.0	True	O4 + O7 may be combined (max +8)	True	O4 + O7 may be combined (max +8)	341.0	306.0	0.527
+PIK3CA	545	K	True	E	575.0	633.0	0.9084	5.0	K:575|G:21|Q:20|A:12|D:5	58.0	4.0	21.0	mutation-specific	Strong	4.0	True	O4 + O7 may be combined (max +8)	True	O4 + O7 may be combined (max +8)	312.0	321.0	0.4929
+TP53	273	H	True	R	251.0	609.0	0.4122	6.0	C:283|H:251|L:56|S:12|P:5|G:2	358.0	5.0	283.0	position-specific	Strong	4.0	True	O4 + O7 may be combined (max +8)	True	O4 + O7 may be combined (max +8)	286.0	323.0	0.4696
+JAK2	617	F	False																			
+FGFR3	249	C	True	S	114.0	114.0	1.0	1.0	C:114	0.0	0.0	0.0	mutation-specific	Strong	4.0	False	Cap combined O4 + O7 at +4	False	Cap combined O4 + O7 at +4	73.0	41.0	0.6404
+KIT	816	V	True	D	11.0	22.0	0.5	4.0	V:11|H:5|Y:5|A:1	11.0	3.0	5.0	mixed	Moderate	2.0	True	O4 + O7 may be combined (max +8)	False	Cap combined O4 + O7 at +4	6.0	16.0	0.2727
+MYD88	265	P	True	L	37.0	37.0	1.0	1.0	P:37	0.0	0.0	0.0	mutation-specific	Moderate	2.0	False	Cap combined O4 + O7 at +4	False	Cap combined O4 + O7 at +4	13.0	24.0	0.3514

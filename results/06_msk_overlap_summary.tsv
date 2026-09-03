@@ -1,0 +1,10 @@
+metric	value
+Hotspot positions analysed (v2 SNV, non-splice)	1024.0
+Total mutations underpinning those positions	25814.0
+Mutations contributed by MSK-IMPACT (n_MSK)	12087.0
+Mutations contributed by retrospective/public cohorts (n_Retro)	13727.0
+Overall MSK fraction of hotspot evidence	0.4682
+Median per-position MSK fraction	0.4444
+Positions where MSK contributes >= 50% of the evidence	432.0
+Positions where MSK contributes >= 75% of the evidence	88.0
+Positions where MSK contributes 100% of the evidence	22.0
