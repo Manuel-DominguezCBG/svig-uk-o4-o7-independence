@@ -17,12 +17,19 @@ All figures below are reproducible from `scripts/` and are tabulated in `results
    * a **definitional channel** — every cancerhotspots.org route to O7 in SVIG-UK v1.1
      is gated on the count of *the same amino-acid change*, which is the same quantity
      O4 measures.
-3. **A blanket cap of Cancer Hotspots at supporting is not the right fix.** It would
+3. The coupling is now **measured, not assumed**: using COSMIC as an independent
+   stand-in for GENIE, **195 of the 198 amino-acid changes that reach O7_strong
+   (98.5%) also reach O4_strong**. The +8 combination is not a corner case; at the
+   top of the scale it is close to automatic.
+4. **A blanket cap of Cancer Hotspots at supporting is not the right fix.** It would
    discard genuine positional evidence at the ~18% of hotspots where the position is
    mutated across many different residues (KRAS G12, NRAS Q61, TP53 R273).
-4. **Kevin's conditional cap is the right shape, and it can be made operational.**
-   A "leave-one-variant-out" test on the CancerHotspots data decides it objectively,
-   and would cap 58% of O7-scoring changes while leaving 42% uncapped.
+5. **Kevin's conditional cap is the right shape, it can be made operational, and its
+   impact is small and targeted.** A "leave-one-variant-out" test on the
+   CancerHotspots data decides it objectively. It would cap 55.5% of O7-scoring
+   changes, but reduce the score of only 15.1% of changes overall, by a mean of 1.34
+   points — and drop just **10 changes** from +8 to +4, **4 of which are already on
+   the SVIG-UK canonical (O1) list** and so are unaffected in practice.
 
 ---
 
@@ -86,6 +93,8 @@ by construction, satisfied a recurrence test nearly identical to the one that ga
 O4_strong — using a patient set that is ~47% shared.** The +8 is substantially one
 observation counted twice.
 
+Section 4 below tests this empirically against a second database.
+
 Conceptually, O4 and O7 *can* be independent — O7 is meant to capture positional
 selection, O4 variant-level recurrence. But as currently specified, the cancerhotspots
 route to O7 does not measure the positional signal in isolation.
@@ -134,7 +143,102 @@ actual substitutions and their individual counts).*
 
 ---
 
-## 4. Proposed operational rule
+## 4. Testing the coupling against a second, largely independent database
+
+The argument so far is structural. It can be tested. SVIG-UK permits COSMIC as an
+alternative to GENIE for O4, and the COSMIC Cancer Mutation Census (CMC v104) gives a
+per-substitution sample count that is a direct O4-style measure — drawn from a cohort
+that is largely *not* the CancerHotspots cohort. GENIE itself was not available, so
+COSMIC is used here as a stand-in, to measure how often O4 and O7 fire on the same
+variant rather than to make classification calls.
+
+2,570 of the 2,918 hotspot amino-acid changes (88.1%) match a COSMIC CMC substitution.
+Across those:
+
+| Metric | Value |
+|---|---|
+| Spearman ρ, CancerHotspots count vs COSMIC count | **0.826** |
+| Pearson r on log10 counts | 0.854 |
+| Spearman ρ restricted to changes reaching O7 moderate or strong | 0.757 |
+
+**The recurrence signal that drives O7 and the recurrence signal that would drive O4
+are strongly correlated even across two largely different cohorts.** That is the point
+worth making to the group: removing the MSK overlap entirely would not make these two
+codes independent, because they are measuring the same underlying phenomenon —
+positive selection on a specific residue change.
+
+The cross-tabulation makes the practical consequence concrete. Applying O4's
+Supplementary Table 1 missense thresholds to the COSMIC counts:
+
+| | O7 Strong | O7 Moderate | O7 Supporting | O7 Not met |
+|---|---|---|---|---|
+| **O4 Strong** | **195** | 192 | 663 | 76 |
+| O4 Moderate | 1 | 1 | 334 | 131 |
+| O4 Not met | 0 | 0 | 200 | 538 |
+| No COSMIC match | 2 | 12 | 136 | 190 |
+
+**195 of the 198 changes reaching O7_strong (98.5%) also reach O4_strong**, and 192 of
+205 O7_moderate changes (93.7%) do as well. At the top of the scale the two codes fire
+together almost deterministically.
+
+Because the guideline warns that COSMIC thresholds "should be much higher" than
+GENIE's without specifying them, the analysis repeats everything with a conservative
+COSMIC-adjusted scheme (≥51 strong, 20–50 moderate). The coupling holds: 185 of 198
+O7_strong changes (93.4%) still reach O4_strong.
+
+*Tables: `results/11_cosmic_o4_o7_crosstab.tsv`, `results/12_o4_o7_correlation.tsv`,
+`results/14_per_change_o4_o7_points.tsv`.*
+
+---
+
+## 5. What the cap would actually cost
+
+A cap is only worth adopting if its effect is proportionate. Modelling the proposed
+rule over all 2,918 changes, with COSMIC standing in for GENIE:
+
+| | O4 thresholds as written | COSMIC-adjusted thresholds |
+|---|---|---|
+| Changes scoring both O4 and O7 | 1,386 | 765 |
+| Changes currently reaching the full +8 | 195 | 185 |
+| Changes reduced at all by the cap | 440 (15.1%) | 104 (3.6%) |
+| Mean points lost where capped | 1.34 | 1.91 |
+| **Changes dropping from +8 to +4** | **10** | **10** |
+
+The cap is therefore **surgical, not disruptive**. It leaves the score of ~85% of
+changes untouched, and only ten amino-acid changes lose the full four points.
+
+Those ten, and their status on the SVIG-UK Canonical Variants List (O1 — standalone
+evidence, so the cap cannot change their classification):
+
+| Variant | Change / position total | Distinct changes | COSMIC samples | MSK fraction | On O1 list? |
+|---|---|---|---|---|---|
+| AKT1 p.E17K | 148 / 149 | 2 | 895 | 63.8% | No |
+| EGFR p.L858R | 144 / 144 | 1 | 2,872 | 79.2% | **Yes** |
+| FGFR3 p.S249C | 114 / 114 | 1 | 1,582 | 64.0% | No |
+| U2AF1 p.S34F | 81 / 85 | 2 | 340 | 50.6% | **Yes** |
+| PIK3CA p.R88Q | 75 / 75 | 1 | 357 | 38.7% | No |
+| EGFR p.T790M | 59 / 60 | 2 | 472 | 96.7% | **Yes** |
+| GNA11 p.Q209L | 57 / 59 | 3 | 446 | 32.2% | No |
+| SF3B1 p.K700E | 57 / 59 | 3 | 811 | 33.9% | **Yes** |
+| TP53 p.M237I | 55 / 64 | 3 | 348 | 43.8% | No |
+| PIK3CA p.E726K | 53 / 55 | 2 | 167 | 49.1% | No |
+
+**Four of the ten are already covered by O1**, where the cap is moot. That leaves six
+variants materially affected, each of which the group can review individually — and
+each of which is exactly the case the proposal is aimed at: a hotspot that is one
+amino-acid change, scored twice.
+
+A 4-point reduction is not cosmetic — it can move a variant from Likely oncogenic
+(6–9) to VUS (0–5) if the rest of the workup is thin. That is the trade-off the group
+needs to take a view on, and it is the reason for recommending the permissive
+calibration of the independence test rather than the strict one.
+
+*Tables: `results/13_points_impact_of_cap.tsv`,
+`results/16_variants_materially_affected.tsv`, `results/15_canonical_list_overlap.tsv`.*
+
+---
+
+## 6. Proposed operational rule
 
 This is Kevin's suggestion, with the "demonstrably supported by multiple independent
 amino acid changes" clause turned into a test that can be applied at the bench.
@@ -154,8 +258,8 @@ Two calibrations were tested (`results/07_cap_rule_sensitivity.tsv`):
 
 | Test | Definition of "other change is recurrent" | O7-scoring changes left uncapped |
 |---|---|---|
-| **Permissive** (recommended) | ≥2 mutations | 797 / 1,920 (41.5%) |
-| **Strict** | ≥10 mutations — i.e. another change would independently meet SVIG-UK's own bar for O7 above supporting | 620 / 1,920 (32.3%) |
+| **Permissive** (recommended) | ≥2 mutations | 773 / 1,736 (44.5%) |
+| **Strict** | ≥10 mutations — i.e. another change would independently meet SVIG-UK's own bar for O7 above supporting | 599 / 1,736 (34.5%) |
 
 The permissive test is recommended: the residual ≥10 threshold already mirrors the
 count SVIG-UK uses to lift O7 above supporting, and the strict test additionally
@@ -190,7 +294,7 @@ correctly lets it combine. EGFR L858R is the clean opposite: one change, 144 of 
 four-fifths of it MSK. There is no positional evidence there that is not L858R's own
 recurrence.
 
-Overall, the rule caps **1,123 of 1,920 (58.5%)** of the amino-acid changes that
+Overall, the rule caps **963 of 1,736 (55.5%)** of the amino-acid changes that
 currently score any O7 from cancerhotspots.org.
 
 *Table: `results/05_o4_o7_double_counting.tsv` gives the recommendation for every
@@ -198,7 +302,7 @@ change; `results/09_worked_examples.tsv` for the subset above.*
 
 ---
 
-## 5. Two things already in the guideline worth raising
+## 7. Two things already in the guideline worth raising
 
 **(a) The precedent for a cap already exists.** Supplementary Figure 1, note 6 states:
 
@@ -225,7 +329,7 @@ sentence should be revised or replaced rather than left standing alongside it.
 
 ---
 
-## 6. Recommendation
+## 8. Recommendation
 
 **Adopt the conditional cap (Kevin's proposal), with the leave-one-variant-out test as
 the operational definition of independence.** Specifically:
@@ -238,6 +342,9 @@ the operational definition of independence.** Specifically:
 2. Do **not** cap Cancer Hotspots at supporting across the board — it would
    under-credit the ~18% of hotspots that carry real positional evidence, and would
    weaken classification of genuinely position-driven drivers such as KRAS G12.
+   The conditional cap achieves the same protection against double counting while
+   changing the score of only 15% of hotspot changes, and dropping only ten from +8
+   to +4 — four of which are already covered by O1.
 3. Revise the "MSK and the TCGA should be excluded from this count" sentence, which
    is ambiguous and not practicable as written.
 4. Consider stating explicitly that O7 via cancerhotspots.org is a **variant-level**
@@ -246,7 +353,7 @@ the operational definition of independence.** Specifically:
 
 ---
 
-## 7. Caveats and open points
+## 9. Caveats and open points
 
 * **Version currency.** CancerHotspots v2 (2018, 24,592 tumours) predates current
   GENIE releases. The MSK fraction measured here is the MSK share *within the hotspot
@@ -274,6 +381,29 @@ the operational definition of independence.** Specifically:
 * **">50" vs "≥50".** The main text and Supplementary Table 1 differ at exactly 50
   entries for O7_strong. This analysis uses ≥50 (the supplementary table). Worth
   correcting in the next revision.
+* **COSMIC is a stand-in for GENIE, not a substitute.** GENIE was not available, so
+  the O4 side of the cross-tabulation is modelled on COSMIC CMC v104. COSMIC and GENIE
+  differ in composition, ascertainment and duplicate handling, and the guideline warns
+  that COSMIC thresholds should be higher. The COSMIC analysis is therefore evidence
+  about *how tightly O4-style and O7-style recurrence track each other*, not a
+  prediction of the exact GENIE counts any individual variant would return. Repeating
+  section 4 against GENIE is the obvious next step if the dataset can be obtained.
+* **Protein-level joins are imperfect.** 11.9% of hotspot changes did not match a
+  COSMIC substitution, largely because the two resources use different reference
+  transcripts. MYD88 p.L265P appears as p.L273P in COSMIC, and GNAS p.R201 (the
+  commonest such case here) does not join at all. This affects the join rate, not the
+  correlation among matched pairs.
+* **Nonsense and stop-loss changes were excluded from O7 scoring.** 247 of the 2,918
+  changes introduce or remove a stop codon. O7 is reserved for missense and small
+  in-frame variants, and O2 + O7 is not a permitted combination (Supplementary
+  Figure 1, notes 4 and 13), so these are marked ineligible rather than scored. Their
+  counts still contribute to the position totals, as they do on the website.
 * **Third file.** Two workbooks (four sheets) were supplied against three referenced in
   the covering email. If a further CancerHotspots export exists, the merge should be
   re-run to include it.
+* **The workbook was validated against the live resource.** A cancerhotspots.org API
+  export (1,165 records: 1,110 single residues + 55 in-frame indel regions) was
+  cross-checked against the parsed v2 workbook: **all 3,004 amino-acid changes match,
+  with 100% agreement on both per-change counts and position totals**
+  (`results/17_api_export_validation.tsv`). The numbers modelled here are the numbers
+  an analyst sees on the website.

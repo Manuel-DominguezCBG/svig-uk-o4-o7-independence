@@ -32,6 +32,7 @@ results/         Deliverable tables (TSV) + a single combined Excel workbook
 |---|---|---|---|
 | `data/raw/cancerhotspots_v1_chang2016.xls` | Chang et al., *Nat Biotechnol* 2016 | `Per Residue`, `Per Allele` | 459 hotspot residues (1,170 residue/change rows) |
 | `data/raw/cancerhotspots_v2_chang2018.xls` | Chang et al., *Cancer Discov* 2018 | `SNV-hotspots`, `INDEL-hotspots` | 1,110 SNV positions (incl. 86 splice) + 55 indel regions; 24,592 tumours |
+| `data/raw/svig_uk_canonical_variants.tsv` | SVIG-UK Supplementary Table 3 | — | 158 canonical (O1) variants, from the local reference set |
 
 CancerHotspots data are made available under the ODC Open Database License (ODbL);
 see <https://www.cancerhotspots.org/>.
@@ -51,10 +52,29 @@ and it is the basis of the central result.
 ```bash
 python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
-.venv/bin/python scripts/01_merge_hotspots.py      # -> data/interim/
-.venv/bin/python scripts/02_position_analysis.py   # -> results/*.tsv
-.venv/bin/python scripts/03_export_workbook.py     # -> results/cancerhotspots_o7_analysis.xlsx
+
+.venv/bin/python scripts/01_merge_hotspots.py             # -> data/interim/
+.venv/bin/python scripts/02_position_analysis.py          # -> results/01..10
+.venv/bin/python scripts/04_extract_cosmic_cmc.py         # -> data/interim/ (needs COSMIC, see below)
+.venv/bin/python scripts/05_o4_proxy_crosstab.py          # -> results/11..14
+.venv/bin/python scripts/06_canonical_list_overlap.py     # -> results/15..16
+.venv/bin/python scripts/07_validate_against_api_export.py  # -> results/17 (needs the API export)
+.venv/bin/python scripts/03_export_workbook.py            # -> results/cancerhotspots_o7_analysis.xlsx
 ```
+
+Scripts 01–03 and 06 need only what is in this repository. Scripts 04 and 07 read two
+large reference files held outside it; their locations can be overridden with
+environment variables:
+
+| Script | Reference file | Override |
+|---|---|---|
+| `04_extract_cosmic_cmc.py` | COSMIC Cancer Mutation Census v104 (`CancerMutationCensus_AllData_Tsv_v104_GRCh37.tar`) | `COSMIC_CMC_TAR` |
+| `07_validate_against_api_export.py` | cancerhotspots.org API export (`cancerhotspots_counts.json`) | `CANCERHOTSPOTS_JSON` |
+
+Both default to the paths in the local reference set at
+`/Users/monkiky/Documents/external/refs/`. COSMIC requires a licence and is not
+redistributed here; only the derived per-substitution counts for the 230 hotspot
+genes are written to `data/interim/`.
 
 Script 01 asserts that, for every v2 SNV position, the per-allele counts sum to the
 stated position total and that `n_MSK + n_Retro` reconstitutes that total. The
@@ -76,11 +96,24 @@ analysis aborts if either check fails.
 | `08_version_comparison.tsv` | CancerHotspots v1 vs v2 position overlap |
 | `09_worked_examples.tsv` | Familiar variants worked through the proposed rule |
 | `10_haematology_coverage_check.tsv` | Coverage of well-known haematological hotspots |
+| `11_cosmic_o4_o7_crosstab.tsv` | O4 (COSMIC proxy) x O7 cross-tabulation, two threshold schemes |
+| `12_o4_o7_correlation.tsv` | Correlation between the CancerHotspots and COSMIC recurrence counts |
+| `13_points_impact_of_cap.tsv` | What the proposed cap costs, in changes affected and points lost |
+| `14_per_change_o4_o7_points.tsv` | Per-change O4 and O7 points, capped and uncapped |
+| `15_canonical_list_overlap.tsv` | Every change, flagged against the SVIG-UK Canonical Variants List (O1) |
+| `16_variants_materially_affected.tsv` | The changes that drop from +8 to +4, and whether O1 already protects them |
+| `17_api_export_validation.tsv` | Workbook vs live cancerhotspots.org API export (100% agreement, 3,004/3,004) |
 
 The primary analysis set is the v2 SNV table restricted to protein-coding
 (non-splice) positions: 1,024 positions and 2,918 distinct amino-acid changes.
-Splice hotspots are excluded because O7 is not applicable to them
-(SVIG-UK Supplementary Figure 1, note 22).
+Splice hotspots are excluded because O7 is not applicable to them (SVIG-UK
+Supplementary Figure 1, note 22), and within the analysis set a further 247 nonsense
+or stop-loss changes are marked ineligible for O7 scoring (notes 4 and 13), leaving
+1,736 changes that score O7 at some strength from cancerhotspots.org.
+
+GENIE was not available. COSMIC Cancer Mutation Census v104 is used as an independent
+stand-in for the O4 side, which the guideline explicitly permits; see
+`docs/findings.md` section 4 for what that does and does not support.
 
 ## Findings
 

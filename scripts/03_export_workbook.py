@@ -28,6 +28,13 @@ SHEET_NAMES = {
     "08_version_comparison": "08 v1 vs v2",
     "09_worked_examples": "09 Worked examples",
     "10_haematology_coverage_check": "10 Haem coverage",
+    "11_cosmic_o4_o7_crosstab": "11 O4 x O7 crosstab",
+    "12_o4_o7_correlation": "12 O4-O7 correlation",
+    "13_points_impact_of_cap": "13 Points impact of cap",
+    "14_per_change_o4_o7_points": "14 Points per change",
+    "15_canonical_list_overlap": "15 O1 canonical overlap",
+    "16_variants_materially_affected": "16 Materially affected",
+    "17_api_export_validation": "17 API export validation",
 }
 
 
