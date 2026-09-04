@@ -16,7 +16,7 @@ Requested by **Kevin Baker** (Principal Clinical Scientist, Oncology; Wessex Gen
 Laboratory Service, Salisbury). Analysis by **Manuel Dominguez Becerra**.
 
 📄 **Read the report:** [**web version**](https://manuel-dominguezcbg.github.io/svig-uk-o4-o7-independence/)
-· [docs/index.html](docs/index.html) (source) · [docs/findings.md](docs/findings.md)
+· [docs/report.html](docs/report.html) (source) · [docs/findings.md](docs/findings.md)
 (the long-form written answer, with every table referenced)
 
 ---
@@ -118,7 +118,8 @@ the recommendation — these would strengthen it or close gaps it leaves open.
 ```
 data/raw/        Source workbooks exactly as supplied (unmodified)
 data/interim/    Merged, tidied per-allele table produced by script 01
-docs/            The report (index.html), the written findings, and verbatim guideline extracts
+docs/            The report (report.html, built to index.html for Pages), the written
+                 findings, and verbatim guideline extracts
 scripts/         Analysis pipeline (numbered, run in order)
 results/         Deliverable tables (TSV) + a single combined Excel workbook
 ```
@@ -159,6 +160,10 @@ python3 -m venv .venv
 .venv/bin/python scripts/07_validate_against_api_export.py  # -> results/17     (needs the API export)
 .venv/bin/python scripts/03_export_workbook.py              # -> results/cancerhotspots_o7_analysis.xlsx
 ```
+
+`scripts/08_build_pages.py` regenerates `docs/index.html` from `docs/report.html`; run it
+after editing the report. The report is authored as a fragment, and the build step wraps it
+in the document skeleton that GitHub Pages needs but the Artifact publisher supplies itself.
 
 Scripts 04 and 07 read two large reference files held outside the repository; their
 locations can be overridden with environment variables:
