@@ -392,7 +392,7 @@
     <div class="byline">
       <div><span class="k">Prepared for</span><span class="v">Kevin Baker, Principal Clinical Scientist (Oncology), Wessex Genomics Laboratory Service (Salisbury)</span></div>
       <div><span class="k">Analysis</span><span class="v">Manuel Dominguez Becerra</span></div>
-      <div><span class="k">Date &middot; version</span><span class="v">3 September 2026 &middot; v1.0</span></div>
+      <div><span class="k">Date &middot; version</span><span class="v">4 September 2026 &middot; v1.1</span></div>
       <div><span class="k">Status</span><span class="v">For discussion by SVIG-UK. GENIE-based confirmation pending.</span></div>
     </div>
   </header>
@@ -979,6 +979,112 @@
       position&rdquo;; Supplementary Table 1 says &ldquo;&ge;&nbsp;50 entries&rdquo;. These
       differ at exactly 50. This analysis uses the Supplementary Table wording, which is the
       operational table.</p>
+  </section>
+
+  <section id="next">
+    <h2><span class="n">Section 11</span>What could be done next, and what it would need</h2>
+
+    <p class="lead">None of what follows is required to act on the recommendation in Section 9 &mdash;
+      the case for the conditional cap rests on the evidence already presented. These are the
+      analyses that would strengthen it, close a gap it leaves open, or extend the same reasoning
+      to parts of the guideline this work did not reach.</p>
+
+    <h3>The one that would settle the question outright</h3>
+    <p>Everything in Sections 6 and 7 models the O4 side on COSMIC, because GENIE was not
+      available. GENIE carries a contributing-centre identifier on every sample, so with the
+      release itself the decisive quantity stops being inferred and becomes directly measurable:
+      <strong>for each hotspot amino-acid change, does it still meet the O4 count threshold once
+      MSK&#8209;IMPACT samples are removed?</strong></p>
+
+    <p>That converts the argument from &ldquo;the two codes correlate at &rho;&nbsp;=&nbsp;0.83
+      across cohorts&rdquo; into &ldquo;<em>n</em> of the 198 changes reaching O7_strong lose
+      O4_strong when the shared patients are taken out&rdquo; &mdash; which is the number a
+      committee will actually want in front of it. It also replaces the MSK fraction measured
+      <em>inside</em> CancerHotspots (46.8%) with the true overlap between a present-day GENIE
+      query and the hotspot call, and it decides between three outcomes: if excluding MSK changes
+      little, the guideline&rsquo;s existing mitigation suffices and needs only clearer wording;
+      if it changes a great deal, the cap is the necessary remedy; if it changes a moderate
+      amount, the conditional cap proposed here is the proportionate one.</p>
+
+    <div class="callout">
+      <span class="eyebrow">Data required</span>
+      <p>An AACR Project GENIE release (v17.x or current): <span class="code">data_mutations_extended.txt</span>
+        and <span class="code">data_clinical_sample.txt</span>, which carry
+        <span class="code">SEQ_ASSAY_ID</span> and <span class="code">CENTER</span> per sample.
+        Free to registered users through Synapse (<span class="code">syn7222066</span>) on
+        acceptance of the terms of use &mdash; no cost, but registration and a data-use agreement
+        are required. Roughly a day of work once the file is in hand: the existing pipeline takes
+        it with one new script in place of the COSMIC extraction step.</p>
+    </div>
+
+    <h3>The rest of the list</h3>
+    <div class="wide">
+      <table>
+        <caption>Further analyses, in descending order of what they would add to a committee decision</caption>
+        <thead>
+          <tr><th>Analysis</th><th>What it would settle</th><th>Data required</th></tr>
+        </thead>
+        <tbody>
+          <tr class="emph">
+            <td>GENIE leave&#8209;MSK&#8209;out recount</td>
+            <td>How many variants actually change O4 tier when the shared patients are removed</td>
+            <td>GENIE release via Synapse &mdash; free, registration and DUA required</td>
+          </tr>
+          <tr>
+            <td>Would the residue still be a hotspot without MSK?</td>
+            <td>Whether a position was called <em>only</em> because of MSK cases &mdash; the sharpest
+              form of the double-counting question</td>
+            <td>Approximation possible now from the published <span class="code">n_Retro</span>
+              column; a proper re-derivation needs the per-sample input to Chang 2018 and its
+              background mutation-rate model</td>
+          </tr>
+          <tr>
+            <td>A haematological hotspot supplement</td>
+            <td>Restores O7 for JAK2 p.V617F, MPL p.W515, CALR, NPM1, ASXL1 and SETBP1, none of
+              which appear in CancerHotspots v2 at all</td>
+            <td>COSMIC restricted to haematopoietic and lymphoid tissue (already licensed), the
+              GENIE haem subset, or a disease-specific cohort such as BeatAML</td>
+          </tr>
+          <tr>
+            <td>Per-database O4 threshold calibration</td>
+            <td>What COSMIC count is equivalent to GENIE&rsquo;s &ge;&nbsp;10 and &ge;&nbsp;50 &mdash;
+              the guideline says only &ldquo;much higher&rdquo;, which leaves real inter-laboratory
+              variation unaddressed</td>
+            <td>GENIE and COSMIC joined per substitution; falls out of a quantile alignment once the
+              GENIE data is loaded</td>
+          </tr>
+          <tr>
+            <td>Extend the construction to indel hotspot regions</td>
+            <td>Whether the same double counting applies to the 55 in-frame indel regions, which are
+              ranges rather than residues and so were excluded here</td>
+            <td>Per-sample indel calls behind the region totals &mdash; and a definitional decision by
+              SVIG-UK on what &ldquo;independent evidence&rdquo; means across a range</td>
+          </tr>
+          <tr>
+            <td>Transcript harmonisation</td>
+            <td>Recovers the 11.9% of changes that failed to join to COSMIC on transcript choice;
+              affects the join rate, not the correlation, but matters for any bench-facing table</td>
+            <td>MANE Select plus VEP or Mutalyzer. Self-contained &mdash; the most easily completed
+              item here</td>
+          </tr>
+          <tr class="emph">
+            <td>Impact on cases the laboratory has actually reported</td>
+            <td>How many previously classified variants change SVIG-UK class under the cap, and in
+              which direction &mdash; a different order of evidence from modelling over the resource</td>
+            <td>A de-identified retrospective extract of variants classified under v1.1 at Wessex GLH,
+              with per-code point assignments rather than final classes. Held in-service; needs local
+              information-governance sign-off, not an external application</td>
+          </tr>
+          <tr>
+            <td>Currency refresh</td>
+            <td>Whether the tier assignments still hold against a modern cohort &mdash; v2 dates from
+              2018 and 24,592 tumours</td>
+            <td>A future cancerhotspots.org release, or GENIE used to recompute recurrence directly.
+              Re-running the pipeline against it is a single command</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </section>
 
   <footer class="colophon">

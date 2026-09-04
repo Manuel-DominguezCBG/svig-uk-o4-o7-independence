@@ -407,3 +407,128 @@ the operational definition of independence.** Specifically:
   with 100% agreement on both per-change counts and position totals**
   (`results/17_api_export_validation.tsv`). The numbers modelled here are the numbers
   an analyst sees on the website.
+
+---
+
+## 10. What could be done next, and what data it would need
+
+Nothing below is required to act on the recommendation in section 8 — the case for the
+conditional cap rests on evidence already in this repository. These are the analyses
+that would strengthen it, close a gap it leaves open, or extend the same reasoning to
+the parts of the guideline this work did not reach. They are ordered by what they would
+add to a committee decision.
+
+### 10.1 Repeat section 4 against GENIE itself, with a leave-MSK-out recount
+
+*The single most valuable follow-up.* Everything in section 4 uses COSMIC as a stand-in
+for the O4 side. GENIE carries a contributing-centre identifier on every sample, so with
+the release itself the decisive quantity becomes directly measurable rather than
+inferred: **for each hotspot amino-acid change, does it still meet the O4 count
+threshold once MSK-IMPACT samples are removed?**
+
+That converts the argument from "the two codes correlate at ρ = 0.83 across cohorts" to
+"n of the 198 O7_strong changes lose O4_strong when the shared patients are taken out" —
+which is the number the group will actually want. It also replaces the MSK fraction
+measured *inside* CancerHotspots (46.8%) with the true overlap between a present-day
+GENIE query and the hotspot call.
+
+**Data needed.** An AACR Project GENIE release (v17.x or current) — the
+`data_mutations_extended.txt` and `data_clinical_sample.txt` files, which carry
+`SEQ_ASSAY_ID` and `CENTER` per sample. Free to registered users via Synapse
+(`syn7222066`) after accepting the terms of use; no cost, but registration and a signed
+data-use agreement are required. Roughly a day of work once the file is in hand; the
+existing pipeline would take it with a new script in place of `04_extract_cosmic_cmc.py`.
+
+### 10.2 Would the position still be a hotspot without MSK?
+
+Section 3 measures how much of the hotspot *evidence* is MSK. It does not answer the
+sharper question: **would cancerhotspots.org have called this position at all without
+MSK-IMPACT?** A position called only because of MSK cases is one where O7 and a
+GENIE-based O4 rest on literally the same patients.
+
+A partial version is possible with what is already here — the `n_Retro` column gives the
+non-MSK count, so positions can be re-ranked on retrospective evidence alone. The full
+version requires re-running the hotspot statistic, which needs the per-sample mutation
+calls and the background mutation-rate model behind the published tables.
+
+**Data needed.** For the approximation, nothing new. For the proper re-derivation, the
+per-sample input to Chang et al. 2018 (MSK-IMPACT plus the retrospective cohorts) and
+the hotspot algorithm's covariate model — obtainable from the authors or reconstructed
+from the published method, which is a substantially larger piece of work.
+
+### 10.3 Fill the haematological gap
+
+JAK2 p.V617F, MPL p.W515, CALR exon 9, NPM1 exon 12, ASXL1 and SETBP1 are absent from
+both the SNV and indel tables of CancerHotspots v2
+(`results/10_haematology_coverage_check.tsv`). O7 via cancerhotspots.org is therefore
+simply unavailable for several of the most important haematological drivers — a gap the
+guideline acknowledges only in general terms. A defensible **supplementary haematological
+hotspot list**, with counts and a stated denominator, would let O7 be applied
+consistently in haem-onc reporting instead of being quietly skipped.
+
+**Data needed.** A haematology-weighted recurrence source: COSMIC restricted to
+haematopoietic and lymphoid tissue (already licensed locally), the GENIE haem subset, or
+a disease-specific cohort such as BeatAML or the MDS/CHIP series. The construction would
+have to mirror SVIG-UK's own thresholds so the resulting tiers are directly comparable.
+
+### 10.4 Calibrate O4 thresholds per database
+
+The guideline permits COSMIC as an alternative to GENIE for O4 but says only that the
+thresholds "should be much higher", without giving numbers. This analysis had to invent
+a conservative scheme (≥51 strong, 20–50 moderate) to test the sensitivity of its own
+result. **A published equivalence table — what COSMIC count corresponds to GENIE's ≥10
+and ≥50 — would remove a real source of inter-laboratory variation** that has nothing to
+do with the O4/O7 question.
+
+**Data needed.** GENIE and COSMIC CMC together, joined per substitution: the mapping
+falls straight out of a quantile alignment of the two count distributions over the same
+variant set. Cheap once 10.1 has the GENIE data loaded.
+
+### 10.5 Extend the construction to indel hotspot regions
+
+The 55 v2 indel hotspots are ranges (e.g. EGFR 745–759), not single residues, so
+"distinct changes at a position" does not transfer and they were excluded from the tier
+analysis. In-frame indels in EGFR, ERBB2, BRAF and CTNNB1 are clinically material, and
+the same double-counting question applies to them.
+
+**Data needed.** Per-sample indel calls behind the region totals, or agreement on a
+region-level analogue of the leave-one-variant-out test. This is a definitional decision
+for SVIG-UK as much as an analysis.
+
+### 10.6 Fix the transcript joins
+
+11.9% of hotspot changes did not match a COSMIC substitution, largely because the two
+resources use different reference transcripts — MYD88 p.L265P is p.L273P in COSMIC, and
+GNAS p.R201 does not join at all. This affects the join rate rather than the correlation
+among matched pairs, so it does not change any conclusion here, but it would matter for
+any per-variant table intended for use at the bench.
+
+**Data needed.** The MANE Select transcript set plus a normaliser (VEP or Mutalyzer) to
+project both resources onto a common transcript. Self-contained, and the most easily
+completed item on this list.
+
+### 10.7 Measure the cap against real reported cases
+
+The impact figures in section 5 are computed over the hotspot resource as a whole. What a
+committee will find most persuasive is the impact on **cases the laboratory has actually
+reported**: how many previously classified variants change SVIG-UK class under the cap,
+and in what direction. Section 5 predicts the answer is very small — ten changes lose the
+full four points and four of those are protected by O1 — but demonstrating it on real
+reports is a different order of evidence.
+
+**Data needed.** A de-identified retrospective extract of somatic variants classified
+under SVIG-UK v1.1 at Wessex GLH (Salisbury), with the per-code point assignments, not
+just the final class. Held within the service; needs local information-governance sign-off
+rather than an external application.
+
+### 10.8 Currency
+
+CancerHotspots v2 dates from 2018 and 24,592 tumours. Whether the tier assignments in
+`results/04_per_allele_o7_tiers.tsv` still hold against a modern cohort is unknown, and
+the guideline already requires GENIE queries to be version-stamped. If a v3 of
+cancerhotspots.org is released, re-running scripts 01–03 against it would refresh every
+table in this repository unchanged; that is what the validation in
+`results/17_api_export_validation.tsv` and the assertions in script 01 exist to make safe.
+
+**Data needed.** A future cancerhotspots.org release, or the GENIE data in 10.1 used to
+recompute recurrence directly.
