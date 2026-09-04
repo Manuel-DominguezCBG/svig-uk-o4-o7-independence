@@ -1112,8 +1112,9 @@
       <p>The full analysis is held as a version-controlled repository: source workbooks
         unmodified, a numbered analysis pipeline, and every table in this report reproducible
         from a single run. Deliverable tables are provided as TSV and as a combined Excel
-        workbook. The COSMIC archive and any GENIE data are held outside the repository under
-        their respective licences; only derived aggregate counts are retained.</p>
+        workbook. The COSMIC archive, the counts derived from it and any GENIE data are held
+        outside the repository under their respective licences and are not redistributed;
+        the extraction script regenerates them from a licensed download.</p>
       <p>Integrity checks are asserted rather than assumed: the per-change counts must sum to
         the published residue total, the MSK and retrospective components must reconstitute
         that total, and the parsed workbook is cross-checked against the live
