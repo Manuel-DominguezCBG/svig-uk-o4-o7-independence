@@ -181,7 +181,7 @@ locations can be overridden with environment variables:
 | `02_distribution_unique_changes.tsv` | Distribution of hotspots by 1 / 2 / 3 / 4+ distinct amino-acid changes |
 | `02b_distribution_unique_changes_exact.tsv` | Same, unbanded |
 | `03_gene_position_table.tsv` | **Complete gene × residue table**: substitutions, unique changes, count per change, dominance, MSK split |
-| `04_per_allele_o7_tiers.tsv` | Every amino-acid change with the O7 strength it achieves under SVIG-UK v1.1 |
+| `04_per_allele_o7_tiers.tsv` | **Every amino-acid change with the O7 strength and points it achieves under SVIG-UK v1.1**, carrying its residue's positional columns (distinct changes, the full substitution breakdown, dominance of the commonest change, mutation-specific / mixed / position-specific character) and the MSK split. Self-contained: the Section 5 analysis and the O7 weighting in one table |
 | `05_o4_o7_double_counting.tsv` | Per-change independence assessment and cap recommendation |
 | `06_msk_overlap_summary.tsv` | MSK-IMPACT contribution to the hotspot evidence base |
 | `06b_msk_fraction_distribution.tsv` | Residues banded by MSK fraction |

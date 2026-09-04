@@ -228,11 +228,16 @@ def main():
     exact.to_csv(RESULTS / "02b_distribution_unique_changes_exact.tsv", sep="\t", index=False)
 
     # ---- 04 per-allele O7 tiers -------------------------------------------
+    # The positional columns from the gene x position table travel with each
+    # change, so this one file answers both "how positional is the residue?"
+    # and "what does O7 award this variant?" without a join.
     allele_out = alleles[[
         "hugo_symbol", "amino_acid_position", "reference_aa", "variant_aa",
         "change_count", "position_total_count", "same_change_fraction",
-        "n_unique_changes", "o7_applicable", "o7_strength", "o7_points",
-        "msk_fraction",
+        "n_unique_changes", "substitutions", "top_change", "top_change_count",
+        "top_change_fraction", "hotspot_character",
+        "o7_applicable", "o7_strength", "o7_points",
+        "n_msk", "n_retro", "msk_fraction",
     ]].sort_values(["change_count"], ascending=False)
     allele_out.to_csv(RESULTS / "04_per_allele_o7_tiers.tsv", sep="\t", index=False)
 
