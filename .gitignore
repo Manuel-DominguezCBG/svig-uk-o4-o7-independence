@@ -27,3 +27,14 @@ data/interim/cosmic_cmc_hotspot_genes.tsv
 # page; the passages the analysis depends on are quoted verbatim, with page
 # references, in docs/svig-uk_o4_o7_extracts.md.
 docs/svig-uk/
+
+# AACR Project GENIE. Access is under a data-use agreement that forbids
+# redistribution, so nothing derived from the release is tracked: not the raw
+# files, not the per-change counts, not the result tables (results/18-28) and
+# not the GENIE workbook. scripts/09-10 regenerate all of them for anyone with
+# GENIE access; the findings and the report quote summary figures only.
+GENIE*.zip
+*genie*.zip
+data/external/
+data/interim/genie_*
+results/*genie*

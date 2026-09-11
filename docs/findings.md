@@ -26,10 +26,16 @@ All figures below are reproducible from `scripts/` and are tabulated in `results
    mutated across many different residues (KRAS G12, NRAS Q61, TP53 R273).
 5. **Kevin's conditional cap is the right shape, it can be made operational, and its
    impact is small and targeted.** A "leave-one-variant-out" test on the
-   CancerHotspots data decides it objectively. It would cap 55.5% of O7-scoring
+   CancerHotspots data decides it objectively. It would cap 54.4% of O7-scoring
    changes, but reduce the score of only 15.1% of changes overall, by a mean of 1.34
    points — and drop just **10 changes** from +8 to +4, **4 of which are already on
    the SVIG-UK canonical (O1) list** and so are unaffected in practice.
+6. **GENIE confirms all of it** (section 11). With O4 counted as unique GENIE v20
+   patients, **197 of the 198 O7_strong changes also reach O4_strong — and all 197
+   still do with every MSK-IMPACT patient removed.** The guideline's own mitigation,
+   excluding MSK, would not prevent a single +8: the double counting is definitional,
+   not a shared-cohort artefact, so only a cap removes it. The same ten changes drop
+   from +8 to +4.
 
 ---
 
@@ -145,6 +151,10 @@ actual substitutions and their individual counts).*
 
 ## 4. Testing the coupling against a second, largely independent database
 
+> **Update, 11 September 2026.** This section used COSMIC because GENIE was not then
+> available. Section 11 repeats it on GENIE v20 itself, counting unique patients; the
+> coupling is tighter there (197 of 198 rather than 195 of 198).
+
 The argument so far is structural. It can be tested. SVIG-UK permits COSMIC as an
 alternative to GENIE for O4, and the COSMIC Cancer Mutation Census (CMC v104) gives a
 per-substitution sample count that is a direct O4-style measure — drawn from a cohort
@@ -175,10 +185,10 @@ Supplementary Table 1 missense thresholds to the COSMIC counts:
 | **O4 Strong** | **195** | 192 | 663 | 76 |
 | O4 Moderate | 1 | 1 | 334 | 131 |
 | O4 Not met | 0 | 0 | 200 | 538 |
-| No COSMIC match | 2 | 12 | 136 | 190 |
+| No COSMIC match | 2 | 10 | 51 | 70 |
 
 **195 of the 198 changes reaching O7_strong (98.5%) also reach O4_strong**, and 192 of
-205 O7_moderate changes (93.7%) do as well. At the top of the scale the two codes fire
+203 O7_moderate changes (94.6%) do as well. At the top of the scale the two codes fire
 together almost deterministically.
 
 Because the guideline warns that COSMIC thresholds "should be much higher" than
@@ -258,8 +268,8 @@ Two calibrations were tested (`results/07_cap_rule_sensitivity.tsv`):
 
 | Test | Definition of "other change is recurrent" | O7-scoring changes left uncapped |
 |---|---|---|
-| **Permissive** (recommended) | ≥2 mutations | 773 / 1,736 (44.5%) |
-| **Strict** | ≥10 mutations — i.e. another change would independently meet SVIG-UK's own bar for O7 above supporting | 599 / 1,736 (34.5%) |
+| **Permissive** (recommended) | ≥2 mutations | 752 / 1,649 (45.6%) |
+| **Strict** | ≥10 mutations — i.e. another change would independently meet SVIG-UK's own bar for O7 above supporting | 585 / 1,649 (35.5%) |
 
 The permissive test is recommended: the residual ≥10 threshold already mirrors the
 count SVIG-UK uses to lift O7 above supporting, and the strict test additionally
@@ -294,7 +304,7 @@ correctly lets it combine. EGFR L858R is the clean opposite: one change, 144 of 
 four-fifths of it MSK. There is no positional evidence there that is not L858R's own
 recurrence.
 
-Overall, the rule caps **963 of 1,736 (55.5%)** of the amino-acid changes that
+Overall, the rule caps **897 of 1,649 (54.4%)** of the amino-acid changes that
 currently score any O7 from cancerhotspots.org.
 
 *Table: `results/05_o4_o7_double_counting.tsv` gives the recommendation for every
@@ -359,8 +369,8 @@ the operational definition of independence.** Specifically:
   GENIE releases. The MSK fraction measured here is the MSK share *within the hotspot
   resource*, which is the quantity that matters for whether the hotspot call and the
   GENIE count rest on the same patients — but the absolute overlap with a present-day
-  GENIE query will differ. Quantifying that directly requires the GENIE dataset,
-  which was not available for this analysis.
+  GENIE query will differ. Section 11 now measures
+  the overlap directly against GENIE v20.
 * **v1 vs v2 differ substantially.** 459 positions in v1 (2016) vs 1,024 SNV positions
   in v2 (2018); only 252 are shared (`results/08_version_comparison.tsv`). The
   cancerhotspots.org website serves v2. Whichever is used should be version-stamped in
@@ -381,23 +391,31 @@ the operational definition of independence.** Specifically:
 * **">50" vs "≥50".** The main text and Supplementary Table 1 differ at exactly 50
   entries for O7_strong. This analysis uses ≥50 (the supplementary table). Worth
   correcting in the next revision.
-* **COSMIC is a stand-in for GENIE, not a substitute.** GENIE was not available, so
-  the O4 side of the cross-tabulation is modelled on COSMIC CMC v104. COSMIC and GENIE
-  differ in composition, ascertainment and duplicate handling, and the guideline warns
-  that COSMIC thresholds should be higher. The COSMIC analysis is therefore evidence
-  about *how tightly O4-style and O7-style recurrence track each other*, not a
-  prediction of the exact GENIE counts any individual variant would return. Repeating
-  section 4 against GENIE is the obvious next step if the dataset can be obtained.
+* **COSMIC was a stand-in for GENIE; GENIE has now been run.** Sections 4 and 5 model
+  the O4 side on COSMIC CMC v104, which was all that was available when they were
+  written. Section 11 repeats them on GENIE v20 with O4 counted as unique patients, and
+  every conclusion holds. The GENIE counts are pan-cancer; laboratories applying the
+  guideline's "on-target" option will count fewer, and the scripts produce
+  per-lineage counts for every change (`results/26`, `results/28`, generated locally).
 * **Protein-level joins are imperfect.** 11.9% of hotspot changes did not match a
   COSMIC substitution, largely because the two resources use different reference
   transcripts. MYD88 p.L265P appears as p.L273P in COSMIC, and GNAS p.R201 (the
   commonest such case here) does not join at all. This affects the join rate, not the
   correlation among matched pairs.
-* **Nonsense and stop-loss changes were excluded from O7 scoring.** 247 of the 2,918
-  changes introduce or remove a stop codon. O7 is reserved for missense and small
-  in-frame variants, and O2 + O7 is not a permitted combination (Supplementary
-  Figure 1, notes 4 and 13), so these are marked ineligible rather than scored. Their
-  counts still contribute to the position totals, as they do on the website.
+* **Nonsense, stop-loss and synonymous changes are excluded from O7 scoring.** Of the
+  2,918 changes, 247 introduce or remove a stop codon and 207 are synonymous. O7 is
+  reserved for missense and small in-frame variants, and O2 + O7 is not a permitted
+  combination (Supplementary Figure 1, notes 4 and 13); a synonymous change alters no
+  amino acid, so a hotspot at its residue says nothing about it. These 454 are marked
+  ineligible rather than scored. Their counts still contribute to the position totals,
+  as they do on the website.
+* **Correction (11 September 2026).** The first version of this analysis scored the 207
+  synonymous changes for O7 — 87 of them at supporting or moderate (KRAS p.G60G, 19
+  mutations, had been given O7_moderate). Excluding them changed the O7 tier counts
+  (moderate 205 → 203, supporting 1,333 → 1,248) and the denominators of the
+  independence test (1,736 → 1,649 O7-scoring changes). It changed none of the 198
+  O7_strong changes, none of the cap-impact figures in section 5, and none of the ten
+  changes that drop from +8 to +4.
 * **Third file.** Two workbooks (four sheets) were supplied against three referenced in
   the covering email. If a further CancerHotspots export exists, the merge should be
   re-run to include it.
@@ -419,6 +437,9 @@ the parts of the guideline this work did not reach. They are ordered by what the
 add to a committee decision.
 
 ### 10.1 Repeat section 4 against GENIE itself, with a leave-MSK-out recount
+
+**Done — see section 11.** Kevin Baker supplied GENIE v20 on 11 September 2026. The text
+below is kept as written, as the case for doing it.
 
 *The single most valuable follow-up.* Everything in section 4 uses COSMIC as a stand-in
 for the O4 side. GENIE carries a contributing-centre identifier on every sample, so with
@@ -458,6 +479,9 @@ from the published method, which is a substantially larger piece of work.
 
 ### 10.3 Fill the haematological gap
 
+*Advanced by section 11: GENIE v20 is now in hand, and `results/25` counts each of these
+drivers in it by lineage.*
+
 JAK2 p.V617F, MPL p.W515, CALR exon 9, NPM1 exon 12, ASXL1 and SETBP1 are absent from
 both the SNV and indel tables of CancerHotspots v2
 (`results/10_haematology_coverage_check.tsv`). O7 via cancerhotspots.org is therefore
@@ -472,6 +496,10 @@ a disease-specific cohort such as BeatAML or the MDS/CHIP series. The constructi
 have to mirror SVIG-UK's own thresholds so the resulting tiers are directly comparable.
 
 ### 10.4 Calibrate O4 thresholds per database
+
+*Both datasets are now in hand, which makes this the cheapest item left. Section 11.5
+already shows that, at the same thresholds, GENIE is the more generous source for these
+changes.*
 
 The guideline permits COSMIC as an alternative to GENIE for O4 but says only that the
 thresholds "should be much higher", without giving numbers. This analysis had to invent
@@ -532,3 +560,214 @@ table in this repository unchanged; that is what the validation in
 
 **Data needed.** A future cancerhotspots.org release, or the GENIE data in 10.1 used to
 recompute recurrence directly.
+
+---
+
+## 11. Confirmation against GENIE v20
+
+Sections 4 and 5 used COSMIC because GENIE was not available when they were written. Kevin
+Baker has since supplied AACR Project GENIE v20.0-public, so the O4 side has been re-run on
+the database SVIG-UK actually names for O4 (`scripts/09_extract_genie.py`,
+`scripts/10_genie_o4_o7.py`).
+
+The result tables those scripts write (`results/18`–`28`) stay local. GENIE's data-use
+agreement forbids redistribution, so they are not in the public repository and the figures
+below are the summary. Anyone with GENIE access regenerates every table by running the two
+scripts; the table references below name the files they produce.
+
+**How the counts were taken.**
+
+* **One entry per patient.** The guideline is explicit: *"The GENIE database contains
+  multiple samples from a single patient … and therefore care should be taken to ensure
+  that multiple samples from the same patient are only counted as a single entry."* Every
+  O4 count here is the number of distinct `PATIENT_ID`s carrying the change, across all of
+  their samples.
+* **The same residue numbering as CancerHotspots.** GENIE annotates eight genes on a
+  different isoform, so their residues carry different numbers — EZH2 p.Y646 is p.Y641 in
+  GENIE, FGFR1 p.N577K is p.N546K, TGFBR2 is offset by 25. A per-gene offset is adopted
+  only when it recovers at least three missense hotspot changes with reference and variant
+  amino acid both matching; each is listed in `results/18c_genie_isoform_offsets.tsv`. With
+  that, **2,655 of the 2,918 changes (91.0%) are observed in GENIE**. The remainder are
+  overwhelmingly singletons in CancerHotspots, plus three genes (GTF2I, HIST1H3C, HIST1H3H)
+  that GENIE panels do not sequence.
+* **Lineage from OncoTree.** Each sample's `ONCOTREE_CODE` is mapped to its OncoTree tissue
+  (release 2025-10-03, pinned in `data/reference/`): Myeloid, Lymphoid, or a solid organ.
+  Glioma codes retired from that release fall back to solid.
+
+### 11.1 De-duplication
+
+| | |
+|---|---|
+| Hotspot-change observations, counted as samples | 298,087 |
+| Counted as distinct patients | 273,014 (−8.4%) |
+| Changes whose count falls on de-duplication | 1,701 of 2,655 |
+| O7-scoring changes whose O4 **tier** falls on de-duplication | 24 |
+
+De-duplication matters far more for some patients than others. Myeloid patients contribute
+**1.98 samples each**, lymphoid 1.41, solid tumours 1.12 — and myeloid patients at MSK 3.1,
+reflecting serial sampling. So the inflation from counting samples is concentrated in
+haematology: JAK2 p.V617F is 3,393 samples but 1,947 patients; SRSF2 p.P95H/L/R is 1,904
+samples but 1,037 patients. O4's thresholds (>10, 5–10) are low relative to hotspot counts,
+so only 24 O7-scoring changes change tier; but for a rarer haematological variant near a
+threshold, counting samples instead of patients is the difference between tiers.
+
+### 11.2 The coupling, on GENIE
+
+| | O7 Strong | O7 Moderate | O7 Supporting | O7 Not met |
+|---|---|---|---|---|
+| **O4 Strong** | **197** | 196 | 973 | 199 |
+| O4 Moderate | 0 | 0 | 156 | 204 |
+| O4 Not met | 0 | 6 | 117 | 410 |
+| Gene not in GENIE | 1 | 1 | 2 | 2 |
+
+**197 of the 198 changes reaching O7_strong (99.5%) also reach O4_strong on GENIE** —
+tighter than COSMIC's 195 (98.5%). The one exception, GTF2I p.L424H, is in a gene GENIE does
+not sequence. 196 of the 203 O7_moderate changes (96.6%) are O4_strong as well.
+
+*Table: `results/20_genie_o4_o7_crosstab.tsv`.*
+
+### 11.3 The leave-MSK-out recount
+
+This is the analysis section 10.1 set out as the one that would settle the question. GENIE
+records the contributing centre for every sample, so O4 can be counted with MSK-IMPACT
+removed. Once it is, O4 and O7 rest on disjoint patients: GENIE's nineteen other centres
+on one side, and on the other CancerHotspots, whose non-MSK half is TCGA and other public
+cohorts that GENIE does not contain.
+
+| O7 tier | O4_strong on all patients | … still O4_strong without MSK |
+|---|---|---|
+| Strong | 197 | **197 (100%)** |
+| Moderate | 196 | 193 (98.5%) |
+| Supporting | 973 | 723 (74.3%) |
+| *Changes scoring the full +8* | *197* | ***197*** |
+
+**Not one O7_strong change loses O4_strong when every MSK patient is removed**, and the
+number of changes scoring the full +8 is 197 either way.
+
+That is the decisive result, and it cuts against the guideline's existing mitigation.
+Section 7(b) quoted it: *"MSK and the TCGA should be excluded from this count to enable the
+use of Cancer Hotspots (O7) without double counting evidence."* Read as an instruction on
+the O4 count and applied exactly, it removes every shared patient — and does not remove a
+single +8. The +8 is therefore not a shared-cohort artefact. It is the definitional channel
+from the short answer: O4 and O7 both reward recurrence of the same amino-acid change, and a
+recurrent change recurs in any large cohort. No cohort exclusion can remove that. A cap can.
+
+The correlations make the same point from the other direction:
+
+| Comparison (Spearman ρ) | |
+|---|---|
+| CancerHotspots count vs GENIE patients, per change | 0.818 |
+| … vs GENIE patients excluding MSK | 0.774 |
+| Per residue: CancerHotspots MSK count vs GENIE MSK patients (the same patients) | 0.806 |
+| Per residue: CancerHotspots retrospective count vs GENIE non-MSK patients (**no patient in common**) | **0.684** |
+
+Recurrence measured in TCGA and recurrence measured in GENIE's non-MSK centres still rank
+the same residues in much the same order.
+
+*Tables: `results/23_genie_leave_msk_out_transitions.tsv`, `results/24_genie_correlations.tsv`.*
+
+### 11.4 What the cap costs, on GENIE
+
+| | GENIE, all patients | GENIE, MSK excluded | COSMIC (section 5) |
+|---|---|---|---|
+| Changes currently reaching the full +8 | 197 | 197 | 195 |
+| Changes reduced by the cap | 671 (23.0%) | 477 (16.3%) | 440 (15.1%) |
+| Mean points lost where capped | 1.23 | 1.31 | 1.34 |
+| **Changes dropping from +8 to +4** | **10** | **10** | **10** |
+| … of which on the O1 list | 4 | 4 | 4 |
+
+The cap reaches more changes on GENIE than on COSMIC because GENIE is larger: more
+O7_supporting changes clear O4_strong, and each of those loses a single point (+5 to +4).
+The costly case does not move: **the same ten changes drop from +8 to +4, and the same four
+are protected by O1.** All ten reach O4_strong in GENIE with or without MSK.
+
+*Tables: `results/21_genie_points_impact_of_cap.tsv`,
+`results/22_genie_variants_dropping_8_to_4.tsv`.*
+
+### 11.5 GENIE against COSMIC as the O4 source
+
+Among O7-scoring changes the two agree on O4_strong for 1,021. GENIE is the more generous
+source at the same thresholds — 305 changes are O4_strong on GENIE but not on COSMIC, and 29
+the reverse. That runs against the guideline's premise that COSMIC thresholds "should be
+much higher", at least for hotspot changes in 2026, and is worth bearing in mind for the
+per-database calibration proposed in 10.4. At O7_strong, where this question is decided, the
+two agree almost exactly.
+
+*Table: `results/27_genie_vs_cosmic_o4_tiers.tsv`.*
+
+### 11.6 Haematological representation in GENIE
+
+| Lineage | Patients | % of patients | Samples | Samples per patient | MSK share of patients |
+|---|---|---|---|---|---|
+| Solid tumour | 215,540 | 88.75% | 240,770 | 1.12 | 37.3% |
+| **Lymphoid** | **13,131** | **5.41%** | 18,477 | 1.41 | **73.7%** |
+| **Myeloid** | **12,018** | **4.95%** | 23,739 | 1.98 | 42.7% |
+| Unknown / not recorded | 5,456 | 2.25% | 6,883 | 1.26 | 87.2% |
+| All | 242,866 | | 289,869 | 1.19 | 39.9% |
+
+(3,146 patients have samples in more than one lineage, so the rows sum to slightly more than
+100%.) Myeloid patients are mostly acute leukaemia (5,060), MPN (3,183), MDS (2,372) and
+MDS/MPN (676); OncoTree also classes histiocytic neoplasms (782) as myeloid. Lymphoid
+patients are mostly mature B-cell neoplasms (9,898), mature T/NK (1,298), B-ALL (1,122),
+T-ALL (253) and Hodgkin lymphoma (222) (`results/18b`).
+
+**Haematological neoplasms are about a tenth of GENIE, and they are disproportionately
+MSK.** MSK-IMPACT contributes 40% of GENIE's patients but 74% of its lymphoid patients and 43%
+of its myeloid ones. Excluding MSK therefore costs haematology far more than solid tumours:
+without MSK, lymphoid neoplasms fall from 5.4% of GENIE to 2.4%.
+
+**What this means for O4 in haem-onc.** Supplementary Table 1 lets O4 counting be limited to
+"on-target" tumour types and, for AML, names the options: *"'on-target' entries may be
+specific to AML, to myeloid disorders or to all haematopoietic disorders (myeloid and
+lymphoid)."* CancerHotspots is pan-cancer and solid-dominated, so a haematological on-target
+count is where O4 and O7 stop drawing on the same patients:
+
+| O4 counted on | O4 Strong | O7_strong changes still O4_strong |
+|---|---|---|
+| All patients | 1,366 | 197 / 197 |
+| Solid tumours only | 1,305 | 197 / 197 |
+| Haematological (myeloid + lymphoid) | 224 | 83 / 197 |
+| Myeloid only | 86 | 47 / 197 |
+| Lymphoid only | 154 | 56 / 197 |
+
+*(Denominator: the 1,645 O7-scoring changes in genes GENIE sequences.
+`results/28_genie_on_target_lineage_o4.tsv`.)*
+
+Most CancerHotspots O7_strong changes are solid-tumour drivers, so few reaching O4_strong on
+a haematological count is the on-target rule working as intended, not a weakness of O4. The
+per-lineage patient counts for every change are produced in `results/26` (generated locally
+from GENIE) for laboratories that apply the option.
+
+### 11.7 The haematological drivers CancerHotspots lacks
+
+Section 9 showed that JAK2 p.V617F, MPL p.W515, CALR exon 9, NPM1 exon 12, ASXL1 and SETBP1
+are absent from CancerHotspots v2, so O7 via cancerhotspots.org is unavailable for them. All
+are well represented in GENIE, predominantly in myeloid patients:
+
+| Variant | GENIE samples | GENIE patients | Myeloid | Lymphoid | Solid | Haematological share |
+|---|---|---|---|---|---|---|
+| JAK2 p.V617F | 3,393 | 1,947 | 1,609 | 34 | 173 | 84% |
+| MPL p.W515L/K | 201 | 118 | 99 | 4 | 10 | 87% |
+| CALR exon 9 frameshift | 751 | 379 | 340 | 11 | 11 | 93% |
+| NPM1 exon 12 frameshift | 977 | 683 | 641 | 6 | 30 | 95% |
+| SETBP1 p.D868N / p.G870S | 371 | 211 | 186 | 5 | 16 | 91% |
+| ASXL1 p.G646Wfs*12 | 1,670 | 1,177 | 472 | 44 | 641 | 44% |
+
+For these the two codes fall out of step in the opposite direction: O4 is available at
+strong on any on-target definition, while O7 via cancerhotspots.org is not available at all.
+The double-counting question does not arise — but the gap in section 9 stands, and GENIE's
+myeloid subset is the natural source for the supplementary haematological list proposed in
+10.3. ASXL1 p.G646Wfs*12 is the exception to the lineage pattern, with more than half its
+patients recorded as solid tumours; clonal haematopoiesis in the sequenced sample is the
+likely explanation, and a reason for care whenever GENIE's pan-cancer counts are used for a
+CHIP-associated gene.
+
+*Table: `results/25_genie_haem_named_variants.tsv`.*
+
+### 11.8 What changes
+
+Nothing in the recommendation. GENIE confirms every quantitative claim in sections 4 and 5,
+and sharpens the argument in one place. The leave-MSK-out recount asked whether excluding MSK
+would be enough, or whether a cap is needed. It answers that: **excluding MSK removes no +8
+at all. The cap is needed, and the "MSK and the TCGA should be excluded" sentence should be
+replaced by it rather than kept alongside it.**

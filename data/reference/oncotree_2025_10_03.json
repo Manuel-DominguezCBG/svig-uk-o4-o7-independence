@@ -1,0 +1,7182 @@
+{
+ "version": "oncotree_2025_10_03",
+ "source": "https://oncotree.info/api/tumorTypes?version=oncotree_latest_stable",
+ "tumorTypes": [
+  {
+   "code": "AMPULLA_OF_VATER",
+   "name": "Ampulla of Vater",
+   "tissue": "Ampulla of Vater",
+   "mainType": "Ampullary Carcinoma",
+   "parent": "TISSUE",
+   "level": 1
+  },
+  {
+   "code": "PENIS",
+   "name": "Penis",
+   "tissue": "Penis",
+   "mainType": "Penile Cancer",
+   "parent": "TISSUE",
+   "level": 1
+  },
+  {
+   "code": "VULVA",
+   "name": "Vulva/Vagina",
+   "tissue": "Vulva/Vagina",
+   "mainType": "Vulvar/Vaginal Cancer",
+   "parent": "TISSUE",
+   "level": 1
+  },
+  {
+   "code": "HEAD_NECK",
+   "name": "Head and Neck",
+   "tissue": "Head and Neck",
+   "mainType": "Head and Neck Cancer",
+   "parent": "TISSUE",
+   "level": 1
+  },
+  {
+   "code": "BOWEL",
+   "name": "Bowel",
+   "tissue": "Bowel",
+   "mainType": "Bowel Cancer",
+   "parent": "TISSUE",
+   "level": 1
+  },
+  {
+   "code": "OTHER",
+   "name": "Other",
+   "tissue": "Other",
+   "mainType": "Other Cancer",
+   "parent": "TISSUE",
+   "level": 1
+  },
+  {
+   "code": "MYELOID",
+   "name": "Myeloid",
+   "tissue": "Myeloid",
+   "mainType": "Blood Cancer",
+   "parent": "TISSUE",
+   "level": 1
+  },
+  {
+   "code": "SKIN",
+   "name": "Skin",
+   "tissue": "Skin",
+   "mainType": "Skin Cancer",
+   "parent": "TISSUE",
+   "level": 1
+  },
+  {
+   "code": "THYROID",
+   "name": "Thyroid",
+   "tissue": "Thyroid",
+   "mainType": "Thyroid Cancer",
+   "parent": "TISSUE",
+   "level": 1
+  },
+  {
+   "code": "BLADDER",
+   "name": "Bladder/Urinary Tract",
+   "tissue": "Bladder/Urinary Tract",
+   "mainType": "Bladder/Urinary Tract Cancer",
+   "parent": "TISSUE",
+   "level": 1
+  },
+  {
+   "code": "BRAIN",
+   "name": "CNS/Brain",
+   "tissue": "CNS/Brain",
+   "mainType": "CNS/Brain Cancer",
+   "parent": "TISSUE",
+   "level": 1
+  },
+  {
+   "code": "BILIARY_TRACT",
+   "name": "Biliary Tract",
+   "tissue": "Biliary Tract",
+   "mainType": "Biliary Tract Cancer",
+   "parent": "TISSUE",
+   "level": 1
+  },
+  {
+   "code": "CERVIX",
+   "name": "Cervix",
+   "tissue": "Cervix",
+   "mainType": "Cervical Cancer",
+   "parent": "TISSUE",
+   "level": 1
+  },
+  {
+   "code": "PERITONEUM",
+   "name": "Peritoneum",
+   "tissue": "Peritoneum",
+   "mainType": "Peritoneal Cancer",
+   "parent": "TISSUE",
+   "level": 1
+  },
+  {
+   "code": "PANCREAS",
+   "name": "Pancreas",
+   "tissue": "Pancreas",
+   "mainType": "Pancreatic Cancer",
+   "parent": "TISSUE",
+   "level": 1
+  },
+  {
+   "code": "PNS",
+   "name": "Peripheral Nervous System",
+   "tissue": "Peripheral Nervous System",
+   "mainType": "Peripheral Nervous System Cancer",
+   "parent": "TISSUE",
+   "level": 1
+  },
+  {
+   "code": "PROSTATE",
+   "name": "Prostate",
+   "tissue": "Prostate",
+   "mainType": "Prostate Cancer",
+   "parent": "TISSUE",
+   "level": 1
+  },
+  {
+   "code": "LIVER",
+   "name": "Liver",
+   "tissue": "Liver",
+   "mainType": "Liver Cancer",
+   "parent": "TISSUE",
+   "level": 1
+  },
+  {
+   "code": "OVARY",
+   "name": "Ovary/Fallopian Tube",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Ovarian/Fallopian Tube Cancer",
+   "parent": "TISSUE",
+   "level": 1
+  },
+  {
+   "code": "SOFT_TISSUE",
+   "name": "Soft Tissue",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Cancer",
+   "parent": "TISSUE",
+   "level": 1
+  },
+  {
+   "code": "BREAST",
+   "name": "Breast",
+   "tissue": "Breast",
+   "mainType": "Breast Cancer",
+   "parent": "TISSUE",
+   "level": 1
+  },
+  {
+   "code": "EYE",
+   "name": "Eye",
+   "tissue": "Eye",
+   "mainType": "Eye Cancer",
+   "parent": "TISSUE",
+   "level": 1
+  },
+  {
+   "code": "BONE",
+   "name": "Bone",
+   "tissue": "Bone",
+   "mainType": "Bone Cancer",
+   "parent": "TISSUE",
+   "level": 1
+  },
+  {
+   "code": "ADRENAL_GLAND",
+   "name": "Adrenal Gland",
+   "tissue": "Adrenal Gland",
+   "mainType": "Adrenal Gland Cancer",
+   "parent": "TISSUE",
+   "level": 1
+  },
+  {
+   "code": "UTERUS",
+   "name": "Uterus",
+   "tissue": "Uterus",
+   "mainType": "Uterine Cancer",
+   "parent": "TISSUE",
+   "level": 1
+  },
+  {
+   "code": "KIDNEY",
+   "name": "Kidney",
+   "tissue": "Kidney",
+   "mainType": "Kidney Cancer",
+   "parent": "TISSUE",
+   "level": 1
+  },
+  {
+   "code": "LYMPH",
+   "name": "Lymphoid",
+   "tissue": "Lymphoid",
+   "mainType": "Lymphatic Cancer",
+   "parent": "TISSUE",
+   "level": 1
+  },
+  {
+   "code": "PLEURA",
+   "name": "Pleura",
+   "tissue": "Pleura",
+   "mainType": "Pleural Cancer",
+   "parent": "TISSUE",
+   "level": 1
+  },
+  {
+   "code": "THYMUS",
+   "name": "Thymus",
+   "tissue": "Thymus",
+   "mainType": "Thymic Cancer",
+   "parent": "TISSUE",
+   "level": 1
+  },
+  {
+   "code": "LUNG",
+   "name": "Lung",
+   "tissue": "Lung",
+   "mainType": "Lung Cancer",
+   "parent": "TISSUE",
+   "level": 1
+  },
+  {
+   "code": "TESTIS",
+   "name": "Testis",
+   "tissue": "Testis",
+   "mainType": "Testicular Cancer",
+   "parent": "TISSUE",
+   "level": 1
+  },
+  {
+   "code": "STOMACH",
+   "name": "Esophagus/Stomach",
+   "tissue": "Esophagus/Stomach",
+   "mainType": "Esophageal/Stomach Cancer",
+   "parent": "TISSUE",
+   "level": 1
+  },
+  {
+   "code": "AMPCA",
+   "name": "Ampullary Carcinoma",
+   "tissue": "Ampulla of Vater",
+   "mainType": "Ampullary Cancer",
+   "parent": "AMPULLA_OF_VATER",
+   "level": 2
+  },
+  {
+   "code": "PSCC",
+   "name": "Penile Squamous Cell Carcinoma",
+   "tissue": "Penis",
+   "mainType": "Penile Cancer",
+   "parent": "PENIS",
+   "level": 2
+  },
+  {
+   "code": "VGCT",
+   "name": "Germ Cell Tumor of the Vulva",
+   "tissue": "Vulva/Vagina",
+   "mainType": "Germ Cell Tumor",
+   "parent": "VULVA",
+   "level": 2
+  },
+  {
+   "code": "VA",
+   "name": "Vaginal Adenocarcinoma",
+   "tissue": "Vulva/Vagina",
+   "mainType": "Vaginal Cancer",
+   "parent": "VULVA",
+   "level": 2
+  },
+  {
+   "code": "VMA",
+   "name": "Mucinous Adenocarcinoma of the Vulva/Vagina",
+   "tissue": "Vulva/Vagina",
+   "mainType": "Vulvar Carcinoma",
+   "parent": "VULVA",
+   "level": 2
+  },
+  {
+   "code": "VMM",
+   "name": "Mucosal Melanoma of the Vulva/Vagina",
+   "tissue": "Vulva/Vagina",
+   "mainType": "Melanoma",
+   "parent": "VULVA",
+   "level": 2
+  },
+  {
+   "code": "VSC",
+   "name": "Squamous Cell Carcinoma of the Vulva/Vagina",
+   "tissue": "Vulva/Vagina",
+   "mainType": "Vaginal Cancer",
+   "parent": "VULVA",
+   "level": 2
+  },
+  {
+   "code": "VPDC",
+   "name": "Poorly Differentiated Vaginal Carcinoma",
+   "tissue": "Vulva/Vagina",
+   "mainType": "Vaginal Cancer",
+   "parent": "VULVA",
+   "level": 2
+  },
+  {
+   "code": "SBL",
+   "name": "Sialoblastoma",
+   "tissue": "Head and Neck",
+   "mainType": "Sialoblastoma",
+   "parent": "HEAD_NECK",
+   "level": 2
+  },
+  {
+   "code": "NPC",
+   "name": "Nasopharyngeal Carcinoma",
+   "tissue": "Head and Neck",
+   "mainType": "Head and Neck Cancer",
+   "parent": "HEAD_NECK",
+   "level": 2
+  },
+  {
+   "code": "HNMUCM",
+   "name": "Head and Neck Mucosal Melanoma",
+   "tissue": "Head and Neck",
+   "mainType": "Melanoma",
+   "parent": "HEAD_NECK",
+   "level": 2
+  },
+  {
+   "code": "PTH",
+   "name": "Parathyroid Cancer",
+   "tissue": "Head and Neck",
+   "mainType": "Parathyroid Cancer",
+   "parent": "HEAD_NECK",
+   "level": 2
+  },
+  {
+   "code": "HNSC",
+   "name": "Head and Neck Squamous Cell Carcinoma",
+   "tissue": "Head and Neck",
+   "mainType": "Head and Neck Cancer",
+   "parent": "HEAD_NECK",
+   "level": 2
+  },
+  {
+   "code": "OHNCA",
+   "name": "Head and Neck Carcinoma, Other",
+   "tissue": "Head and Neck",
+   "mainType": "Head and Neck Cancer",
+   "parent": "HEAD_NECK",
+   "level": 2
+  },
+  {
+   "code": "SACA",
+   "name": "Salivary Carcinoma",
+   "tissue": "Head and Neck",
+   "mainType": "Salivary Gland Cancer",
+   "parent": "HEAD_NECK",
+   "level": 2
+  },
+  {
+   "code": "GINET",
+   "name": "Gastrointestinal Neuroendocrine Tumors",
+   "tissue": "Bowel",
+   "mainType": "Gastrointestinal Neuroendocrine Tumor",
+   "parent": "BOWEL",
+   "level": 2
+  },
+  {
+   "code": "ANSC",
+   "name": "Anal Squamous Cell Carcinoma",
+   "tissue": "Bowel",
+   "mainType": "Anal Cancer",
+   "parent": "BOWEL",
+   "level": 2
+  },
+  {
+   "code": "APAD",
+   "name": "Appendiceal Adenocarcinoma",
+   "tissue": "Bowel",
+   "mainType": "Appendiceal Cancer",
+   "parent": "BOWEL",
+   "level": 2
+  },
+  {
+   "code": "SIC",
+   "name": "Small Intestinal Carcinoma",
+   "tissue": "Bowel",
+   "mainType": "Small Bowel Cancer",
+   "parent": "BOWEL",
+   "level": 2
+  },
+  {
+   "code": "ARMM",
+   "name": "Anorectal Mucosal Melanoma",
+   "tissue": "Bowel",
+   "mainType": "Melanoma",
+   "parent": "BOWEL",
+   "level": 2
+  },
+  {
+   "code": "COADREAD",
+   "name": "Colorectal Adenocarcinoma",
+   "tissue": "Bowel",
+   "mainType": "Colorectal Cancer",
+   "parent": "BOWEL",
+   "level": 2
+  },
+  {
+   "code": "LAMN",
+   "name": "Low-grade Appendiceal Mucinous Neoplasm",
+   "tissue": "Bowel",
+   "mainType": "Appendiceal Cancer",
+   "parent": "BOWEL",
+   "level": 2
+  },
+  {
+   "code": "SBC",
+   "name": "Small Bowel Cancer",
+   "tissue": "Bowel",
+   "mainType": "Small Bowel Cancer",
+   "parent": "BOWEL",
+   "level": 2
+  },
+  {
+   "code": "TAC",
+   "name": "Tubular Adenoma of the Colon",
+   "tissue": "Bowel",
+   "mainType": "Tubular Adenoma of the Colon",
+   "parent": "BOWEL",
+   "level": 2
+  },
+  {
+   "code": "CMC",
+   "name": "Medullary Carcinoma of the Colon",
+   "tissue": "Bowel",
+   "mainType": "Colorectal Cancer",
+   "parent": "BOWEL",
+   "level": 2
+  },
+  {
+   "code": "AGA",
+   "name": "Anal Gland Adenocarcinoma",
+   "tissue": "Bowel",
+   "mainType": "Anal Cancer",
+   "parent": "BOWEL",
+   "level": 2
+  },
+  {
+   "code": "ARCH",
+   "name": "Adenocarcinoma in Retrorectal Cystic Hamartoma",
+   "tissue": "Other",
+   "mainType": "Adenocarcinoma in Retrorectal Cystic Hamartoma",
+   "parent": "OTHER",
+   "level": 2
+  },
+  {
+   "code": "EGCT",
+   "name": "Extra Gonadal Germ Cell Tumor",
+   "tissue": "Other",
+   "mainType": "Germ Cell Tumor",
+   "parent": "OTHER",
+   "level": 2
+  },
+  {
+   "code": "AIS",
+   "name": "Adenocarcinoma In Situ",
+   "tissue": "Other",
+   "mainType": "Adenocarcinoma In Situ",
+   "parent": "OTHER",
+   "level": 2
+  },
+  {
+   "code": "MIXED",
+   "name": "Mixed Cancer Types",
+   "tissue": "Other",
+   "mainType": "Cancer of Unknown Primary",
+   "parent": "OTHER",
+   "level": 2
+  },
+  {
+   "code": "CUP",
+   "name": "Cancer of Unknown Primary",
+   "tissue": "Other",
+   "mainType": "Cancer of Unknown Primary",
+   "parent": "OTHER",
+   "level": 2
+  },
+  {
+   "code": "MATPL",
+   "name": "Myeloid Atypical",
+   "tissue": "Myeloid",
+   "mainType": "Blood Cancer, NOS",
+   "parent": "MYELOID",
+   "level": 2
+  },
+  {
+   "code": "MBGN",
+   "name": "Myeloid Benign",
+   "tissue": "Myeloid",
+   "mainType": "Blood Cancer, NOS",
+   "parent": "MYELOID",
+   "level": 2
+  },
+  {
+   "code": "MNM",
+   "name": "Myeloid Neoplasm",
+   "tissue": "Myeloid",
+   "mainType": "Blood Cancer, NOS",
+   "parent": "MYELOID",
+   "level": 2
+  },
+  {
+   "code": "DFSP",
+   "name": "Dermatofibrosarcoma Protuberans",
+   "tissue": "Skin",
+   "mainType": "Skin Cancer, Non-Melanoma",
+   "parent": "SKIN",
+   "level": 2
+  },
+  {
+   "code": "EMPSGC",
+   "name": "Endocrine Mucin Producing Sweat Gland Carcinoma",
+   "tissue": "Skin",
+   "mainType": "Skin Cancer, Non-Melanoma",
+   "parent": "SKIN",
+   "level": 2
+  },
+  {
+   "code": "CSCC",
+   "name": "Cutaneous Squamous Cell Carcinoma",
+   "tissue": "Skin",
+   "mainType": "Skin Cancer, Non-Melanoma",
+   "parent": "SKIN",
+   "level": 2
+  },
+  {
+   "code": "PPCT",
+   "name": "Proliferating Pilar Cystic Tumor",
+   "tissue": "Skin",
+   "mainType": "Skin Cancer, Non-Melanoma",
+   "parent": "SKIN",
+   "level": 2
+  },
+  {
+   "code": "MEL",
+   "name": "Melanoma",
+   "tissue": "Skin",
+   "mainType": "Melanoma",
+   "parent": "SKIN",
+   "level": 2
+  },
+  {
+   "code": "EMPD",
+   "name": "Extramammary Paget Disease",
+   "tissue": "Skin",
+   "mainType": "Skin Cancer, Non-Melanoma",
+   "parent": "SKIN",
+   "level": 2
+  },
+  {
+   "code": "SKAC",
+   "name": "Skin Adnexal Carcinoma",
+   "tissue": "Skin",
+   "mainType": "Skin Cancer, Non-Melanoma",
+   "parent": "SKIN",
+   "level": 2
+  },
+  {
+   "code": "DF",
+   "name": "Dermatofibroma",
+   "tissue": "Skin",
+   "mainType": "Skin Cancer, Non-Melanoma",
+   "parent": "SKIN",
+   "level": 2
+  },
+  {
+   "code": "AN",
+   "name": "Atypical Nevus",
+   "tissue": "Skin",
+   "mainType": "Skin Cancer, Non-Melanoma",
+   "parent": "SKIN",
+   "level": 2
+  },
+  {
+   "code": "MAC",
+   "name": "Microcystic Adnexal Carcinoma",
+   "tissue": "Skin",
+   "mainType": "Skin Cancer, Non-Melanoma",
+   "parent": "SKIN",
+   "level": 2
+  },
+  {
+   "code": "SEBA",
+   "name": "Sebaceous Carcinoma",
+   "tissue": "Skin",
+   "mainType": "Skin Cancer, Non-Melanoma",
+   "parent": "SKIN",
+   "level": 2
+  },
+  {
+   "code": "BCC",
+   "name": "Basal Cell Carcinoma",
+   "tissue": "Skin",
+   "mainType": "Skin Cancer, Non-Melanoma",
+   "parent": "SKIN",
+   "level": 2
+  },
+  {
+   "code": "ADPA",
+   "name": "Aggressive Digital Papillary Adenocarcinoma",
+   "tissue": "Skin",
+   "mainType": "Skin Cancer, Non-Melanoma",
+   "parent": "SKIN",
+   "level": 2
+  },
+  {
+   "code": "MCC",
+   "name": "Merkel Cell Carcinoma",
+   "tissue": "Skin",
+   "mainType": "Skin Cancer, Non-Melanoma",
+   "parent": "SKIN",
+   "level": 2
+  },
+  {
+   "code": "SGAD",
+   "name": "Sweat Gland Adenocarcinoma",
+   "tissue": "Skin",
+   "mainType": "Skin Cancer, Non-Melanoma",
+   "parent": "SKIN",
+   "level": 2
+  },
+  {
+   "code": "DTE",
+   "name": "Desmoplastic Trichoepithelioma",
+   "tissue": "Skin",
+   "mainType": "Skin Cancer, Non-Melanoma",
+   "parent": "SKIN",
+   "level": 2
+  },
+  {
+   "code": "POCA",
+   "name": "Porocarcinoma/Spiroadenocarcinoma",
+   "tissue": "Skin",
+   "mainType": "Skin Cancer, Non-Melanoma",
+   "parent": "SKIN",
+   "level": 2
+  },
+  {
+   "code": "PORO",
+   "name": "Poroma/Acrospiroma",
+   "tissue": "Skin",
+   "mainType": "Skin Cancer, Non-Melanoma",
+   "parent": "SKIN",
+   "level": 2
+  },
+  {
+   "code": "SPIR",
+   "name": "Spiroma/Spiradenoma",
+   "tissue": "Skin",
+   "mainType": "Skin Cancer, Non-Melanoma",
+   "parent": "SKIN",
+   "level": 2
+  },
+  {
+   "code": "AFX",
+   "name": "Atypical Fibroxanthoma",
+   "tissue": "Skin",
+   "mainType": "Skin Cancer, Non-Melanoma",
+   "parent": "SKIN",
+   "level": 2
+  },
+  {
+   "code": "AECA",
+   "name": "Sweat Gland Carcinoma/Apocrine Eccrine Carcinoma",
+   "tissue": "Skin",
+   "mainType": "Skin Cancer, Non-Melanoma",
+   "parent": "SKIN",
+   "level": 2
+  },
+  {
+   "code": "OAT",
+   "name": "Oncocytic Adenoma of the Thyroid",
+   "tissue": "Thyroid",
+   "mainType": "Thyroid Cancer",
+   "parent": "THYROID",
+   "level": 2
+  },
+  {
+   "code": "THAP",
+   "name": "Anaplastic Thyroid Cancer",
+   "tissue": "Thyroid",
+   "mainType": "Thyroid Cancer",
+   "parent": "THYROID",
+   "level": 2
+  },
+  {
+   "code": "WDTC",
+   "name": "Well-Differentiated Thyroid Cancer",
+   "tissue": "Thyroid",
+   "mainType": "Thyroid Cancer",
+   "parent": "THYROID",
+   "level": 2
+  },
+  {
+   "code": "THHC",
+   "name": "Hurthle Cell Thyroid Cancer",
+   "tissue": "Thyroid",
+   "mainType": "Thyroid Cancer",
+   "parent": "THYROID",
+   "level": 2
+  },
+  {
+   "code": "THME",
+   "name": "Medullary Thyroid Cancer",
+   "tissue": "Thyroid",
+   "mainType": "Thyroid Cancer",
+   "parent": "THYROID",
+   "level": 2
+  },
+  {
+   "code": "HTAT",
+   "name": "Hyalinizing Trabecular Adenoma of the Thyroid",
+   "tissue": "Thyroid",
+   "mainType": "Thyroid Cancer",
+   "parent": "THYROID",
+   "level": 2
+  },
+  {
+   "code": "THPD",
+   "name": "Poorly Differentiated Thyroid Cancer",
+   "tissue": "Thyroid",
+   "mainType": "Thyroid Cancer",
+   "parent": "THYROID",
+   "level": 2
+  },
+  {
+   "code": "UCA",
+   "name": "Urethral Cancer",
+   "tissue": "Bladder/Urinary Tract",
+   "mainType": "Bladder Cancer",
+   "parent": "BLADDER",
+   "level": 2
+  },
+  {
+   "code": "SCB",
+   "name": "Sarcomatoid Carcinoma of the Urinary Bladder",
+   "tissue": "Bladder/Urinary Tract",
+   "mainType": "Bladder Cancer",
+   "parent": "BLADDER",
+   "level": 2
+  },
+  {
+   "code": "URCA",
+   "name": "Urachal Carcinoma",
+   "tissue": "Bladder/Urinary Tract",
+   "mainType": "Bladder Cancer",
+   "parent": "BLADDER",
+   "level": 2
+  },
+  {
+   "code": "UPA",
+   "name": "Urothelial Papilloma",
+   "tissue": "Bladder/Urinary Tract",
+   "mainType": "Bladder Cancer",
+   "parent": "BLADDER",
+   "level": 2
+  },
+  {
+   "code": "BLAD",
+   "name": "Bladder Adenocarcinoma",
+   "tissue": "Bladder/Urinary Tract",
+   "mainType": "Bladder Cancer",
+   "parent": "BLADDER",
+   "level": 2
+  },
+  {
+   "code": "BLCA",
+   "name": "Bladder Urothelial Carcinoma",
+   "tissue": "Bladder/Urinary Tract",
+   "mainType": "Bladder Cancer",
+   "parent": "BLADDER",
+   "level": 2
+  },
+  {
+   "code": "SCBC",
+   "name": "Small Cell Bladder Cancer",
+   "tissue": "Bladder/Urinary Tract",
+   "mainType": "Bladder Cancer",
+   "parent": "BLADDER",
+   "level": 2
+  },
+  {
+   "code": "URMM",
+   "name": "Mucosal Melanoma of the Urethra",
+   "tissue": "Bladder/Urinary Tract",
+   "mainType": "Melanoma",
+   "parent": "BLADDER",
+   "level": 2
+  },
+  {
+   "code": "BLSC",
+   "name": "Bladder Squamous Cell Carcinoma",
+   "tissue": "Bladder/Urinary Tract",
+   "mainType": "Bladder Cancer",
+   "parent": "BLADDER",
+   "level": 2
+  },
+  {
+   "code": "IUP",
+   "name": "Inverted Urothelial Papilloma",
+   "tissue": "Bladder/Urinary Tract",
+   "mainType": "Bladder Cancer",
+   "parent": "BLADDER",
+   "level": 2
+  },
+  {
+   "code": "UTUC",
+   "name": "Upper Tract Urothelial Carcinoma",
+   "tissue": "Bladder/Urinary Tract",
+   "mainType": "Bladder Cancer",
+   "parent": "BLADDER",
+   "level": 2
+  },
+  {
+   "code": "IMTB",
+   "name": "Inflammatory Myofibroblastic Bladder Tumor",
+   "tissue": "Bladder/Urinary Tract",
+   "mainType": "Bladder Cancer",
+   "parent": "BLADDER",
+   "level": 2
+  },
+  {
+   "code": "SRCBC",
+   "name": "Plasmacytoid/Signet Ring Cell Bladder Carcinoma",
+   "tissue": "Bladder/Urinary Tract",
+   "mainType": "Bladder Cancer",
+   "parent": "BLADDER",
+   "level": 2
+  },
+  {
+   "code": "MNGT",
+   "name": "Meningothelial Tumor",
+   "tissue": "CNS/Brain",
+   "mainType": "CNS Cancer",
+   "parent": "BRAIN",
+   "level": 2
+  },
+  {
+   "code": "EMBT",
+   "name": "Embryonal Tumor",
+   "tissue": "CNS/Brain",
+   "mainType": "Embryonal Tumor",
+   "parent": "BRAIN",
+   "level": 2
+  },
+  {
+   "code": "MBT",
+   "name": "Miscellaneous Brain Tumor",
+   "tissue": "CNS/Brain",
+   "mainType": "Miscellaneous Brain Tumor",
+   "parent": "BRAIN",
+   "level": 2
+  },
+  {
+   "code": "EPMT",
+   "name": "Ependymomal Tumor",
+   "tissue": "CNS/Brain",
+   "mainType": "CNS Cancer",
+   "parent": "BRAIN",
+   "level": 2
+  },
+  {
+   "code": "MNET",
+   "name": "Miscellaneous Neuroepithelial Tumor",
+   "tissue": "CNS/Brain",
+   "mainType": "Miscellaneous Neuroepithelial Tumor",
+   "parent": "BRAIN",
+   "level": 2
+  },
+  {
+   "code": "DIFG",
+   "name": "Diffuse Glioma",
+   "tissue": "CNS/Brain",
+   "mainType": "Glioma",
+   "parent": "BRAIN",
+   "level": 2
+  },
+  {
+   "code": "CPT",
+   "name": "Choroid Plexus Tumor",
+   "tissue": "CNS/Brain",
+   "mainType": "Choroid Plexus Tumor",
+   "parent": "BRAIN",
+   "level": 2
+  },
+  {
+   "code": "PCNSMT",
+   "name": "Primary CNS Melanocytic Tumors",
+   "tissue": "CNS/Brain",
+   "mainType": "Primary CNS Melanocytic Tumors",
+   "parent": "BRAIN",
+   "level": 2
+  },
+  {
+   "code": "PINT",
+   "name": "Pineal Tumor",
+   "tissue": "CNS/Brain",
+   "mainType": "Pineal Tumor",
+   "parent": "BRAIN",
+   "level": 2
+  },
+  {
+   "code": "SELT",
+   "name": "Sellar Tumor",
+   "tissue": "CNS/Brain",
+   "mainType": "Sellar Tumor",
+   "parent": "BRAIN",
+   "level": 2
+  },
+  {
+   "code": "ENCG",
+   "name": "Encapsulated Glioma",
+   "tissue": "CNS/Brain",
+   "mainType": "Glioma",
+   "parent": "BRAIN",
+   "level": 2
+  },
+  {
+   "code": "BGCT",
+   "name": "Germ Cell Tumor, Brain",
+   "tissue": "CNS/Brain",
+   "mainType": "Germ Cell Tumor",
+   "parent": "BRAIN",
+   "level": 2
+  },
+  {
+   "code": "ICPN",
+   "name": "Intracholecystic Papillary Neoplasm",
+   "tissue": "Biliary Tract",
+   "mainType": "Hepatobiliary Cancer",
+   "parent": "BILIARY_TRACT",
+   "level": 2
+  },
+  {
+   "code": "IPN",
+   "name": "Intraductal Papillary Neoplasm of the Bile Duct",
+   "tissue": "Biliary Tract",
+   "mainType": "Hepatobiliary Cancer",
+   "parent": "BILIARY_TRACT",
+   "level": 2
+  },
+  {
+   "code": "CACC",
+   "name": "Cervical Adenoid Cystic Carcinoma",
+   "tissue": "Cervix",
+   "mainType": "Cervical Cancer",
+   "parent": "CERVIX",
+   "level": 2
+  },
+  {
+   "code": "CENE",
+   "name": "Cervical Neuroendocrine Tumor",
+   "tissue": "Cervix",
+   "mainType": "Cervical Cancer",
+   "parent": "CERVIX",
+   "level": 2
+  },
+  {
+   "code": "CEAS",
+   "name": "Cervical Adenosquamous Carcinoma",
+   "tissue": "Cervix",
+   "mainType": "Cervical Cancer",
+   "parent": "CERVIX",
+   "level": 2
+  },
+  {
+   "code": "CESC",
+   "name": "Cervical Squamous Cell Carcinoma",
+   "tissue": "Cervix",
+   "mainType": "Cervical Cancer",
+   "parent": "CERVIX",
+   "level": 2
+  },
+  {
+   "code": "CEGCC",
+   "name": "Glassy Cell Carcinoma of the Cervix",
+   "tissue": "Cervix",
+   "mainType": "Cervical Cancer",
+   "parent": "CERVIX",
+   "level": 2
+  },
+  {
+   "code": "CEAD",
+   "name": "Cervical Adenocarcinoma",
+   "tissue": "Cervix",
+   "mainType": "Cervical Cancer",
+   "parent": "CERVIX",
+   "level": 2
+  },
+  {
+   "code": "VGCE",
+   "name": "Villoglandular Adenocarcinoma of the Cervix",
+   "tissue": "Cervix",
+   "mainType": "Cervical Cancer",
+   "parent": "CERVIX",
+   "level": 2
+  },
+  {
+   "code": "MCCE",
+   "name": "Mixed Cervical Carcinoma",
+   "tissue": "Cervix",
+   "mainType": "Cervical Cancer",
+   "parent": "CERVIX",
+   "level": 2
+  },
+  {
+   "code": "CABC",
+   "name": "Cervical Adenoid Basal Carcinoma",
+   "tissue": "Cervix",
+   "mainType": "Cervical Cancer",
+   "parent": "CERVIX",
+   "level": 2
+  },
+  {
+   "code": "CELI",
+   "name": "Cervical Leiomyosarcoma",
+   "tissue": "Cervix",
+   "mainType": "Cervical Cancer",
+   "parent": "CERVIX",
+   "level": 2
+  },
+  {
+   "code": "CERMS",
+   "name": "Cervical Rhabdomyosarcoma",
+   "tissue": "Cervix",
+   "mainType": "Cervical Cancer",
+   "parent": "CERVIX",
+   "level": 2
+  },
+  {
+   "code": "SCCE",
+   "name": "Small Cell Carcinoma of the Cervix",
+   "tissue": "Cervix",
+   "mainType": "Cervical Cancer",
+   "parent": "CERVIX",
+   "level": 2
+  },
+  {
+   "code": "CEAIS",
+   "name": "Cervical Adenocarcinoma In Situ",
+   "tissue": "Cervix",
+   "mainType": "Cervical Cancer",
+   "parent": "CERVIX",
+   "level": 2
+  },
+  {
+   "code": "PSEC",
+   "name": "Peritoneal Serous Carcinoma",
+   "tissue": "Peritoneum",
+   "mainType": "Peritoneal Cancer, NOS",
+   "parent": "PERITONEUM",
+   "level": 2
+  },
+  {
+   "code": "PEMESO",
+   "name": "Peritoneal Mesothelioma",
+   "tissue": "Peritoneum",
+   "mainType": "Mesothelioma",
+   "parent": "PERITONEUM",
+   "level": 2
+  },
+  {
+   "code": "PANET",
+   "name": "Pancreatic Neuroendocrine Tumor",
+   "tissue": "Pancreas",
+   "mainType": "Pancreatic Cancer",
+   "parent": "PANCREAS",
+   "level": 2
+  },
+  {
+   "code": "UCP",
+   "name": "Undifferentiated Carcinoma of the Pancreas",
+   "tissue": "Pancreas",
+   "mainType": "Pancreatic Cancer",
+   "parent": "PANCREAS",
+   "level": 2
+  },
+  {
+   "code": "PAASC",
+   "name": "Adenosquamous Carcinoma of the Pancreas",
+   "tissue": "Pancreas",
+   "mainType": "Pancreatic Cancer",
+   "parent": "PANCREAS",
+   "level": 2
+  },
+  {
+   "code": "PAAC",
+   "name": "Acinar Cell Carcinoma of the Pancreas",
+   "tissue": "Pancreas",
+   "mainType": "Pancreatic Cancer",
+   "parent": "PANCREAS",
+   "level": 2
+  },
+  {
+   "code": "PACT",
+   "name": "Cystic Tumor of the Pancreas",
+   "tissue": "Pancreas",
+   "mainType": "Pancreatic Cancer",
+   "parent": "PANCREAS",
+   "level": 2
+  },
+  {
+   "code": "PANEC",
+   "name": "Pancreatic Neuroendocrine Carcinoma",
+   "tissue": "Pancreas",
+   "mainType": "Pancreatic Cancer",
+   "parent": "PANCREAS",
+   "level": 2
+  },
+  {
+   "code": "SPN",
+   "name": "Solid Pseudopapillary Neoplasm of the Pancreas",
+   "tissue": "Pancreas",
+   "mainType": "Pancreatic Cancer",
+   "parent": "PANCREAS",
+   "level": 2
+  },
+  {
+   "code": "PAAD",
+   "name": "Pancreatic Adenocarcinoma",
+   "tissue": "Pancreas",
+   "mainType": "Pancreatic Cancer",
+   "parent": "PANCREAS",
+   "level": 2
+  },
+  {
+   "code": "PB",
+   "name": "Pancreatoblastoma",
+   "tissue": "Pancreas",
+   "mainType": "Pancreatic Cancer",
+   "parent": "PANCREAS",
+   "level": 2
+  },
+  {
+   "code": "GNBL",
+   "name": "Ganglioneuroblastoma",
+   "tissue": "Peripheral Nervous System",
+   "mainType": "Peripheral Nervous System",
+   "parent": "PNS",
+   "level": 2
+  },
+  {
+   "code": "NBL",
+   "name": "Neuroblastoma",
+   "tissue": "Peripheral Nervous System",
+   "mainType": "Peripheral Nervous System",
+   "parent": "PNS",
+   "level": 2
+  },
+  {
+   "code": "NST",
+   "name": "Nerve Sheath Tumor",
+   "tissue": "Peripheral Nervous System",
+   "mainType": "Nerve Sheath Tumor",
+   "parent": "PNS",
+   "level": 2
+  },
+  {
+   "code": "GN",
+   "name": "Ganglioneuroma",
+   "tissue": "Peripheral Nervous System",
+   "mainType": "Peripheral Nervous System",
+   "parent": "PNS",
+   "level": 2
+  },
+  {
+   "code": "BCCP",
+   "name": "Basal Cell Carcinoma of Prostate",
+   "tissue": "Prostate",
+   "mainType": "Prostate Cancer",
+   "parent": "PROSTATE",
+   "level": 2
+  },
+  {
+   "code": "PRSCC",
+   "name": "Prostate Small Cell Carcinoma",
+   "tissue": "Prostate",
+   "mainType": "Prostate Cancer",
+   "parent": "PROSTATE",
+   "level": 2
+  },
+  {
+   "code": "PRNE",
+   "name": "Prostate Neuroendocrine Carcinoma",
+   "tissue": "Prostate",
+   "mainType": "Prostate Cancer",
+   "parent": "PROSTATE",
+   "level": 2
+  },
+  {
+   "code": "PRSC",
+   "name": "Prostate Squamous Cell Carcinoma",
+   "tissue": "Prostate",
+   "mainType": "Prostate Cancer",
+   "parent": "PROSTATE",
+   "level": 2
+  },
+  {
+   "code": "PRAD",
+   "name": "Prostate Adenocarcinoma",
+   "tissue": "Prostate",
+   "mainType": "Prostate Cancer",
+   "parent": "PROSTATE",
+   "level": 2
+  },
+  {
+   "code": "LIAD",
+   "name": "Hepatocellular Adenoma",
+   "tissue": "Liver",
+   "mainType": "Hepatobiliary Cancer",
+   "parent": "LIVER",
+   "level": 2
+  },
+  {
+   "code": "MRTL",
+   "name": "Malignant Rhabdoid Tumor of the Liver",
+   "tissue": "Liver",
+   "mainType": "Malignant Rhabdoid Tumor of the Liver",
+   "parent": "LIVER",
+   "level": 2
+  },
+  {
+   "code": "LIAS",
+   "name": "Liver Angiosarcoma",
+   "tissue": "Liver",
+   "mainType": "Hepatobiliary Cancer",
+   "parent": "LIVER",
+   "level": 2
+  },
+  {
+   "code": "LIMNET",
+   "name": "Malignant Nonepithelial Tumor of the Liver",
+   "tissue": "Liver",
+   "mainType": "Hepatobiliary Cancer",
+   "parent": "LIVER",
+   "level": 2
+  },
+  {
+   "code": "LIHB",
+   "name": "Hepatoblastoma",
+   "tissue": "Liver",
+   "mainType": "Hepatobiliary Cancer",
+   "parent": "LIVER",
+   "level": 2
+  },
+  {
+   "code": "HCC",
+   "name": "Hepatocellular Carcinoma",
+   "tissue": "Liver",
+   "mainType": "Hepatobiliary Cancer",
+   "parent": "LIVER",
+   "level": 2
+  },
+  {
+   "code": "HCCIHCH",
+   "name": "Hepatocellular Carcinoma plus Intrahepatic Cholangiocarcinoma",
+   "tissue": "Liver",
+   "mainType": "Hepatobiliary Cancer",
+   "parent": "LIVER",
+   "level": 2
+  },
+  {
+   "code": "FLC",
+   "name": "Fibrolamellar Carcinoma",
+   "tissue": "Liver",
+   "mainType": "Hepatobiliary Cancer",
+   "parent": "LIVER",
+   "level": 2
+  },
+  {
+   "code": "UESL",
+   "name": "Undifferentiated Embryonal Sarcoma of the Liver",
+   "tissue": "Liver",
+   "mainType": "Undifferentiated Embryonal Sarcoma of the Liver",
+   "parent": "LIVER",
+   "level": 2
+  },
+  {
+   "code": "SCST",
+   "name": "Sex Cord Stromal Tumor",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Sex Cord Stromal Tumor",
+   "parent": "OVARY",
+   "level": 2
+  },
+  {
+   "code": "OOVC",
+   "name": "Ovarian Cancer, Other",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Ovarian Cancer",
+   "parent": "OVARY",
+   "level": 2
+  },
+  {
+   "code": "OVT",
+   "name": "Ovarian Epithelial Tumor",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Ovarian Cancer",
+   "parent": "OVARY",
+   "level": 2
+  },
+  {
+   "code": "OGCT",
+   "name": "Ovarian Germ Cell Tumor",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Germ Cell Tumor",
+   "parent": "OVARY",
+   "level": 2
+  },
+  {
+   "code": "PGNG",
+   "name": "Paraganglioma",
+   "tissue": "Soft Tissue",
+   "mainType": "Miscellaneous Neuroepithelial Tumor",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "LM",
+   "name": "Leiomyoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Cancer",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "TGCT",
+   "name": "Tenosynovial Giant Cell Tumor Diffuse Type",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "MYXO",
+   "name": "Myxoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "ALT",
+   "name": "Atypical Lipomatous Tumor",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "MFS",
+   "name": "Myxofibrosarcoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "MGST",
+   "name": "Malignant Glomus Tumor",
+   "tissue": "Soft Tissue",
+   "mainType": "Malignant Glomus Tumor",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "PMHE",
+   "name": "Pseudomyogenic Hemangioendothelioma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "AA",
+   "name": "Aggressive Angiomyxoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "ESST",
+   "name": "Ewing Sarcoma of Soft Tissue",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "EPIS",
+   "name": "Epithelioid Sarcoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "SYNS",
+   "name": "Synovial Sarcoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "ASPS",
+   "name": "Alveolar Soft Part Sarcoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "INTS",
+   "name": "Intimal Sarcoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "MFH",
+   "name": "Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "IFS",
+   "name": "Infantile Fibrosarcoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Infantile Fibrosarcoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "LIPO",
+   "name": "Liposarcoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "SFT",
+   "name": "Solitary Fibrous Tumor/Hemangiopericytoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "RMS",
+   "name": "Rhabdomyosarcoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "GIST",
+   "name": "Gastrointestinal Stromal Tumor",
+   "tissue": "Soft Tissue",
+   "mainType": "Gastrointestinal Stromal Tumor",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "EHAE",
+   "name": "Epithelioid Hemangioendothelioma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "STMYEC",
+   "name": "Soft Tissue Myoepithelial Carcinoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "RAS",
+   "name": "Radiation-Associated Sarcoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "SARCNOS",
+   "name": "Sarcoma, NOS",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "DES",
+   "name": "Desmoid/Aggressive Fibromatosis",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "DCS",
+   "name": "Dendritic Cell Sarcoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "GS",
+   "name": "Glomangiosarcoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "CCS",
+   "name": "Clear Cell Sarcoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "LMS",
+   "name": "Leiomyosarcoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "LGFMS",
+   "name": "Low-Grade Fibromyxoid Sarcoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "AFH",
+   "name": "Angiomatoid Fibrous Histiocytoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Angiomatoid Fibrous Histiocytoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "MF",
+   "name": "Myofibroma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "IMS",
+   "name": "Myofibromatosis",
+   "tissue": "Soft Tissue",
+   "mainType": "Myofibromatosis",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "HEMA",
+   "name": "Hemangioma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "IMT",
+   "name": "Inflammatory Myofibroblastic Tumor",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "FIBS",
+   "name": "Fibrosarcoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "RCSNOS",
+   "name": "Round Cell Sarcoma, NOS",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "MPC",
+   "name": "Myopericytoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "ANGS",
+   "name": "Angiosarcoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "PECOMA",
+   "name": "Perivascular Epithelioid Cell Tumor",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "DSRCT",
+   "name": "Desmoplastic Small-Round-Cell Tumor",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "SOFT_TISSUE",
+   "level": 2
+  },
+  {
+   "code": "PBS",
+   "name": "Breast Sarcoma",
+   "tissue": "Breast",
+   "mainType": "Breast Sarcoma",
+   "parent": "BREAST",
+   "level": 2
+  },
+  {
+   "code": "BRCA",
+   "name": "Invasive Breast Carcinoma",
+   "tissue": "Breast",
+   "mainType": "Breast Cancer",
+   "parent": "BREAST",
+   "level": 2
+  },
+  {
+   "code": "LCIS",
+   "name": "Breast Lobular Carcinoma In Situ",
+   "tissue": "Breast",
+   "mainType": "Breast Cancer",
+   "parent": "BREAST",
+   "level": 2
+  },
+  {
+   "code": "JSCB",
+   "name": "Juvenile Secretory Carcinoma of the Breast",
+   "tissue": "Breast",
+   "mainType": "Breast Cancer",
+   "parent": "BREAST",
+   "level": 2
+  },
+  {
+   "code": "BFN",
+   "name": "Breast Fibroepithelial Neoplasms",
+   "tissue": "Breast",
+   "mainType": "Breast Sarcoma",
+   "parent": "BREAST",
+   "level": 2
+  },
+  {
+   "code": "BNNOS",
+   "name": "Breast Neoplasm, NOS",
+   "tissue": "Breast",
+   "mainType": "Breast Cancer",
+   "parent": "BREAST",
+   "level": 2
+  },
+  {
+   "code": "BRAME",
+   "name": "Adenomyoepithelioma of the Breast",
+   "tissue": "Breast",
+   "mainType": "Breast Cancer",
+   "parent": "BREAST",
+   "level": 2
+  },
+  {
+   "code": "DCIS",
+   "name": "Breast Ductal Carcinoma In Situ",
+   "tissue": "Breast",
+   "mainType": "Breast Cancer",
+   "parent": "BREAST",
+   "level": 2
+  },
+  {
+   "code": "IBC",
+   "name": "Inflammatory Breast Cancer",
+   "tissue": "Breast",
+   "mainType": "Breast Cancer",
+   "parent": "BREAST",
+   "level": 2
+  },
+  {
+   "code": "MBC",
+   "name": "Metaplastic Breast Cancer",
+   "tissue": "Breast",
+   "mainType": "Breast Cancer",
+   "parent": "BREAST",
+   "level": 2
+  },
+  {
+   "code": "OM",
+   "name": "Ocular Melanoma",
+   "tissue": "Eye",
+   "mainType": "Melanoma",
+   "parent": "EYE",
+   "level": 2
+  },
+  {
+   "code": "LGT",
+   "name": "Lacrimal Gland Tumor",
+   "tissue": "Eye",
+   "mainType": "Lacrimal Gland Tumor",
+   "parent": "EYE",
+   "level": 2
+  },
+  {
+   "code": "RBL",
+   "name": "Retinoblastoma",
+   "tissue": "Eye",
+   "mainType": "Retinoblastoma",
+   "parent": "EYE",
+   "level": 2
+  },
+  {
+   "code": "ADMA",
+   "name": "Adamantinoma",
+   "tissue": "Bone",
+   "mainType": "Bone Cancer",
+   "parent": "BONE",
+   "level": 2
+  },
+  {
+   "code": "GCTB",
+   "name": "Giant Cell Tumor of Bone",
+   "tissue": "Bone",
+   "mainType": "Bone Cancer",
+   "parent": "BONE",
+   "level": 2
+  },
+  {
+   "code": "ES",
+   "name": "Ewing Sarcoma",
+   "tissue": "Bone",
+   "mainType": "Bone Cancer",
+   "parent": "BONE",
+   "level": 2
+  },
+  {
+   "code": "CHS",
+   "name": "Chondrosarcoma",
+   "tissue": "Bone",
+   "mainType": "Bone Cancer",
+   "parent": "BONE",
+   "level": 2
+  },
+  {
+   "code": "CHBL",
+   "name": "Chondroblastoma",
+   "tissue": "Bone",
+   "mainType": "Bone Cancer",
+   "parent": "BONE",
+   "level": 2
+  },
+  {
+   "code": "CHDM",
+   "name": "Chordoma",
+   "tissue": "Bone",
+   "mainType": "Bone Cancer",
+   "parent": "BONE",
+   "level": 2
+  },
+  {
+   "code": "OS",
+   "name": "Osteosarcoma",
+   "tissue": "Bone",
+   "mainType": "Bone Cancer",
+   "parent": "BONE",
+   "level": 2
+  },
+  {
+   "code": "ACA",
+   "name": "Adrenocortical Adenoma",
+   "tissue": "Adrenal Gland",
+   "mainType": "Adrenocortical Adenoma",
+   "parent": "ADRENAL_GLAND",
+   "level": 2
+  },
+  {
+   "code": "ACC",
+   "name": "Adrenocortical Carcinoma",
+   "tissue": "Adrenal Gland",
+   "mainType": "Adrenocortical Carcinoma",
+   "parent": "ADRENAL_GLAND",
+   "level": 2
+  },
+  {
+   "code": "PHC",
+   "name": "Pheochromocytoma",
+   "tissue": "Adrenal Gland",
+   "mainType": "Pheochromocytoma",
+   "parent": "ADRENAL_GLAND",
+   "level": 2
+  },
+  {
+   "code": "USARC",
+   "name": "Uterine Sarcoma/Mesenchymal",
+   "tissue": "Uterus",
+   "mainType": "Uterine Sarcoma",
+   "parent": "UTERUS",
+   "level": 2
+  },
+  {
+   "code": "OUTT",
+   "name": "Other Uterine Tumor",
+   "tissue": "Uterus",
+   "mainType": "Endometrial Cancer",
+   "parent": "UTERUS",
+   "level": 2
+  },
+  {
+   "code": "UCEC",
+   "name": "Endometrial Carcinoma",
+   "tissue": "Uterus",
+   "mainType": "Endometrial Cancer",
+   "parent": "UTERUS",
+   "level": 2
+  },
+  {
+   "code": "GTD",
+   "name": "Gestational Trophoblastic Disease",
+   "tissue": "Uterus",
+   "mainType": "Gestational Trophoblastic Disease",
+   "parent": "UTERUS",
+   "level": 2
+  },
+  {
+   "code": "RNET",
+   "name": "Renal Neuroendocrine Tumor",
+   "tissue": "Kidney",
+   "mainType": "Renal Neuroendocrine Tumor",
+   "parent": "KIDNEY",
+   "level": 2
+  },
+  {
+   "code": "MRT",
+   "name": "Rhabdoid Cancer",
+   "tissue": "Kidney",
+   "mainType": "Rhabdoid Cancer",
+   "parent": "KIDNEY",
+   "level": 2
+  },
+  {
+   "code": "CCSK",
+   "name": "Clear Cell Sarcoma of Kidney",
+   "tissue": "Kidney",
+   "mainType": "Clear Cell Sarcoma of Kidney",
+   "parent": "KIDNEY",
+   "level": 2
+  },
+  {
+   "code": "RCC",
+   "name": "Renal Cell Carcinoma",
+   "tissue": "Kidney",
+   "mainType": "Renal Cell Carcinoma",
+   "parent": "KIDNEY",
+   "level": 2
+  },
+  {
+   "code": "WT",
+   "name": "Wilms' Tumor",
+   "tissue": "Kidney",
+   "mainType": "Wilms Tumor",
+   "parent": "KIDNEY",
+   "level": 2
+  },
+  {
+   "code": "LNM",
+   "name": "Lymphoid Neoplasm",
+   "tissue": "Lymphoid",
+   "mainType": "Lymphatic Cancer, NOS",
+   "parent": "LYMPH",
+   "level": 2
+  },
+  {
+   "code": "LATL",
+   "name": "Lymphoid Atypical",
+   "tissue": "Lymphoid",
+   "mainType": "Lymphatic Cancer, NOS",
+   "parent": "LYMPH",
+   "level": 2
+  },
+  {
+   "code": "LBGN",
+   "name": "Lymphoid Benign",
+   "tissue": "Lymphoid",
+   "mainType": "Lymphatic Cancer, NOS",
+   "parent": "LYMPH",
+   "level": 2
+  },
+  {
+   "code": "PLMESO",
+   "name": "Pleural Mesothelioma",
+   "tissue": "Pleura",
+   "mainType": "Mesothelioma",
+   "parent": "PLEURA",
+   "level": 2
+  },
+  {
+   "code": "TET",
+   "name": "Thymic Epithelial Tumor",
+   "tissue": "Thymus",
+   "mainType": "Thymic Tumor",
+   "parent": "THYMUS",
+   "level": 2
+  },
+  {
+   "code": "TNET",
+   "name": "Thymic Neuroendocrine Tumor",
+   "tissue": "Thymus",
+   "mainType": "Thymic Tumor",
+   "parent": "THYMUS",
+   "level": 2
+  },
+  {
+   "code": "LAIS",
+   "name": "Lung Adenocarcinoma In Situ",
+   "tissue": "Lung",
+   "mainType": "Non-Small Cell Lung Cancer",
+   "parent": "LUNG",
+   "level": 2
+  },
+  {
+   "code": "CSCLC",
+   "name": "Combined Small Cell Lung Carcinoma",
+   "tissue": "Lung",
+   "mainType": "Small Cell Lung Cancer",
+   "parent": "LUNG",
+   "level": 2
+  },
+  {
+   "code": "SARCL",
+   "name": "Sarcomatoid Carcinoma of the Lung",
+   "tissue": "Lung",
+   "mainType": "Non-Small Cell Lung Cancer",
+   "parent": "LUNG",
+   "level": 2
+  },
+  {
+   "code": "IMTL",
+   "name": "Inflammatory Myofibroblastic Lung Tumor",
+   "tissue": "Lung",
+   "mainType": "Non-Small Cell Lung Cancer",
+   "parent": "LUNG",
+   "level": 2
+  },
+  {
+   "code": "LNET",
+   "name": "Lung Neuroendocrine Tumor",
+   "tissue": "Lung",
+   "mainType": "Non-Small Cell Lung Cancer",
+   "parent": "LUNG",
+   "level": 2
+  },
+  {
+   "code": "PPB",
+   "name": "Pleuropulmonary Blastoma",
+   "tissue": "Lung",
+   "mainType": "Non-Small Cell Lung Cancer",
+   "parent": "LUNG",
+   "level": 2
+  },
+  {
+   "code": "NSCLC",
+   "name": "Non-Small Cell Lung Cancer",
+   "tissue": "Lung",
+   "mainType": "Non-Small Cell Lung Cancer",
+   "parent": "LUNG",
+   "level": 2
+  },
+  {
+   "code": "LAM",
+   "name": "Pulmonary Lymphangiomyomatosis",
+   "tissue": "Lung",
+   "mainType": "Non-Small Cell Lung Cancer",
+   "parent": "LUNG",
+   "level": 2
+  },
+  {
+   "code": "TLYM",
+   "name": "Testicular Lymphoma",
+   "tissue": "Testis",
+   "mainType": "Non-Hodgkin Lymphoma",
+   "parent": "TESTIS",
+   "level": 2
+  },
+  {
+   "code": "NSGCT",
+   "name": "Non-Seminomatous Germ Cell Tumor",
+   "tissue": "Testis",
+   "mainType": "Germ Cell Tumor",
+   "parent": "TESTIS",
+   "level": 2
+  },
+  {
+   "code": "SEM",
+   "name": "Seminoma",
+   "tissue": "Testis",
+   "mainType": "Germ Cell Tumor",
+   "parent": "TESTIS",
+   "level": 2
+  },
+  {
+   "code": "TSCST",
+   "name": "Sex Cord Stromal Tumor",
+   "tissue": "Testis",
+   "mainType": "Sex Cord Stromal Tumor",
+   "parent": "TESTIS",
+   "level": 2
+  },
+  {
+   "code": "TMESO",
+   "name": "Testicular Mesothelioma",
+   "tissue": "Testis",
+   "mainType": "Mesothelioma",
+   "parent": "TESTIS",
+   "level": 2
+  },
+  {
+   "code": "EPDCA",
+   "name": "Esophageal Poorly Differentiated Carcinoma",
+   "tissue": "Esophagus/Stomach",
+   "mainType": "Esophagogastric Cancer",
+   "parent": "STOMACH",
+   "level": 2
+  },
+  {
+   "code": "GINETES",
+   "name": "Gastrointestinal Neuroendocrine Tumors of the Esophagus/Stomach",
+   "tissue": "Esophagus/Stomach",
+   "mainType": "Esophagogastric Cancer",
+   "parent": "STOMACH",
+   "level": 2
+  },
+  {
+   "code": "ESCC",
+   "name": "Esophageal Squamous Cell Carcinoma",
+   "tissue": "Esophagus/Stomach",
+   "mainType": "Esophagogastric Cancer",
+   "parent": "STOMACH",
+   "level": 2
+  },
+  {
+   "code": "ESMM",
+   "name": "Mucosal Melanoma of the Esophagus",
+   "tissue": "Esophagus/Stomach",
+   "mainType": "Melanoma",
+   "parent": "STOMACH",
+   "level": 2
+  },
+  {
+   "code": "EGC",
+   "name": "Esophagogastric Adenocarcinoma",
+   "tissue": "Esophagus/Stomach",
+   "mainType": "Esophagogastric Cancer",
+   "parent": "STOMACH",
+   "level": 2
+  },
+  {
+   "code": "SMN",
+   "name": "Smooth Muscle Neoplasm, NOS",
+   "tissue": "Esophagus/Stomach",
+   "mainType": "Esophagogastric Cancer",
+   "parent": "STOMACH",
+   "level": 2
+  },
+  {
+   "code": "PAMPCA",
+   "name": "Pancreatobiliary Ampullary Carcinoma",
+   "tissue": "Ampulla of Vater",
+   "mainType": "Ampullary Cancer",
+   "parent": "AMPCA",
+   "level": 3
+  },
+  {
+   "code": "IAMPCA",
+   "name": "Intestinal Ampullary Carcinoma",
+   "tissue": "Ampulla of Vater",
+   "mainType": "Ampullary Cancer",
+   "parent": "AMPCA",
+   "level": 3
+  },
+  {
+   "code": "MAMPCA",
+   "name": "Mixed Ampullary Carcinoma",
+   "tissue": "Ampulla of Vater",
+   "mainType": "Ampullary Cancer",
+   "parent": "AMPCA",
+   "level": 3
+  },
+  {
+   "code": "VPSCC",
+   "name": "Verrucous Penile Squamous Cell Carcinoma",
+   "tissue": "Penis",
+   "mainType": "Penile Cancer",
+   "parent": "PSCC",
+   "level": 3
+  },
+  {
+   "code": "WPSCC",
+   "name": "Warty Penile Squamous Cell Carcinoma",
+   "tissue": "Penis",
+   "mainType": "Penile Cancer",
+   "parent": "PSCC",
+   "level": 3
+  },
+  {
+   "code": "BPSCC",
+   "name": "Basaloid Penile Squamous Cell Carcinoma",
+   "tissue": "Penis",
+   "mainType": "Penile Cancer",
+   "parent": "PSCC",
+   "level": 3
+  },
+  {
+   "code": "VDYS",
+   "name": "Dysgerminoma",
+   "tissue": "Vulva/Vagina",
+   "mainType": "Germ Cell Tumor",
+   "parent": "VGCT",
+   "level": 3
+  },
+  {
+   "code": "VIMT",
+   "name": "Immature Teratoma",
+   "tissue": "Vulva/Vagina",
+   "mainType": "Germ Cell Tumor",
+   "parent": "VGCT",
+   "level": 3
+  },
+  {
+   "code": "VPE",
+   "name": "Polyembryoma",
+   "tissue": "Vulva/Vagina",
+   "mainType": "Germ Cell Tumor",
+   "parent": "VGCT",
+   "level": 3
+  },
+  {
+   "code": "VYST",
+   "name": "Yolk Sac Tumor",
+   "tissue": "Vulva/Vagina",
+   "mainType": "Germ Cell Tumor",
+   "parent": "VGCT",
+   "level": 3
+  },
+  {
+   "code": "VMT",
+   "name": "Mature Teratoma",
+   "tissue": "Vulva/Vagina",
+   "mainType": "Germ Cell Tumor",
+   "parent": "VGCT",
+   "level": 3
+  },
+  {
+   "code": "VMGCT",
+   "name": "Mixed Germ Cell Tumor",
+   "tissue": "Vulva/Vagina",
+   "mainType": "Germ Cell Tumor",
+   "parent": "VGCT",
+   "level": 3
+  },
+  {
+   "code": "VOEC",
+   "name": "Embryonal Carcinoma",
+   "tissue": "Vulva/Vagina",
+   "mainType": "Germ Cell Tumor",
+   "parent": "VGCT",
+   "level": 3
+  },
+  {
+   "code": "PTHC",
+   "name": "Parathyroid Carcinoma",
+   "tissue": "Head and Neck",
+   "mainType": "Parathyroid Cancer",
+   "parent": "PTH",
+   "level": 3
+  },
+  {
+   "code": "OCSC",
+   "name": "Oral Cavity Squamous Cell Carcinoma",
+   "tissue": "Head and Neck",
+   "mainType": "Head and Neck Cancer",
+   "parent": "HNSC",
+   "level": 3
+  },
+  {
+   "code": "OPHSC",
+   "name": "Oropharynx Squamous Cell Carcinoma",
+   "tissue": "Head and Neck",
+   "mainType": "Head and Neck Cancer",
+   "parent": "HNSC",
+   "level": 3
+  },
+  {
+   "code": "HPHSC",
+   "name": "Hypopharynx Squamous Cell Carcinoma",
+   "tissue": "Head and Neck",
+   "mainType": "Head and Neck Cancer",
+   "parent": "HNSC",
+   "level": 3
+  },
+  {
+   "code": "SNSC",
+   "name": "Sinonasal Squamous Cell Carcinoma",
+   "tissue": "Head and Neck",
+   "mainType": "Head and Neck Cancer",
+   "parent": "HNSC",
+   "level": 3
+  },
+  {
+   "code": "LXSC",
+   "name": "Larynx Squamous Cell Carcinoma",
+   "tissue": "Head and Neck",
+   "mainType": "Head and Neck Cancer",
+   "parent": "HNSC",
+   "level": 3
+  },
+  {
+   "code": "HNSCUP",
+   "name": "Head and Neck Squamous Cell Carcinoma of Unknown Primary",
+   "tissue": "Head and Neck",
+   "mainType": "Head and Neck Cancer",
+   "parent": "HNSC",
+   "level": 3
+  },
+  {
+   "code": "EMYOCA",
+   "name": "Epithelial-Myoepithelial Carcinoma",
+   "tissue": "Head and Neck",
+   "mainType": "Head and Neck Cancer",
+   "parent": "OHNCA",
+   "level": 3
+  },
+  {
+   "code": "HNNE",
+   "name": "Head and Neck Neuroendocrine Carcinoma",
+   "tissue": "Head and Neck",
+   "mainType": "Head and Neck Cancer",
+   "parent": "OHNCA",
+   "level": 3
+  },
+  {
+   "code": "ASCT",
+   "name": "Adenosquamous Carcinoma of the Tongue",
+   "tissue": "Head and Neck",
+   "mainType": "Head and Neck Cancer",
+   "parent": "OHNCA",
+   "level": 3
+  },
+  {
+   "code": "SNUC",
+   "name": "Sinonasal Undifferentiated Carcinoma",
+   "tissue": "Head and Neck",
+   "mainType": "Head and Neck Cancer",
+   "parent": "OHNCA",
+   "level": 3
+  },
+  {
+   "code": "ODGC",
+   "name": "Odontogenic Carcinoma",
+   "tissue": "Head and Neck",
+   "mainType": "Head and Neck Cancer",
+   "parent": "OHNCA",
+   "level": 3
+  },
+  {
+   "code": "NMCHN",
+   "name": "NUT Midline Carcinoma of the Head and Neck",
+   "tissue": "Head and Neck",
+   "mainType": "Head and Neck Cancer",
+   "parent": "OHNCA",
+   "level": 3
+  },
+  {
+   "code": "SNA",
+   "name": "Sinonasal Adenocarcinoma",
+   "tissue": "Head and Neck",
+   "mainType": "Head and Neck Cancer",
+   "parent": "OHNCA",
+   "level": 3
+  },
+  {
+   "code": "ACCC",
+   "name": "Acinic Cell Carcinoma",
+   "tissue": "Head and Neck",
+   "mainType": "Salivary Gland Cancer",
+   "parent": "SACA",
+   "level": 3
+  },
+  {
+   "code": "HNMASC",
+   "name": "Mammary Analogue Secretory Carcinoma of Salivary Gland Origin",
+   "tissue": "Head and Neck",
+   "mainType": "Salivary Gland Cancer",
+   "parent": "SACA",
+   "level": 3
+  },
+  {
+   "code": "CAEXPA",
+   "name": "Carcinoma ex Pleomorphic Adenoma",
+   "tissue": "Head and Neck",
+   "mainType": "Salivary Gland Cancer",
+   "parent": "SACA",
+   "level": 3
+  },
+  {
+   "code": "SAAD",
+   "name": "Salivary Adenocarcinoma",
+   "tissue": "Head and Neck",
+   "mainType": "Salivary Gland Cancer",
+   "parent": "SACA",
+   "level": 3
+  },
+  {
+   "code": "SGO",
+   "name": "Salivary Gland Oncocytoma",
+   "tissue": "Head and Neck",
+   "mainType": "Salivary Gland Cancer",
+   "parent": "SACA",
+   "level": 3
+  },
+  {
+   "code": "BCAC",
+   "name": "Basal Cell Adenocarcinoma",
+   "tissue": "Head and Neck",
+   "mainType": "Salivary Gland Cancer",
+   "parent": "SACA",
+   "level": 3
+  },
+  {
+   "code": "OSACA",
+   "name": "Salivary Carcinoma, Other",
+   "tissue": "Head and Neck",
+   "mainType": "Salivary Gland Cancer",
+   "parent": "SACA",
+   "level": 3
+  },
+  {
+   "code": "SDCA",
+   "name": "Salivary Duct Carcinoma",
+   "tissue": "Head and Neck",
+   "mainType": "Salivary Gland Cancer",
+   "parent": "SACA",
+   "level": 3
+  },
+  {
+   "code": "PADA",
+   "name": "Pleomorphic Adenoma",
+   "tissue": "Head and Neck",
+   "mainType": "Salivary Gland Cancer",
+   "parent": "SACA",
+   "level": 3
+  },
+  {
+   "code": "MUCC",
+   "name": "Mucoepidermoid Carcinoma",
+   "tissue": "Head and Neck",
+   "mainType": "Salivary Gland Cancer",
+   "parent": "SACA",
+   "level": 3
+  },
+  {
+   "code": "MYEC",
+   "name": "Myoepithelial Carcinoma",
+   "tissue": "Head and Neck",
+   "mainType": "Salivary Gland Cancer",
+   "parent": "SACA",
+   "level": 3
+  },
+  {
+   "code": "ACYC",
+   "name": "Adenoid Cystic Carcinoma",
+   "tissue": "Head and Neck",
+   "mainType": "Salivary Gland Cancer",
+   "parent": "SACA",
+   "level": 3
+  },
+  {
+   "code": "PAC",
+   "name": "Polymorphous Adenocarcinoma",
+   "tissue": "Head and Neck",
+   "mainType": "Salivary Gland Cancer",
+   "parent": "SACA",
+   "level": 3
+  },
+  {
+   "code": "RWDNET",
+   "name": "Well-Differentiated Neuroendocrine Tumor of the Rectum",
+   "tissue": "Bowel",
+   "mainType": "Gastrointestinal Neuroendocrine Tumor",
+   "parent": "GINET",
+   "level": 3
+  },
+  {
+   "code": "AWDNET",
+   "name": "Well-Differentiated Neuroendocrine Tumor of the Appendix",
+   "tissue": "Bowel",
+   "mainType": "Gastrointestinal Neuroendocrine Tumor",
+   "parent": "GINET",
+   "level": 3
+  },
+  {
+   "code": "HGNEC",
+   "name": "High-Grade Neuroendocrine Carcinoma of the Colon and Rectum",
+   "tissue": "Bowel",
+   "mainType": "Gastrointestinal Neuroendocrine Tumor",
+   "parent": "GINET",
+   "level": 3
+  },
+  {
+   "code": "SBWDNET",
+   "name": "Small Bowel Well-Differentiated Neuroendocrine Tumor",
+   "tissue": "Bowel",
+   "mainType": "Gastrointestinal Neuroendocrine Tumor",
+   "parent": "GINET",
+   "level": 3
+  },
+  {
+   "code": "SRAP",
+   "name": "Signet Ring Cell Type of the Appendix",
+   "tissue": "Bowel",
+   "mainType": "Appendiceal Cancer",
+   "parent": "APAD",
+   "level": 3
+  },
+  {
+   "code": "GCCAP",
+   "name": "Goblet Cell Adenocarcinoma of the Appendix",
+   "tissue": "Bowel",
+   "mainType": "Appendiceal Cancer",
+   "parent": "APAD",
+   "level": 3
+  },
+  {
+   "code": "MAAP",
+   "name": "Mucinous Adenocarcinoma of the Appendix",
+   "tissue": "Bowel",
+   "mainType": "Appendiceal Cancer",
+   "parent": "APAD",
+   "level": 3
+  },
+  {
+   "code": "CTAAP",
+   "name": "Colonic Type Adenocarcinoma of the Appendix",
+   "tissue": "Bowel",
+   "mainType": "Appendiceal Cancer",
+   "parent": "APAD",
+   "level": 3
+  },
+  {
+   "code": "READ",
+   "name": "Rectal Adenocarcinoma",
+   "tissue": "Bowel",
+   "mainType": "Colorectal Cancer",
+   "parent": "COADREAD",
+   "level": 3
+  },
+  {
+   "code": "MACR",
+   "name": "Mucinous Adenocarcinoma of the Colon and Rectum",
+   "tissue": "Bowel",
+   "mainType": "Colorectal Cancer",
+   "parent": "COADREAD",
+   "level": 3
+  },
+  {
+   "code": "COAD",
+   "name": "Colon Adenocarcinoma",
+   "tissue": "Bowel",
+   "mainType": "Colorectal Cancer",
+   "parent": "COADREAD",
+   "level": 3
+  },
+  {
+   "code": "SRCCR",
+   "name": "Signet Ring Cell Adenocarcinoma of the Colon and Rectum",
+   "tissue": "Bowel",
+   "mainType": "Colorectal Cancer",
+   "parent": "COADREAD",
+   "level": 3
+  },
+  {
+   "code": "CAIS",
+   "name": "Colon Adenocarcinoma In Situ",
+   "tissue": "Bowel",
+   "mainType": "Colorectal Cancer",
+   "parent": "COADREAD",
+   "level": 3
+  },
+  {
+   "code": "DA",
+   "name": "Duodenal Adenocarcinoma",
+   "tissue": "Bowel",
+   "mainType": "Small Bowel Cancer",
+   "parent": "SBC",
+   "level": 3
+  },
+  {
+   "code": "ACN",
+   "name": "Acinar Cell Carcinoma, NOS",
+   "tissue": "Other",
+   "mainType": "Cancer of Unknown Primary",
+   "parent": "CUP",
+   "level": 3
+  },
+  {
+   "code": "SCUP",
+   "name": "Small Cell Carcinoma of Unknown Primary",
+   "tissue": "Other",
+   "mainType": "Cancer of Unknown Primary",
+   "parent": "CUP",
+   "level": 3
+  },
+  {
+   "code": "PDC",
+   "name": "Poorly Differentiated Carcinoma, NOS",
+   "tissue": "Other",
+   "mainType": "Cancer of Unknown Primary",
+   "parent": "CUP",
+   "level": 3
+  },
+  {
+   "code": "UDMN",
+   "name": "Undifferentiated Malignant Neoplasm",
+   "tissue": "Other",
+   "mainType": "Cancer of Unknown Primary",
+   "parent": "CUP",
+   "level": 3
+  },
+  {
+   "code": "NETNOS",
+   "name": "Neuroendocrine Tumor, NOS",
+   "tissue": "Other",
+   "mainType": "Cancer of Unknown Primary",
+   "parent": "CUP",
+   "level": 3
+  },
+  {
+   "code": "CUPNOS",
+   "name": "Cancer of Unknown Primary, NOS",
+   "tissue": "Other",
+   "mainType": "Cancer of Unknown Primary",
+   "parent": "CUP",
+   "level": 3
+  },
+  {
+   "code": "SCCNOS",
+   "name": "Squamous Cell Carcinoma, NOS",
+   "tissue": "Other",
+   "mainType": "Cancer of Unknown Primary",
+   "parent": "CUP",
+   "level": 3
+  },
+  {
+   "code": "NECNOS",
+   "name": "Neuroendocrine Carcinoma, NOS",
+   "tissue": "Other",
+   "mainType": "Cancer of Unknown Primary",
+   "parent": "CUP",
+   "level": 3
+  },
+  {
+   "code": "ADNOS",
+   "name": "Adenocarcinoma, NOS",
+   "tissue": "Other",
+   "mainType": "Cancer of Unknown Primary",
+   "parent": "CUP",
+   "level": 3
+  },
+  {
+   "code": "MCD",
+   "name": "Mastocytosis",
+   "tissue": "Myeloid",
+   "mainType": "Mastocytosis",
+   "parent": "MNM",
+   "level": 3
+  },
+  {
+   "code": "MDS",
+   "name": "Myelodysplastic Syndromes",
+   "tissue": "Myeloid",
+   "mainType": "Myelodysplastic Syndromes",
+   "parent": "MNM",
+   "level": 3
+  },
+  {
+   "code": "MDSWP",
+   "name": "Myelodysplastic Workup",
+   "tissue": "Myeloid",
+   "mainType": "Myelodysplastic Workup",
+   "parent": "MNM",
+   "level": 3
+  },
+  {
+   "code": "MDS/MPN",
+   "name": "Myelodysplastic/Myeloproliferative Neoplasms",
+   "tissue": "Myeloid",
+   "mainType": "Myelodysplastic/Myeloproliferative Neoplasms",
+   "parent": "MNM",
+   "level": 3
+  },
+  {
+   "code": "MPN",
+   "name": "Myeloproliferative Neoplasms",
+   "tissue": "Myeloid",
+   "mainType": "Myeloproliferative Neoplasms",
+   "parent": "MNM",
+   "level": 3
+  },
+  {
+   "code": "NVRINT",
+   "name": "Neoplastic Vs Reactive",
+   "tissue": "Myeloid",
+   "mainType": "Neoplastic Vs Reactive",
+   "parent": "MNM",
+   "level": 3
+  },
+  {
+   "code": "MLNER",
+   "name": "Myeloid/Lymphoid Neoplasms with Eosinophilia and Rearrangement of  PDGFRA/PDGFRB or FGFR1 or with PCM1-JAK2",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "MNM",
+   "level": 3
+  },
+  {
+   "code": "AML",
+   "name": "Acute Myeloid Leukemia",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "MNM",
+   "level": 3
+  },
+  {
+   "code": "HDCN",
+   "name": "Histiocytic and Dendritic Cell Neoplasms",
+   "tissue": "Myeloid",
+   "mainType": "Histiocytosis",
+   "parent": "MNM",
+   "level": 3
+  },
+  {
+   "code": "MPNWP",
+   "name": "Myeloproliferative Workup",
+   "tissue": "Myeloid",
+   "mainType": "Myeloproliferative Workup",
+   "parent": "MNM",
+   "level": 3
+  },
+  {
+   "code": "BPDCN",
+   "name": "Blastic Plasmacytoid Dendritic Cell Neoplasm",
+   "tissue": "Myeloid",
+   "mainType": "Blastic Plasmacytoid Dendritic Cell Neoplasm",
+   "parent": "MNM",
+   "level": 3
+  },
+  {
+   "code": "ALAL",
+   "name": "Acute Leukemias of Ambiguous Lineage",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "MNM",
+   "level": 3
+  },
+  {
+   "code": "MNGLP",
+   "name": "Myeloid Neoplasms with Germ Line Predisposition",
+   "tissue": "Myeloid",
+   "mainType": "Myeloid Neoplasms with Germ Line Predisposition",
+   "parent": "MNM",
+   "level": 3
+  },
+  {
+   "code": "SKCN",
+   "name": "Congenital Nevus",
+   "tissue": "Skin",
+   "mainType": "Melanoma",
+   "parent": "MEL",
+   "level": 3
+  },
+  {
+   "code": "SPZM",
+   "name": "Spitzoid Melanoma",
+   "tissue": "Skin",
+   "mainType": "Melanoma",
+   "parent": "MEL",
+   "level": 3
+  },
+  {
+   "code": "MUP",
+   "name": "Melanoma of Unknown Primary",
+   "tissue": "Skin",
+   "mainType": "Melanoma",
+   "parent": "MEL",
+   "level": 3
+  },
+  {
+   "code": "SKLMM",
+   "name": "Lentigo Maligna Melanoma",
+   "tissue": "Skin",
+   "mainType": "Melanoma",
+   "parent": "MEL",
+   "level": 3
+  },
+  {
+   "code": "ACRM",
+   "name": "Acral Melanoma",
+   "tissue": "Skin",
+   "mainType": "Melanoma",
+   "parent": "MEL",
+   "level": 3
+  },
+  {
+   "code": "SKCM",
+   "name": "Cutaneous Melanoma",
+   "tissue": "Skin",
+   "mainType": "Melanoma",
+   "parent": "MEL",
+   "level": 3
+  },
+  {
+   "code": "DESM",
+   "name": "Desmoplastic Melanoma",
+   "tissue": "Skin",
+   "mainType": "Melanoma",
+   "parent": "MEL",
+   "level": 3
+  },
+  {
+   "code": "THPA",
+   "name": "Papillary Thyroid Cancer",
+   "tissue": "Thyroid",
+   "mainType": "Thyroid Cancer",
+   "parent": "WDTC",
+   "level": 3
+  },
+  {
+   "code": "THFO",
+   "name": "Follicular Thyroid Cancer",
+   "tissue": "Thyroid",
+   "mainType": "Thyroid Cancer",
+   "parent": "WDTC",
+   "level": 3
+  },
+  {
+   "code": "USCC",
+   "name": "Urethral Squamous Cell Carcinoma",
+   "tissue": "Bladder/Urinary Tract",
+   "mainType": "Bladder Cancer",
+   "parent": "UCA",
+   "level": 3
+  },
+  {
+   "code": "UAD",
+   "name": "Urethral Adenocarcinoma",
+   "tissue": "Bladder/Urinary Tract",
+   "mainType": "Bladder Cancer",
+   "parent": "UCA",
+   "level": 3
+  },
+  {
+   "code": "UCU",
+   "name": "Urethral Urothelial Carcinoma",
+   "tissue": "Bladder/Urinary Tract",
+   "mainType": "Bladder Cancer",
+   "parent": "UCA",
+   "level": 3
+  },
+  {
+   "code": "UA",
+   "name": "Urachal Adenocarcinoma",
+   "tissue": "Bladder/Urinary Tract",
+   "mainType": "Bladder Cancer",
+   "parent": "URCA",
+   "level": 3
+  },
+  {
+   "code": "SFTCNS",
+   "name": "Solitary Fibrous Tumor of the Central Nervous System",
+   "tissue": "CNS/Brain",
+   "mainType": "CNS Cancer",
+   "parent": "MNGT",
+   "level": 3
+  },
+  {
+   "code": "RHM",
+   "name": "Rhabdoid Meningioma",
+   "tissue": "CNS/Brain",
+   "mainType": "CNS Cancer",
+   "parent": "MNGT",
+   "level": 3
+  },
+  {
+   "code": "MNG",
+   "name": "Meningioma",
+   "tissue": "CNS/Brain",
+   "mainType": "CNS Cancer",
+   "parent": "MNGT",
+   "level": 3
+  },
+  {
+   "code": "ATM",
+   "name": "Atypical Meningioma",
+   "tissue": "CNS/Brain",
+   "mainType": "CNS Cancer",
+   "parent": "MNGT",
+   "level": 3
+  },
+  {
+   "code": "CCM",
+   "name": "Clear cell Meningioma",
+   "tissue": "CNS/Brain",
+   "mainType": "CNS Cancer",
+   "parent": "MNGT",
+   "level": 3
+  },
+  {
+   "code": "CHOM",
+   "name": "Chordoid Meningioma",
+   "tissue": "CNS/Brain",
+   "mainType": "CNS Cancer",
+   "parent": "MNGT",
+   "level": 3
+  },
+  {
+   "code": "PPM",
+   "name": "Papillary Meningioma",
+   "tissue": "CNS/Brain",
+   "mainType": "CNS Cancer",
+   "parent": "MNGT",
+   "level": 3
+  },
+  {
+   "code": "ANM",
+   "name": "Anaplastic Meningioma",
+   "tissue": "CNS/Brain",
+   "mainType": "CNS Cancer",
+   "parent": "MNGT",
+   "level": 3
+  },
+  {
+   "code": "HPCCNS",
+   "name": "Hemangiopericytoma of the Central Nervous System",
+   "tissue": "CNS/Brain",
+   "mainType": "CNS Cancer",
+   "parent": "MNGT",
+   "level": 3
+  },
+  {
+   "code": "MMB",
+   "name": "Medullomyoblastoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Embryonal Tumor",
+   "parent": "EMBT",
+   "level": 3
+  },
+  {
+   "code": "PNET",
+   "name": "Primitive Neuroectodermal Tumor",
+   "tissue": "CNS/Brain",
+   "mainType": "Embryonal Tumor",
+   "parent": "EMBT",
+   "level": 3
+  },
+  {
+   "code": "AMBL",
+   "name": "Large Cell/Anaplastic Medulloblastoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Embryonal Tumor",
+   "parent": "EMBT",
+   "level": 3
+  },
+  {
+   "code": "MBEN",
+   "name": "Medulloblastoma with Extensive Nodularity",
+   "tissue": "CNS/Brain",
+   "mainType": "Embryonal Tumor",
+   "parent": "EMBT",
+   "level": 3
+  },
+  {
+   "code": "ATRT",
+   "name": "Atypical Teratoid/Rhabdoid Tumor",
+   "tissue": "CNS/Brain",
+   "mainType": "Embryonal Tumor",
+   "parent": "EMBT",
+   "level": 3
+  },
+  {
+   "code": "ONBL",
+   "name": "Olfactory Neuroblastoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Embryonal Tumor",
+   "parent": "EMBT",
+   "level": 3
+  },
+  {
+   "code": "MMBL",
+   "name": "Melanotic Medulloblastoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Embryonal Tumor",
+   "parent": "EMBT",
+   "level": 3
+  },
+  {
+   "code": "DMBL",
+   "name": "Desmoplastic/Nodular Medulloblastoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Embryonal Tumor",
+   "parent": "EMBT",
+   "level": 3
+  },
+  {
+   "code": "MDEP",
+   "name": "Medulloepithelioma",
+   "tissue": "CNS/Brain",
+   "mainType": "Embryonal Tumor",
+   "parent": "EMBT",
+   "level": 3
+  },
+  {
+   "code": "MBL",
+   "name": "Medulloblastoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Embryonal Tumor",
+   "parent": "EMBT",
+   "level": 3
+  },
+  {
+   "code": "ETANTR",
+   "name": "Embryonal Tumor with Abundant Neuropil and True Rosettes",
+   "tissue": "CNS/Brain",
+   "mainType": "Embryonal Tumor",
+   "parent": "EMBT",
+   "level": 3
+  },
+  {
+   "code": "PBT",
+   "name": "Primary Brain Tumor",
+   "tissue": "CNS/Brain",
+   "mainType": "Miscellaneous Brain Tumor",
+   "parent": "MBT",
+   "level": 3
+  },
+  {
+   "code": "PRNET",
+   "name": "Primary Neuroepithelial Tumor",
+   "tissue": "CNS/Brain",
+   "mainType": "Miscellaneous Brain Tumor",
+   "parent": "MBT",
+   "level": 3
+  },
+  {
+   "code": "HGNET",
+   "name": "High-Grade Neuroepithelial Tumor",
+   "tissue": "CNS/Brain",
+   "mainType": "Miscellaneous Brain Tumor",
+   "parent": "MBT",
+   "level": 3
+  },
+  {
+   "code": "MCHSCNS",
+   "name": "Mesenchymal Chondrosarcoma of the CNS",
+   "tissue": "CNS/Brain",
+   "mainType": "Miscellaneous Brain Tumor",
+   "parent": "MBT",
+   "level": 3
+  },
+  {
+   "code": "MLYM",
+   "name": "Malignant Lymphoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Miscellaneous Brain Tumor",
+   "parent": "MBT",
+   "level": 3
+  },
+  {
+   "code": "MT",
+   "name": "Malignant Tumor",
+   "tissue": "CNS/Brain",
+   "mainType": "Miscellaneous Brain Tumor",
+   "parent": "MBT",
+   "level": 3
+  },
+  {
+   "code": "HMBL",
+   "name": "Hemangioblastoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Miscellaneous Brain Tumor",
+   "parent": "MBT",
+   "level": 3
+  },
+  {
+   "code": "EPM",
+   "name": "Ependymoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Glioma",
+   "parent": "EPMT",
+   "level": 3
+  },
+  {
+   "code": "CCE",
+   "name": "Clear Cell Ependymoma",
+   "tissue": "CNS/Brain",
+   "mainType": "CNS Cancer",
+   "parent": "EPMT",
+   "level": 3
+  },
+  {
+   "code": "APE",
+   "name": "Anaplastic Ependymoma",
+   "tissue": "CNS/Brain",
+   "mainType": "CNS Cancer",
+   "parent": "EPMT",
+   "level": 3
+  },
+  {
+   "code": "SUBE",
+   "name": "Subependymoma",
+   "tissue": "CNS/Brain",
+   "mainType": "CNS Cancer",
+   "parent": "EPMT",
+   "level": 3
+  },
+  {
+   "code": "MPE",
+   "name": "Myxopapillary Ependymoma",
+   "tissue": "CNS/Brain",
+   "mainType": "CNS Cancer",
+   "parent": "EPMT",
+   "level": 3
+  },
+  {
+   "code": "LDD",
+   "name": "Dysplastic Gangliocytoma of the Cerebellum/Lhermitte-Duclos Disease",
+   "tissue": "CNS/Brain",
+   "mainType": "Miscellaneous Neuroepithelial Tumor",
+   "parent": "MNET",
+   "level": 3
+  },
+  {
+   "code": "ASTB",
+   "name": "Astroblastoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Miscellaneous Neuroepithelial Tumor",
+   "parent": "MNET",
+   "level": 3
+  },
+  {
+   "code": "DIG",
+   "name": "Desmoplastic Infantile Ganglioglioma",
+   "tissue": "CNS/Brain",
+   "mainType": "Miscellaneous Neuroepithelial Tumor",
+   "parent": "MNET",
+   "level": 3
+  },
+  {
+   "code": "CHGL",
+   "name": "Chordoid Glioma of the Third Ventricle",
+   "tissue": "CNS/Brain",
+   "mainType": "Miscellaneous Neuroepithelial Tumor",
+   "parent": "MNET",
+   "level": 3
+  },
+  {
+   "code": "CNC",
+   "name": "Central Neurocytoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Miscellaneous Neuroepithelial Tumor",
+   "parent": "MNET",
+   "level": 3
+  },
+  {
+   "code": "EVN",
+   "name": "Extraventricular Neurocytoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Miscellaneous Neuroepithelial Tumor",
+   "parent": "MNET",
+   "level": 3
+  },
+  {
+   "code": "CLNC",
+   "name": "Cerebellar Liponeurocytoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Miscellaneous Neuroepithelial Tumor",
+   "parent": "MNET",
+   "level": 3
+  },
+  {
+   "code": "PGNT",
+   "name": "Papillary Glioneuronal Tumor",
+   "tissue": "CNS/Brain",
+   "mainType": "Miscellaneous Neuroepithelial Tumor",
+   "parent": "MNET",
+   "level": 3
+  },
+  {
+   "code": "DIA",
+   "name": "Desmoplastic Infantile Astrocytoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Miscellaneous Neuroepithelial Tumor",
+   "parent": "MNET",
+   "level": 3
+  },
+  {
+   "code": "RGNT",
+   "name": "Rosette-forming Glioneuronal Tumor of the Fourth Ventricle",
+   "tissue": "CNS/Brain",
+   "mainType": "Miscellaneous Neuroepithelial Tumor",
+   "parent": "MNET",
+   "level": 3
+  },
+  {
+   "code": "PDIFHG",
+   "name": "Pediatric-Type Diffuse High-Grade Glioma",
+   "tissue": "CNS/Brain",
+   "mainType": "Gliomas, Glioneuronal Tumors, and Neuronal Tumors",
+   "parent": "DIFG",
+   "level": 3
+  },
+  {
+   "code": "HGGNOS",
+   "name": "High-Grade Glioma, NOS",
+   "tissue": "CNS/Brain",
+   "mainType": "Glioma",
+   "parent": "DIFG",
+   "level": 3
+  },
+  {
+   "code": "PDIFLG",
+   "name": "Pediatric-Type Diffuse Low-Grade Glioma",
+   "tissue": "CNS/Brain",
+   "mainType": "Gliomas, Glioneuronal Tumors, and Neuronal Tumors",
+   "parent": "DIFG",
+   "level": 3
+  },
+  {
+   "code": "GNOS",
+   "name": "Glioma, NOS",
+   "tissue": "CNS/Brain",
+   "mainType": "Glioma",
+   "parent": "DIFG",
+   "level": 3
+  },
+  {
+   "code": "ADIFG",
+   "name": "Adult-Type Diffuse Glioma",
+   "tissue": "CNS/Brain",
+   "mainType": "Gliomas, Glioneuronal Tumors, and Neuronal Tumors",
+   "parent": "DIFG",
+   "level": 3
+  },
+  {
+   "code": "ACPP",
+   "name": "Atypical Choroid Plexus Papilloma",
+   "tissue": "CNS/Brain",
+   "mainType": "Choroid Plexus Tumor",
+   "parent": "CPT",
+   "level": 3
+  },
+  {
+   "code": "CPP",
+   "name": "Choroid Plexus Papilloma",
+   "tissue": "CNS/Brain",
+   "mainType": "Choroid Plexus Tumor",
+   "parent": "CPT",
+   "level": 3
+  },
+  {
+   "code": "CPC",
+   "name": "Choroid Plexus Carcinoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Choroid Plexus Tumor",
+   "parent": "CPT",
+   "level": 3
+  },
+  {
+   "code": "PCNSM",
+   "name": "Primary CNS Melanoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Melanoma",
+   "parent": "PCNSMT",
+   "level": 3
+  },
+  {
+   "code": "MELC",
+   "name": "Melanocytoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Melanocytoma",
+   "parent": "PCNSMT",
+   "level": 3
+  },
+  {
+   "code": "PTPR",
+   "name": "Papillary Tumor of the Pineal Region",
+   "tissue": "CNS/Brain",
+   "mainType": "Pineal Tumor",
+   "parent": "PINT",
+   "level": 3
+  },
+  {
+   "code": "PPTID",
+   "name": "Pineal Parenchymal Tumor of Intermediate Differentiation",
+   "tissue": "CNS/Brain",
+   "mainType": "Pineal Tumor",
+   "parent": "PINT",
+   "level": 3
+  },
+  {
+   "code": "PINC",
+   "name": "Pineocytoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Pineal Tumor",
+   "parent": "PINT",
+   "level": 3
+  },
+  {
+   "code": "PBL",
+   "name": "Pineoblastoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Pineal Tumor",
+   "parent": "PINT",
+   "level": 3
+  },
+  {
+   "code": "PTCA",
+   "name": "Pituitary Carcinoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Sellar Tumor",
+   "parent": "SELT",
+   "level": 3
+  },
+  {
+   "code": "ACPG",
+   "name": "Craniopharyngioma, Adamantinomatous Type",
+   "tissue": "CNS/Brain",
+   "mainType": "Sellar Tumor",
+   "parent": "SELT",
+   "level": 3
+  },
+  {
+   "code": "PCGP",
+   "name": "Craniopharyngioma, Papillary Type",
+   "tissue": "CNS/Brain",
+   "mainType": "Sellar Tumor",
+   "parent": "SELT",
+   "level": 3
+  },
+  {
+   "code": "GCT",
+   "name": "Granular Cell Tumor",
+   "tissue": "CNS/Brain",
+   "mainType": "Sellar Tumor",
+   "parent": "SELT",
+   "level": 3
+  },
+  {
+   "code": "PTCY",
+   "name": "Pituicytoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Sellar Tumor",
+   "parent": "SELT",
+   "level": 3
+  },
+  {
+   "code": "APTAD",
+   "name": "Atypical Pituitary Adenoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Sellar Tumor",
+   "parent": "SELT",
+   "level": 3
+  },
+  {
+   "code": "PTAD",
+   "name": "Pituitary Adenoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Sellar Tumor",
+   "parent": "SELT",
+   "level": 3
+  },
+  {
+   "code": "SCOAH",
+   "name": "Spindle Cell Oncocytoma of the Adenohypophysis",
+   "tissue": "CNS/Brain",
+   "mainType": "Sellar Tumor",
+   "parent": "SELT",
+   "level": 3
+  },
+  {
+   "code": "GNC",
+   "name": "Gangliocytoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Glioma",
+   "parent": "ENCG",
+   "level": 3
+  },
+  {
+   "code": "AGNG",
+   "name": "Anaplastic Ganglioglioma",
+   "tissue": "CNS/Brain",
+   "mainType": "Glioma",
+   "parent": "ENCG",
+   "level": 3
+  },
+  {
+   "code": "GNG",
+   "name": "Ganglioglioma",
+   "tissue": "CNS/Brain",
+   "mainType": "Glioma",
+   "parent": "ENCG",
+   "level": 3
+  },
+  {
+   "code": "APXA",
+   "name": "Anaplastic Pleomorphic Xanthoastrocytoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Glioma",
+   "parent": "ENCG",
+   "level": 3
+  },
+  {
+   "code": "PXA",
+   "name": "Pleomorphic Xanthoastrocytoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Glioma",
+   "parent": "ENCG",
+   "level": 3
+  },
+  {
+   "code": "PMA",
+   "name": "Pilomyxoid Astrocytoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Glioma",
+   "parent": "ENCG",
+   "level": 3
+  },
+  {
+   "code": "PAST",
+   "name": "Pilocytic Astrocytoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Glioma",
+   "parent": "ENCG",
+   "level": 3
+  },
+  {
+   "code": "DNT",
+   "name": "Dysembryoplastic Neuroepithelial Tumor",
+   "tissue": "CNS/Brain",
+   "mainType": "Glioma",
+   "parent": "ENCG",
+   "level": 3
+  },
+  {
+   "code": "LGGNOS",
+   "name": "Low-Grade Glioma, NOS",
+   "tissue": "CNS/Brain",
+   "mainType": "Glioma",
+   "parent": "ENCG",
+   "level": 3
+  },
+  {
+   "code": "BMGCT",
+   "name": "Mixed Germ Cell Tumor",
+   "tissue": "CNS/Brain",
+   "mainType": "Germ Cell Tumor",
+   "parent": "BGCT",
+   "level": 3
+  },
+  {
+   "code": "BCCA",
+   "name": "Choriocarcinoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Germ Cell Tumor",
+   "parent": "BGCT",
+   "level": 3
+  },
+  {
+   "code": "BEC",
+   "name": "Embryonal Carcinoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Germ Cell Tumor",
+   "parent": "BGCT",
+   "level": 3
+  },
+  {
+   "code": "BIMT",
+   "name": "Immature Teratoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Germ Cell Tumor",
+   "parent": "BGCT",
+   "level": 3
+  },
+  {
+   "code": "BYST",
+   "name": "Yolk Sac Tumor",
+   "tissue": "CNS/Brain",
+   "mainType": "Germ Cell Tumor",
+   "parent": "BGCT",
+   "level": 3
+  },
+  {
+   "code": "BMGT",
+   "name": "Malignant Teratoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Germ Cell Tumor",
+   "parent": "BGCT",
+   "level": 3
+  },
+  {
+   "code": "BMT",
+   "name": "Mature Teratoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Germ Cell Tumor",
+   "parent": "BGCT",
+   "level": 3
+  },
+  {
+   "code": "GMN",
+   "name": "Germinoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Germ Cell Tumor",
+   "parent": "BGCT",
+   "level": 3
+  },
+  {
+   "code": "GBC",
+   "name": "Gallbladder Cancer",
+   "tissue": "Biliary Tract",
+   "mainType": "Hepatobiliary Cancer",
+   "parent": "ICPN",
+   "level": 3
+  },
+  {
+   "code": "CHOL",
+   "name": "Cholangiocarcinoma",
+   "tissue": "Biliary Tract",
+   "mainType": "Hepatobiliary Cancer",
+   "parent": "IPN",
+   "level": 3
+  },
+  {
+   "code": "CEEN",
+   "name": "Cervical Endometrioid Carcinoma",
+   "tissue": "Cervix",
+   "mainType": "Cervical Cancer",
+   "parent": "CEAD",
+   "level": 3
+  },
+  {
+   "code": "CEMU",
+   "name": "Mucinous Carcinoma",
+   "tissue": "Cervix",
+   "mainType": "Cervical Cancer",
+   "parent": "CEAD",
+   "level": 3
+  },
+  {
+   "code": "CESE",
+   "name": "Cervical Serous Carcinoma",
+   "tissue": "Cervix",
+   "mainType": "Cervical Cancer",
+   "parent": "CEAD",
+   "level": 3
+  },
+  {
+   "code": "CEMN",
+   "name": "Mesonephric Carcinoma",
+   "tissue": "Cervix",
+   "mainType": "Cervical Cancer",
+   "parent": "CEAD",
+   "level": 3
+  },
+  {
+   "code": "CEVG",
+   "name": "Villoglandular Carcinoma",
+   "tissue": "Cervix",
+   "mainType": "Cervical Cancer",
+   "parent": "CEAD",
+   "level": 3
+  },
+  {
+   "code": "CECC",
+   "name": "Cervical Clear Cell Carcinoma",
+   "tissue": "Cervix",
+   "mainType": "Cervical Cancer",
+   "parent": "CEAD",
+   "level": 3
+  },
+  {
+   "code": "ECAD",
+   "name": "Endocervical Adenocarcinoma",
+   "tissue": "Cervix",
+   "mainType": "Cervical Cancer",
+   "parent": "CEAD",
+   "level": 3
+  },
+  {
+   "code": "OSGCT",
+   "name": "Osteoclastic Giant Cell Tumor",
+   "tissue": "Pancreas",
+   "mainType": "Pancreatic Cancer",
+   "parent": "UCP",
+   "level": 3
+  },
+  {
+   "code": "PSC",
+   "name": "Serous Cystadenoma of the Pancreas",
+   "tissue": "Pancreas",
+   "mainType": "Pancreatic Cancer",
+   "parent": "PACT",
+   "level": 3
+  },
+  {
+   "code": "MCN",
+   "name": "Mucinous Cystic Neoplasm",
+   "tissue": "Pancreas",
+   "mainType": "Pancreatic Cancer",
+   "parent": "PACT",
+   "level": 3
+  },
+  {
+   "code": "IPMN",
+   "name": "Intraductal Papillary Mucinous Neoplasm",
+   "tissue": "Pancreas",
+   "mainType": "Pancreatic Cancer",
+   "parent": "PACT",
+   "level": 3
+  },
+  {
+   "code": "ITPN",
+   "name": "Intraductal Tubulopapillary Neoplasm",
+   "tissue": "Pancreas",
+   "mainType": "Pancreatic Cancer",
+   "parent": "PACT",
+   "level": 3
+  },
+  {
+   "code": "IOPN",
+   "name": "Intraductal Oncocytic Papillary Neoplasm",
+   "tissue": "Pancreas",
+   "mainType": "Pancreatic Cancer",
+   "parent": "PACT",
+   "level": 3
+  },
+  {
+   "code": "NFIB",
+   "name": "Neurofibroma",
+   "tissue": "Peripheral Nervous System",
+   "mainType": "Nerve Sheath Tumor",
+   "parent": "NST",
+   "level": 3
+  },
+  {
+   "code": "SCHW",
+   "name": "Schwannoma",
+   "tissue": "Peripheral Nervous System",
+   "mainType": "Nerve Sheath Tumor",
+   "parent": "NST",
+   "level": 3
+  },
+  {
+   "code": "MPNST",
+   "name": "Malignant Peripheral Nerve Sheath Tumor",
+   "tissue": "Peripheral Nervous System",
+   "mainType": "Nerve Sheath Tumor",
+   "parent": "NST",
+   "level": 3
+  },
+  {
+   "code": "OGBL",
+   "name": "Gonadoblastoma",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Sex Cord Stromal Tumor",
+   "parent": "SCST",
+   "level": 3
+  },
+  {
+   "code": "FT",
+   "name": "Fibrothecoma",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Sex Cord Stromal Tumor",
+   "parent": "SCST",
+   "level": 3
+  },
+  {
+   "code": "SLCT",
+   "name": "Sertoli-Leydig Cell Tumor",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Sex Cord Stromal Tumor",
+   "parent": "SCST",
+   "level": 3
+  },
+  {
+   "code": "SCT",
+   "name": "Steroid Cell Tumor, NOS",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Sex Cord Stromal Tumor",
+   "parent": "SCST",
+   "level": 3
+  },
+  {
+   "code": "GRCT",
+   "name": "Granulosa Cell Tumor",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Sex Cord Stromal Tumor",
+   "parent": "SCST",
+   "level": 3
+  },
+  {
+   "code": "OCNOS",
+   "name": "Ovarian Choriocarcinoma, NOS",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Ovarian Cancer",
+   "parent": "OOVC",
+   "level": 3
+  },
+  {
+   "code": "HGONEC",
+   "name": "High-Grade Neuroendocrine Carcinoma of the Ovary",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Ovarian Cancer",
+   "parent": "OOVC",
+   "level": 3
+  },
+  {
+   "code": "HGSFT",
+   "name": "High-Grade Serous Fallopian Tube Cancer",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Ovarian Cancer",
+   "parent": "OOVC",
+   "level": 3
+  },
+  {
+   "code": "SCCO",
+   "name": "Small Cell Carcinoma of the Ovary",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Ovarian Cancer",
+   "parent": "OVT",
+   "level": 3
+  },
+  {
+   "code": "SOC",
+   "name": "Serous Ovarian Cancer",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Ovarian Cancer",
+   "parent": "OVT",
+   "level": 3
+  },
+  {
+   "code": "EOV",
+   "name": "Endometrioid Ovarian Cancer",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Ovarian Cancer",
+   "parent": "OVT",
+   "level": 3
+  },
+  {
+   "code": "CCOV",
+   "name": "Clear Cell Ovarian Cancer",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Ovarian Cancer",
+   "parent": "OVT",
+   "level": 3
+  },
+  {
+   "code": "OSMBT",
+   "name": "Ovarian Seromucinous Borderline Tumor",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Ovarian Cancer",
+   "parent": "OVT",
+   "level": 3
+  },
+  {
+   "code": "BTOV",
+   "name": "Brenner Tumor",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Ovarian Cancer",
+   "parent": "OVT",
+   "level": 3
+  },
+  {
+   "code": "SBOV",
+   "name": "Serous Borderline Ovarian Tumor",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Ovarian Cancer",
+   "parent": "OVT",
+   "level": 3
+  },
+  {
+   "code": "MOV",
+   "name": "Mucinous Ovarian Cancer",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Ovarian Cancer",
+   "parent": "OVT",
+   "level": 3
+  },
+  {
+   "code": "MXOV",
+   "name": "Mixed Ovarian Carcinoma",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Ovarian Cancer",
+   "parent": "OVT",
+   "level": 3
+  },
+  {
+   "code": "CCBOV",
+   "name": "Clear Cell Borderline Ovarian Tumor",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Ovarian Cancer",
+   "parent": "OVT",
+   "level": 3
+  },
+  {
+   "code": "OSMCA",
+   "name": "Ovarian Seromucinous Carcinoma",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Ovarian Cancer",
+   "parent": "OVT",
+   "level": 3
+  },
+  {
+   "code": "MBOV",
+   "name": "Mucinous Borderline Ovarian Tumor",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Ovarian Cancer",
+   "parent": "OVT",
+   "level": 3
+  },
+  {
+   "code": "OCS",
+   "name": "Ovarian Carcinosarcoma/Malignant Mixed Mesodermal Tumor",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Ovarian Cancer",
+   "parent": "OVT",
+   "level": 3
+  },
+  {
+   "code": "EBOV",
+   "name": "Endometrioid Borderlin Ovarian Tumor",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Ovarian Cancer",
+   "parent": "OVT",
+   "level": 3
+  },
+  {
+   "code": "OSMAD",
+   "name": "Ovarian Seromucinous Adenoma",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Ovarian Cancer",
+   "parent": "OVT",
+   "level": 3
+  },
+  {
+   "code": "SBMOV",
+   "name": "Serous Borderline Ovarian Tumor, Micropapillary",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Ovarian Cancer",
+   "parent": "OVT",
+   "level": 3
+  },
+  {
+   "code": "OIMT",
+   "name": "Immature Teratoma",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Germ Cell Tumor",
+   "parent": "OGCT",
+   "level": 3
+  },
+  {
+   "code": "OPE",
+   "name": "Polyembryoma",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Germ Cell Tumor",
+   "parent": "OGCT",
+   "level": 3
+  },
+  {
+   "code": "OMGCT",
+   "name": "Mixed Germ Cell Tumor",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Germ Cell Tumor",
+   "parent": "OGCT",
+   "level": 3
+  },
+  {
+   "code": "OMT",
+   "name": "Mature Teratoma",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Germ Cell Tumor",
+   "parent": "OGCT",
+   "level": 3
+  },
+  {
+   "code": "ODYS",
+   "name": "Dysgerminoma",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Germ Cell Tumor",
+   "parent": "OGCT",
+   "level": 3
+  },
+  {
+   "code": "OEC",
+   "name": "Embryonal Carcinoma",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Germ Cell Tumor",
+   "parent": "OGCT",
+   "level": 3
+  },
+  {
+   "code": "OYST",
+   "name": "Yolk Sac Tumor",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Germ Cell Tumor",
+   "parent": "OGCT",
+   "level": 3
+  },
+  {
+   "code": "OFMT",
+   "name": "Ossifying Fibromyxoid Tumor",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "MYXO",
+   "level": 3
+  },
+  {
+   "code": "PTES",
+   "name": "Proximal-Type Epithelioid Sarcoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "EPIS",
+   "level": 3
+  },
+  {
+   "code": "DDLS",
+   "name": "Dedifferentiated Liposarcoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "LIPO",
+   "level": 3
+  },
+  {
+   "code": "MRLS",
+   "name": "Myxoid/Round-Cell Liposarcoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "LIPO",
+   "level": 3
+  },
+  {
+   "code": "WDLS",
+   "name": "Well-Differentiated Liposarcoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "LIPO",
+   "level": 3
+  },
+  {
+   "code": "PLLS",
+   "name": "Pleomorphic Liposarcoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "LIPO",
+   "level": 3
+  },
+  {
+   "code": "PLRMS",
+   "name": "Pleomorphic Rhabdomyosarcoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "RMS",
+   "level": 3
+  },
+  {
+   "code": "ARMS",
+   "name": "Alveolar Rhabdomyosarcoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "RMS",
+   "level": 3
+  },
+  {
+   "code": "SCRMS",
+   "name": "Spindle Cell Rhabdomyosarcoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "RMS",
+   "level": 3
+  },
+  {
+   "code": "ERMS",
+   "name": "Embryonal Rhabdomyosarcoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "RMS",
+   "level": 3
+  },
+  {
+   "code": "SCSRMS",
+   "name": "Spindle Cell/Sclerosing Rhabdomyosarcoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "RMS",
+   "level": 3
+  },
+  {
+   "code": "HDCS",
+   "name": "Histiocytic Dendritic Cell Sarcoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "DCS",
+   "level": 3
+  },
+  {
+   "code": "SEF",
+   "name": "Sclerosing Epithelioid Fibrosarcoma",
+   "tissue": "Soft Tissue",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "FIBS",
+   "level": 3
+  },
+  {
+   "code": "BA",
+   "name": "Breast Angiosarcoma",
+   "tissue": "Breast",
+   "mainType": "Breast Sarcoma",
+   "parent": "PBS",
+   "level": 3
+  },
+  {
+   "code": "ACBC",
+   "name": "Adenoid Cystic Breast Cancer",
+   "tissue": "Breast",
+   "mainType": "Breast Cancer",
+   "parent": "BRCA",
+   "level": 3
+  },
+  {
+   "code": "ILC",
+   "name": "Breast Invasive Lobular Carcinoma",
+   "tissue": "Breast",
+   "mainType": "Breast Cancer",
+   "parent": "BRCA",
+   "level": 3
+  },
+  {
+   "code": "CSNOS",
+   "name": "Breast Invasive Carcinosarcoma, NOS",
+   "tissue": "Breast",
+   "mainType": "Breast Cancer",
+   "parent": "BRCA",
+   "level": 3
+  },
+  {
+   "code": "IMMC",
+   "name": "Breast Invasive Mixed Mucinous Carcinoma",
+   "tissue": "Breast",
+   "mainType": "Breast Cancer",
+   "parent": "BRCA",
+   "level": 3
+  },
+  {
+   "code": "MDLC",
+   "name": "Breast Mixed Ductal and Lobular Carcinoma",
+   "tissue": "Breast",
+   "mainType": "Breast Cancer",
+   "parent": "BRCA",
+   "level": 3
+  },
+  {
+   "code": "BRCANOS",
+   "name": "Breast Invasive Cancer, NOS",
+   "tissue": "Breast",
+   "mainType": "Breast Cancer",
+   "parent": "BRCA",
+   "level": 3
+  },
+  {
+   "code": "BRSRCC",
+   "name": "Breast Carcinoma with Signet Ring",
+   "tissue": "Breast",
+   "mainType": "Breast Cancer",
+   "parent": "BRCA",
+   "level": 3
+  },
+  {
+   "code": "SPC",
+   "name": "Solid Papillary Carcinoma of the Breast",
+   "tissue": "Breast",
+   "mainType": "Breast Cancer",
+   "parent": "BRCA",
+   "level": 3
+  },
+  {
+   "code": "IDC",
+   "name": "Breast Invasive Ductal Carcinoma",
+   "tissue": "Breast",
+   "mainType": "Breast Cancer",
+   "parent": "BRCA",
+   "level": 3
+  },
+  {
+   "code": "BRCNOS",
+   "name": "Breast Invasive Carcinoma, NOS",
+   "tissue": "Breast",
+   "mainType": "Breast Cancer",
+   "parent": "BRCA",
+   "level": 3
+  },
+  {
+   "code": "PT",
+   "name": "Phyllodes Tumor of the Breast",
+   "tissue": "Breast",
+   "mainType": "Breast Sarcoma",
+   "parent": "BFN",
+   "level": 3
+  },
+  {
+   "code": "FA",
+   "name": "Fibroadenoma",
+   "tissue": "Breast",
+   "mainType": "Breast Sarcoma",
+   "parent": "BFN",
+   "level": 3
+  },
+  {
+   "code": "PD",
+   "name": "Paget Disease of the Nipple",
+   "tissue": "Breast",
+   "mainType": "Breast Cancer",
+   "parent": "DCIS",
+   "level": 3
+  },
+  {
+   "code": "MMBC",
+   "name": "Mixed Type Metaplastic Breast Cancer",
+   "tissue": "Breast",
+   "mainType": "Breast Cancer",
+   "parent": "MBC",
+   "level": 3
+  },
+  {
+   "code": "EMBC",
+   "name": "Epithelial Type Metaplastic Breast Cancer",
+   "tissue": "Breast",
+   "mainType": "Breast Cancer",
+   "parent": "MBC",
+   "level": 3
+  },
+  {
+   "code": "UM",
+   "name": "Uveal Melanoma",
+   "tissue": "Eye",
+   "mainType": "Melanoma",
+   "parent": "OM",
+   "level": 3
+  },
+  {
+   "code": "CM",
+   "name": "Conjunctival Melanoma",
+   "tissue": "Eye",
+   "mainType": "Melanoma",
+   "parent": "OM",
+   "level": 3
+  },
+  {
+   "code": "ACLG",
+   "name": "Adenoid Cystic Carcinoma of the Lacrimal Gland",
+   "tissue": "Eye",
+   "mainType": "Lacrimal Gland Tumor",
+   "parent": "LGT",
+   "level": 3
+  },
+  {
+   "code": "SCLG",
+   "name": "Squamous Cell Carcinoma of the Lacrimal Gland",
+   "tissue": "Eye",
+   "mainType": "Lacrimal Gland Tumor",
+   "parent": "LGT",
+   "level": 3
+  },
+  {
+   "code": "DDCHS",
+   "name": "Dedifferentiated Chondrosarcoma",
+   "tissue": "Bone",
+   "mainType": "Bone Cancer",
+   "parent": "CHS",
+   "level": 3
+  },
+  {
+   "code": "MYCHS",
+   "name": "Myxoid Chondrosarcoma",
+   "tissue": "Bone",
+   "mainType": "Bone Cancer",
+   "parent": "CHS",
+   "level": 3
+  },
+  {
+   "code": "MCHS",
+   "name": "Mesenchymal Chondrosarcoma",
+   "tissue": "Bone",
+   "mainType": "Bone Cancer",
+   "parent": "CHS",
+   "level": 3
+  },
+  {
+   "code": "EMCHS",
+   "name": "Extraskeletal Myxoid Chondrosarcoma",
+   "tissue": "Bone",
+   "mainType": "Bone Cancer",
+   "parent": "CHS",
+   "level": 3
+  },
+  {
+   "code": "DDCHDM",
+   "name": "Dedifferentiated Chordoma",
+   "tissue": "Bone",
+   "mainType": "Bone Cancer",
+   "parent": "CHDM",
+   "level": 3
+  },
+  {
+   "code": "CCHDM",
+   "name": "Conventional Type Chordoma",
+   "tissue": "Bone",
+   "mainType": "Bone Cancer",
+   "parent": "CHDM",
+   "level": 3
+  },
+  {
+   "code": "HGSOS",
+   "name": "High-Grade Surface Osteosarcoma",
+   "tissue": "Bone",
+   "mainType": "Bone Cancer",
+   "parent": "OS",
+   "level": 3
+  },
+  {
+   "code": "PAOS",
+   "name": "Parosteal Osteosarcoma",
+   "tissue": "Bone",
+   "mainType": "Bone Cancer",
+   "parent": "OS",
+   "level": 3
+  },
+  {
+   "code": "SCOS",
+   "name": "Small Cell Osteosarcoma",
+   "tissue": "Bone",
+   "mainType": "Bone Cancer",
+   "parent": "OS",
+   "level": 3
+  },
+  {
+   "code": "CHOS",
+   "name": "Chondroblastic Osteosarcoma",
+   "tissue": "Bone",
+   "mainType": "Bone Cancer",
+   "parent": "OS",
+   "level": 3
+  },
+  {
+   "code": "SECOS",
+   "name": "Secondary Osteosarcoma",
+   "tissue": "Bone",
+   "mainType": "Bone Cancer",
+   "parent": "OS",
+   "level": 3
+  },
+  {
+   "code": "FIOS",
+   "name": "Fibroblastic Osteosarcoma",
+   "tissue": "Bone",
+   "mainType": "Bone Cancer",
+   "parent": "OS",
+   "level": 3
+  },
+  {
+   "code": "LGCOS",
+   "name": "Low-Grade Central Osteosarcoma",
+   "tissue": "Bone",
+   "mainType": "Bone Cancer",
+   "parent": "OS",
+   "level": 3
+  },
+  {
+   "code": "TEOS",
+   "name": "Telangiectatic Osteosarcoma",
+   "tissue": "Bone",
+   "mainType": "Bone Cancer",
+   "parent": "OS",
+   "level": 3
+  },
+  {
+   "code": "PEOS",
+   "name": "Periosteal Osteosarcoma",
+   "tissue": "Bone",
+   "mainType": "Bone Cancer",
+   "parent": "OS",
+   "level": 3
+  },
+  {
+   "code": "OSOS",
+   "name": "Osteoblastic Osteosarcoma",
+   "tissue": "Bone",
+   "mainType": "Bone Cancer",
+   "parent": "OS",
+   "level": 3
+  },
+  {
+   "code": "UUS",
+   "name": "Undifferentiated Uterine Sarcoma",
+   "tissue": "Uterus",
+   "mainType": "Uterine Sarcoma",
+   "parent": "USARC",
+   "level": 3
+  },
+  {
+   "code": "USMT",
+   "name": "Uterine Smooth Muscle Tumor",
+   "tissue": "Uterus",
+   "mainType": "Uterine Sarcoma",
+   "parent": "USARC",
+   "level": 3
+  },
+  {
+   "code": "UPECOMA",
+   "name": "Uterine Perivascular Epithelioid Cell Tumor",
+   "tissue": "Uterus",
+   "mainType": "Uterine Sarcoma",
+   "parent": "USARC",
+   "level": 3
+  },
+  {
+   "code": "ESS",
+   "name": "Endometrial Stromal Sarcoma",
+   "tissue": "Uterus",
+   "mainType": "Uterine Sarcoma",
+   "parent": "USARC",
+   "level": 3
+  },
+  {
+   "code": "OUSARC",
+   "name": "Uterine Sarcoma, Other",
+   "tissue": "Uterus",
+   "mainType": "Uterine Sarcoma",
+   "parent": "USARC",
+   "level": 3
+  },
+  {
+   "code": "UAS",
+   "name": "Uterine Adenosarcoma",
+   "tissue": "Uterus",
+   "mainType": "Uterine Sarcoma",
+   "parent": "USARC",
+   "level": 3
+  },
+  {
+   "code": "UEC",
+   "name": "Uterine Endometrioid Carcinoma",
+   "tissue": "Uterus",
+   "mainType": "Endometrial Cancer",
+   "parent": "UCEC",
+   "level": 3
+  },
+  {
+   "code": "UCS",
+   "name": "Uterine Carcinosarcoma/Uterine Malignant Mixed Mullerian Tumor",
+   "tissue": "Uterus",
+   "mainType": "Endometrial Cancer",
+   "parent": "UCEC",
+   "level": 3
+  },
+  {
+   "code": "UDDC",
+   "name": "Uterine Dedifferentiated Carcinoma",
+   "tissue": "Uterus",
+   "mainType": "Endometrial Cancer",
+   "parent": "UCEC",
+   "level": 3
+  },
+  {
+   "code": "UCCC",
+   "name": "Uterine Clear Cell Carcinoma",
+   "tissue": "Uterus",
+   "mainType": "Endometrial Cancer",
+   "parent": "UCEC",
+   "level": 3
+  },
+  {
+   "code": "UMNC",
+   "name": "Uterine Mesonephric Carcinoma",
+   "tissue": "Uterus",
+   "mainType": "Endometrial Cancer",
+   "parent": "UCEC",
+   "level": 3
+  },
+  {
+   "code": "UASC",
+   "name": "Uterine Adenosquamous Carcinoma",
+   "tissue": "Uterus",
+   "mainType": "Endometrial Cancer",
+   "parent": "UCEC",
+   "level": 3
+  },
+  {
+   "code": "UMEC",
+   "name": "Uterine Mixed Endometrial Carcinoma",
+   "tissue": "Uterus",
+   "mainType": "Endometrial Cancer",
+   "parent": "UCEC",
+   "level": 3
+  },
+  {
+   "code": "UUC",
+   "name": "Uterine Undifferentiated Carcinoma",
+   "tissue": "Uterus",
+   "mainType": "Endometrial Cancer",
+   "parent": "UCEC",
+   "level": 3
+  },
+  {
+   "code": "USC",
+   "name": "Uterine Serous Carcinoma/Uterine Papillary Serous Carcinoma",
+   "tissue": "Uterus",
+   "mainType": "Endometrial Cancer",
+   "parent": "UCEC",
+   "level": 3
+  },
+  {
+   "code": "UMC",
+   "name": "Uterine Mucinous Carcinoma",
+   "tissue": "Uterus",
+   "mainType": "Endometrial Cancer",
+   "parent": "UCEC",
+   "level": 3
+  },
+  {
+   "code": "UPDC",
+   "name": "Poorly Differentiated Carcinoma of the Uterus",
+   "tissue": "Uterus",
+   "mainType": "Endometrial Cancer",
+   "parent": "UCEC",
+   "level": 3
+  },
+  {
+   "code": "UNEC",
+   "name": "Uterine Neuroendocrine Carcinoma",
+   "tissue": "Uterus",
+   "mainType": "Endometrial Cancer",
+   "parent": "UCEC",
+   "level": 3
+  },
+  {
+   "code": "MP",
+   "name": "Molar Pregnancy",
+   "tissue": "Uterus",
+   "mainType": "Gestational Trophoblastic Disease",
+   "parent": "GTD",
+   "level": 3
+  },
+  {
+   "code": "UCCA",
+   "name": "Choriocarcinoma",
+   "tissue": "Uterus",
+   "mainType": "Gestational Trophoblastic Disease",
+   "parent": "GTD",
+   "level": 3
+  },
+  {
+   "code": "ETT",
+   "name": "Epithelioid Trophoblastic Tumor",
+   "tissue": "Uterus",
+   "mainType": "Gestational Trophoblastic Disease",
+   "parent": "GTD",
+   "level": 3
+  },
+  {
+   "code": "PSTT",
+   "name": "Placental Site Trophoblastic Tumor",
+   "tissue": "Uterus",
+   "mainType": "Gestational Trophoblastic Disease",
+   "parent": "GTD",
+   "level": 3
+  },
+  {
+   "code": "NRCC",
+   "name": "NUTM1 Renal Cell Carcinoma",
+   "tissue": "Kidney",
+   "mainType": "Renal Cell Carcinoma",
+   "parent": "RCC",
+   "level": 3
+  },
+  {
+   "code": "NCCRCC",
+   "name": "Renal Non-Clear Cell Carcinoma",
+   "tissue": "Kidney",
+   "mainType": "Renal Cell Carcinoma",
+   "parent": "RCC",
+   "level": 3
+  },
+  {
+   "code": "CCRCC",
+   "name": "Renal Clear Cell Carcinoma",
+   "tissue": "Kidney",
+   "mainType": "Renal Cell Carcinoma",
+   "parent": "RCC",
+   "level": 3
+  },
+  {
+   "code": "NHL",
+   "name": "Non-Hodgkin Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Non-Hodgkin Lymphoma",
+   "parent": "LNM",
+   "level": 3
+  },
+  {
+   "code": "HL",
+   "name": "Hodgkin Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Hodgkin Lymphoma",
+   "parent": "LNM",
+   "level": 3
+  },
+  {
+   "code": "TLL",
+   "name": "T-Lymphoblastic Leukemia/Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "T-Lymphoblastic Leukemia/Lymphoma",
+   "parent": "LNM",
+   "level": 3
+  },
+  {
+   "code": "PTLD",
+   "name": "Posttransplant Lymphoproliferative Disorders",
+   "tissue": "Lymphoid",
+   "mainType": "Posttransplant Lymphoproliferative Disorders",
+   "parent": "LNM",
+   "level": 3
+  },
+  {
+   "code": "BLL",
+   "name": "B-Lymphoblastic Leukemia/Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "B-Lymphoblastic Leukemia/Lymphoma",
+   "parent": "LNM",
+   "level": 3
+  },
+  {
+   "code": "PLSMESO",
+   "name": "Pleural Mesothelioma, Sarcomatoid Type",
+   "tissue": "Pleura",
+   "mainType": "Mesothelioma",
+   "parent": "PLMESO",
+   "level": 3
+  },
+  {
+   "code": "PLBMESO",
+   "name": "Pleural Mesothelioma, Biphasic Type",
+   "tissue": "Pleura",
+   "mainType": "Mesothelioma",
+   "parent": "PLMESO",
+   "level": 3
+  },
+  {
+   "code": "PLEMESO",
+   "name": "Pleural Mesothelioma, Epithelioid Type",
+   "tissue": "Pleura",
+   "mainType": "Mesothelioma",
+   "parent": "PLMESO",
+   "level": 3
+  },
+  {
+   "code": "THYC",
+   "name": "Thymic Carcinoma",
+   "tissue": "Thymus",
+   "mainType": "Thymic Tumor",
+   "parent": "TET",
+   "level": 3
+  },
+  {
+   "code": "THYM",
+   "name": "Thymoma",
+   "tissue": "Thymus",
+   "mainType": "Thymic Tumor",
+   "parent": "TET",
+   "level": 3
+  },
+  {
+   "code": "SCLC",
+   "name": "Small Cell Lung Cancer",
+   "tissue": "Lung",
+   "mainType": "Small Cell Lung Cancer",
+   "parent": "LNET",
+   "level": 3
+  },
+  {
+   "code": "LUNE",
+   "name": "Large Cell Neuroendocrine Carcinoma",
+   "tissue": "Lung",
+   "mainType": "Non-Small Cell Lung Cancer",
+   "parent": "LNET",
+   "level": 3
+  },
+  {
+   "code": "LUCA",
+   "name": "Lung Carcinoid",
+   "tissue": "Lung",
+   "mainType": "Non-Small Cell Lung Cancer",
+   "parent": "LNET",
+   "level": 3
+  },
+  {
+   "code": "ALUCA",
+   "name": "Atypical Lung Carcinoid",
+   "tissue": "Lung",
+   "mainType": "Non-Small Cell Lung Cancer",
+   "parent": "LNET",
+   "level": 3
+  },
+  {
+   "code": "LUSC",
+   "name": "Lung Squamous Cell Carcinoma",
+   "tissue": "Lung",
+   "mainType": "Non-Small Cell Lung Cancer",
+   "parent": "NSCLC",
+   "level": 3
+  },
+  {
+   "code": "SGTTL",
+   "name": "Salivary Gland-Type Tumor of the Lung",
+   "tissue": "Lung",
+   "mainType": "Non-Small Cell Lung Cancer",
+   "parent": "NSCLC",
+   "level": 3
+  },
+  {
+   "code": "LCLC",
+   "name": "Large Cell Lung Carcinoma",
+   "tissue": "Lung",
+   "mainType": "Non-Small Cell Lung Cancer",
+   "parent": "NSCLC",
+   "level": 3
+  },
+  {
+   "code": "LUAD",
+   "name": "Lung Adenocarcinoma",
+   "tissue": "Lung",
+   "mainType": "Non-Small Cell Lung Cancer",
+   "parent": "NSCLC",
+   "level": 3
+  },
+  {
+   "code": "LUPC",
+   "name": "Pleomorphic Carcinoma of the Lung",
+   "tissue": "Lung",
+   "mainType": "Non-Small Cell Lung Cancer",
+   "parent": "NSCLC",
+   "level": 3
+  },
+  {
+   "code": "NUTCL",
+   "name": "NUT Carcinoma of the Lung",
+   "tissue": "Lung",
+   "mainType": "Non-Small Cell Lung Cancer",
+   "parent": "NSCLC",
+   "level": 3
+  },
+  {
+   "code": "LUAS",
+   "name": "Lung Adenosquamous Carcinoma",
+   "tissue": "Lung",
+   "mainType": "Non-Small Cell Lung Cancer",
+   "parent": "NSCLC",
+   "level": 3
+  },
+  {
+   "code": "SPCC",
+   "name": "Spindle Cell Carcinoma of the Lung",
+   "tissue": "Lung",
+   "mainType": "Non-Small Cell Lung Cancer",
+   "parent": "NSCLC",
+   "level": 3
+  },
+  {
+   "code": "CMPT",
+   "name": "Ciliated Muconodular Papillary Tumor of the Lung",
+   "tissue": "Lung",
+   "mainType": "Non-Small Cell Lung Cancer",
+   "parent": "NSCLC",
+   "level": 3
+  },
+  {
+   "code": "NSCLCPD",
+   "name": "Poorly Differentiated Non-Small Cell Lung Cancer",
+   "tissue": "Lung",
+   "mainType": "Non-Small Cell Lung Cancer",
+   "parent": "NSCLC",
+   "level": 3
+  },
+  {
+   "code": "EMBCA",
+   "name": "Embryonal Carcinoma",
+   "tissue": "Testis",
+   "mainType": "Germ Cell Tumor",
+   "parent": "NSGCT",
+   "level": 3
+  },
+  {
+   "code": "TYST",
+   "name": "Yolk Sac Tumor",
+   "tissue": "Testis",
+   "mainType": "Germ Cell Tumor",
+   "parent": "NSGCT",
+   "level": 3
+  },
+  {
+   "code": "TCCA",
+   "name": "Choriocarcinoma",
+   "tissue": "Testis",
+   "mainType": "Germ Cell Tumor",
+   "parent": "NSGCT",
+   "level": 3
+  },
+  {
+   "code": "GCTSTM",
+   "name": "Germ Cell Tumor with Somatic-Type Malignancy",
+   "tissue": "Testis",
+   "mainType": "Germ Cell Tumor",
+   "parent": "NSGCT",
+   "level": 3
+  },
+  {
+   "code": "MGCT",
+   "name": "Mixed Germ Cell Tumor",
+   "tissue": "Testis",
+   "mainType": "Germ Cell Tumor",
+   "parent": "NSGCT",
+   "level": 3
+  },
+  {
+   "code": "TT",
+   "name": "Teratoma",
+   "tissue": "Testis",
+   "mainType": "Germ Cell Tumor",
+   "parent": "NSGCT",
+   "level": 3
+  },
+  {
+   "code": "SWDNET",
+   "name": "Well-Differentiated Neuroendocrine Tumors of the Stomach",
+   "tissue": "Esophagus/Stomach",
+   "mainType": "Gastrointestinal Neuroendocrine Tumor",
+   "parent": "GINETES",
+   "level": 3
+  },
+  {
+   "code": "HGNES",
+   "name": "High-Grade Neuroendocrine Carcinoma of the Stomach",
+   "tissue": "Esophagus/Stomach",
+   "mainType": "Gastrointestinal Neuroendocrine Tumors of the Esophagus/Stomach",
+   "parent": "GINETES",
+   "level": 3
+  },
+  {
+   "code": "HGNEE",
+   "name": "High-Grade Neuroendocrine Carcinoma of the Esophagus",
+   "tissue": "Esophagus/Stomach",
+   "mainType": "Gastrointestinal Neuroendocrine Tumors of the Esophagus/Stomach",
+   "parent": "GINETES",
+   "level": 3
+  },
+  {
+   "code": "STAD",
+   "name": "Stomach Adenocarcinoma",
+   "tissue": "Esophagus/Stomach",
+   "mainType": "Esophagogastric Cancer",
+   "parent": "EGC",
+   "level": 3
+  },
+  {
+   "code": "STAS",
+   "name": "Adenosquamous Carcinoma of the Stomach",
+   "tissue": "Esophagus/Stomach",
+   "mainType": "Esophagogastric Cancer",
+   "parent": "EGC",
+   "level": 3
+  },
+  {
+   "code": "STSC",
+   "name": "Small Cell Carcinoma of the Stomach",
+   "tissue": "Esophagus/Stomach",
+   "mainType": "Esophagogastric Cancer",
+   "parent": "EGC",
+   "level": 3
+  },
+  {
+   "code": "GRC",
+   "name": "Gastric Remnant Adenocarcinoma",
+   "tissue": "Esophagus/Stomach",
+   "mainType": "Esophagogastric Cancer",
+   "parent": "EGC",
+   "level": 3
+  },
+  {
+   "code": "ESCA",
+   "name": "Esophageal Adenocarcinoma",
+   "tissue": "Esophagus/Stomach",
+   "mainType": "Esophagogastric Cancer",
+   "parent": "EGC",
+   "level": 3
+  },
+  {
+   "code": "USTAD",
+   "name": "Undifferentiated Stomach Adenocarcinoma",
+   "tissue": "Esophagus/Stomach",
+   "mainType": "Esophagogastric Cancer",
+   "parent": "EGC",
+   "level": 3
+  },
+  {
+   "code": "GEJ",
+   "name": "Adenocarcinoma of the Gastroesophageal Junction",
+   "tissue": "Esophagus/Stomach",
+   "mainType": "Esophagogastric Cancer",
+   "parent": "EGC",
+   "level": 3
+  },
+  {
+   "code": "CCOC",
+   "name": "Clear Cell Odontogenic Carcinoma",
+   "tissue": "Head and Neck",
+   "mainType": "Head and Neck Cancer",
+   "parent": "ODGC",
+   "level": 4
+  },
+  {
+   "code": "CMCD",
+   "name": "Cutaneous Mastocytosis",
+   "tissue": "Myeloid",
+   "mainType": "Mastocytosis",
+   "parent": "MCD",
+   "level": 4
+  },
+  {
+   "code": "SM",
+   "name": "Systemic Mastocytosis",
+   "tissue": "Myeloid",
+   "mainType": "Mastocytosis",
+   "parent": "MCD",
+   "level": 4
+  },
+  {
+   "code": "MCSL",
+   "name": "Mast Cell Sarcoma",
+   "tissue": "Myeloid",
+   "mainType": "Mastocytosis",
+   "parent": "MCD",
+   "level": 4
+  },
+  {
+   "code": "MDSMD",
+   "name": "MDS with Multilineage Dysplasia",
+   "tissue": "Myeloid",
+   "mainType": "Myelodysplastic Syndromes",
+   "parent": "MDS",
+   "level": 4
+  },
+  {
+   "code": "MDSID5Q",
+   "name": "MDS with Isolated Del(5q)",
+   "tissue": "Myeloid",
+   "mainType": "Myelodysplastic Syndromes",
+   "parent": "MDS",
+   "level": 4
+  },
+  {
+   "code": "MDSRS",
+   "name": "MDS with Ring Sideroblasts",
+   "tissue": "Myeloid",
+   "mainType": "Myelodysplastic Syndromes",
+   "parent": "MDS",
+   "level": 4
+  },
+  {
+   "code": "MDSEB",
+   "name": "MDS with Excess Blasts",
+   "tissue": "Myeloid",
+   "mainType": "Myelodysplastic Syndromes",
+   "parent": "MDS",
+   "level": 4
+  },
+  {
+   "code": "MDSSLD",
+   "name": "MDS with Single Lineage Dysplasia",
+   "tissue": "Myeloid",
+   "mainType": "Myelodysplastic Syndromes",
+   "parent": "MDS",
+   "level": 4
+  },
+  {
+   "code": "MDSU",
+   "name": "MDS, Unclassifiable",
+   "tissue": "Myeloid",
+   "mainType": "Myelodysplastic Syndromes",
+   "parent": "MDS",
+   "level": 4
+  },
+  {
+   "code": "RCYC",
+   "name": "Refractory Cytopenia of Childhood",
+   "tissue": "Myeloid",
+   "mainType": "Myelodysplastic Syndromes",
+   "parent": "MDS",
+   "level": 4
+  },
+  {
+   "code": "JMML",
+   "name": "Juvenile Myelomonocytic Leukemia",
+   "tissue": "Myeloid",
+   "mainType": "Myelodysplastic/Myeloproliferative Neoplasms",
+   "parent": "MDS/MPN",
+   "level": 4
+  },
+  {
+   "code": "MDSMPNU",
+   "name": "MDS/MPN, Unclassifiable",
+   "tissue": "Myeloid",
+   "mainType": "Myelodysplastic/Myeloproliferative Neoplasms",
+   "parent": "MDS/MPN",
+   "level": 4
+  },
+  {
+   "code": "CMML",
+   "name": "Chronic Myelomonocytic Leukemia",
+   "tissue": "Myeloid",
+   "mainType": "Myelodysplastic/Myeloproliferative Neoplasms",
+   "parent": "MDS/MPN",
+   "level": 4
+  },
+  {
+   "code": "MDSMPNRST",
+   "name": "MDS/MPN with Ring Sideroblasts and Thrombocytosis",
+   "tissue": "Myeloid",
+   "mainType": "Myelodysplastic/Myeloproliferative Neoplasms",
+   "parent": "MDS/MPN",
+   "level": 4
+  },
+  {
+   "code": "ACML",
+   "name": "Atypical Chronic Myeloid Leukemia, BCR-ABL1-",
+   "tissue": "Myeloid",
+   "mainType": "Myelodysplastic/Myeloproliferative Neoplasms",
+   "parent": "MDS/MPN",
+   "level": 4
+  },
+  {
+   "code": "CNL",
+   "name": "Chronic Neutrophilic Leukemia",
+   "tissue": "Myeloid",
+   "mainType": "Myeloproliferative Neoplasms",
+   "parent": "MPN",
+   "level": 4
+  },
+  {
+   "code": "CML",
+   "name": "Chronic Myelogenous Leukemia",
+   "tissue": "Myeloid",
+   "mainType": "Myeloproliferative Neoplasms",
+   "parent": "MPN",
+   "level": 4
+  },
+  {
+   "code": "PV",
+   "name": "Polycythemia Vera",
+   "tissue": "Myeloid",
+   "mainType": "Myeloproliferative Neoplasms",
+   "parent": "MPN",
+   "level": 4
+  },
+  {
+   "code": "PMF",
+   "name": "Primary Myelofibrosis",
+   "tissue": "Myeloid",
+   "mainType": "Myeloproliferative Neoplasms",
+   "parent": "MPN",
+   "level": 4
+  },
+  {
+   "code": "CELNOS",
+   "name": "Chronic Eosinophilic Leukemia, NOS",
+   "tissue": "Myeloid",
+   "mainType": "Myeloproliferative Neoplasms",
+   "parent": "MPN",
+   "level": 4
+  },
+  {
+   "code": "MPNU",
+   "name": "Myeloproliferative Neoplasms, Unclassifiable",
+   "tissue": "Myeloid",
+   "mainType": "Myeloproliferative Neoplasms",
+   "parent": "MPN",
+   "level": 4
+  },
+  {
+   "code": "ET",
+   "name": "Essential Thrombocythemia",
+   "tissue": "Myeloid",
+   "mainType": "Myeloproliferative Neoplasms",
+   "parent": "MPN",
+   "level": 4
+  },
+  {
+   "code": "MLNPDGFRA",
+   "name": "Myeloid/Lymphoid Neoplasms with PDGFRA Rearrangement",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "MLNER",
+   "level": 4
+  },
+  {
+   "code": "MLNPDGFRB",
+   "name": "Myeloid/Lymphoid Neoplasms with PDGFRB Rearrangement",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "MLNER",
+   "level": 4
+  },
+  {
+   "code": "MLNFGFR1",
+   "name": "Myeloid/Lymphoid Neoplasms with FGFR1 Rearrangement",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "MLNER",
+   "level": 4
+  },
+  {
+   "code": "MLNPCM1JAK2",
+   "name": "Myeloid/Lymphoid Neoplasms with PCM1-JAK2",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "MLNER",
+   "level": 4
+  },
+  {
+   "code": "AMLNOS",
+   "name": "AML, NOS",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "AML",
+   "level": 4
+  },
+  {
+   "code": "TMN",
+   "name": "Therapy-Related Myeloid Neoplasms",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "AML",
+   "level": 4
+  },
+  {
+   "code": "MPRDS",
+   "name": "Myeloid Proliferations Related to Down Syndrome",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "AML",
+   "level": 4
+  },
+  {
+   "code": "AMLMRC",
+   "name": "AML with Myelodysplasia-Related Changes",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "AML",
+   "level": 4
+  },
+  {
+   "code": "MS",
+   "name": "Myeloid Sarcoma",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "AML",
+   "level": 4
+  },
+  {
+   "code": "AMLRGA",
+   "name": "AML with Recurrent Genetic Abnormalities",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "AML",
+   "level": 4
+  },
+  {
+   "code": "RDD",
+   "name": "Rosai-Dorfman Disease",
+   "tissue": "Myeloid",
+   "mainType": "Histiocytosis",
+   "parent": "HDCN",
+   "level": 4
+  },
+  {
+   "code": "ECD",
+   "name": "Erdheim-Chester Disease",
+   "tissue": "Myeloid",
+   "mainType": "Histiocytosis",
+   "parent": "HDCN",
+   "level": 4
+  },
+  {
+   "code": "HS",
+   "name": "Histiocytic Sarcoma",
+   "tissue": "Myeloid",
+   "mainType": "Histiocytosis",
+   "parent": "HDCN",
+   "level": 4
+  },
+  {
+   "code": "FRCT",
+   "name": "Fibroblastic Reticular Cell Tumor",
+   "tissue": "Myeloid",
+   "mainType": "Histiocytosis",
+   "parent": "HDCN",
+   "level": 4
+  },
+  {
+   "code": "FDCS",
+   "name": "Follicular Dendritic Cell Sarcoma",
+   "tissue": "Myeloid",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "HDCN",
+   "level": 4
+  },
+  {
+   "code": "IDCT",
+   "name": "Indeterminate Dendritic Cell Tumor",
+   "tissue": "Myeloid",
+   "mainType": "Histiocytosis",
+   "parent": "HDCN",
+   "level": 4
+  },
+  {
+   "code": "LCH",
+   "name": "Langerhans Cell Histiocytosis",
+   "tissue": "Myeloid",
+   "mainType": "Histiocytosis",
+   "parent": "HDCN",
+   "level": 4
+  },
+  {
+   "code": "XGA",
+   "name": "Xanthogranuloma",
+   "tissue": "Myeloid",
+   "mainType": "Histiocytosis",
+   "parent": "HDCN",
+   "level": 4
+  },
+  {
+   "code": "IDCS",
+   "name": "Interdigitating Dendritic Cell Sarcoma",
+   "tissue": "Myeloid",
+   "mainType": "Soft Tissue Sarcoma",
+   "parent": "HDCN",
+   "level": 4
+  },
+  {
+   "code": "LCS",
+   "name": "Langerhans Cell Sarcoma",
+   "tissue": "Myeloid",
+   "mainType": "Histiocytosis",
+   "parent": "HDCN",
+   "level": 4
+  },
+  {
+   "code": "MPALTNOS",
+   "name": "Mixed Phenotype Acute Leukemia, T/Myeloid, NOS",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "ALAL",
+   "level": 4
+  },
+  {
+   "code": "MPALKMT2A",
+   "name": "Mixed Phenotype Acute Leukemia with t(v;11q23.3); KMT2A Rearranged",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "ALAL",
+   "level": 4
+  },
+  {
+   "code": "MPALBNOS",
+   "name": "Mixed Phenotype Acute Leukemia, B/Myeloid, NOS",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "ALAL",
+   "level": 4
+  },
+  {
+   "code": "AUL",
+   "name": "Acute Undifferentiated Leukemia",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "ALAL",
+   "level": 4
+  },
+  {
+   "code": "MPALBCRABL1",
+   "name": "Mixed Phenotype Acute Leukemia with t(9;22)(q34.1;q11.2); BCR-ABL1",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "ALAL",
+   "level": 4
+  },
+  {
+   "code": "AMBLSHH",
+   "name": "Anaplastic Medulloblastoma, SHH Subtype",
+   "tissue": "CNS/Brain",
+   "mainType": "Large Cell/Anaplastic Medulloblastoma",
+   "parent": "AMBL",
+   "level": 4
+  },
+  {
+   "code": "AMBLNOS",
+   "name": "Anaplastic Medulloblastoma, NOS",
+   "tissue": "CNS/Brain",
+   "mainType": "Large Cell/Anaplastic Medulloblastoma",
+   "parent": "AMBL",
+   "level": 4
+  },
+  {
+   "code": "AMBLNWS",
+   "name": "Anaplastic Medulloblastoma, Non-WNT, Non-SHH",
+   "tissue": "CNS/Brain",
+   "mainType": "Large Cell/Anaplastic Medulloblastoma",
+   "parent": "AMBL",
+   "level": 4
+  },
+  {
+   "code": "MBENNOS",
+   "name": "Medulloblastoma with Extensive Nodularity, NOS",
+   "tissue": "CNS/Brain",
+   "mainType": "Medulloblastoma with Extensive Nodularity",
+   "parent": "MBEN",
+   "level": 4
+  },
+  {
+   "code": "MBENSHH",
+   "name": "Medulloblastoma with Extensive Nodularity, SHH Subtype",
+   "tissue": "CNS/Brain",
+   "mainType": "Medulloblastoma with Extensive Nodularity",
+   "parent": "MBEN",
+   "level": 4
+  },
+  {
+   "code": "DMBLNOS",
+   "name": "Desmoplastic/Nodular Medulloblastoma, NOS",
+   "tissue": "CNS/Brain",
+   "mainType": "Desmoplastic/Nodular Medulloblastoma",
+   "parent": "DMBL",
+   "level": 4
+  },
+  {
+   "code": "DMBLSHH",
+   "name": "Desmoplastic/Nodular Medulloblastoma, SHH Subtype",
+   "tissue": "CNS/Brain",
+   "mainType": "Desmoplastic/Nodular Medulloblastoma",
+   "parent": "DMBL",
+   "level": 4
+  },
+  {
+   "code": "MBLSHH",
+   "name": "Medulloblastoma, SHH Subtype",
+   "tissue": "CNS/Brain",
+   "mainType": "Medulloblastoma",
+   "parent": "MBL",
+   "level": 4
+  },
+  {
+   "code": "MBLNOS",
+   "name": "Medulloblastoma, NOS",
+   "tissue": "CNS/Brain",
+   "mainType": "Medulloblastoma",
+   "parent": "MBL",
+   "level": 4
+  },
+  {
+   "code": "MBLNWS",
+   "name": "Medulloblastoma, Non-WNT, Non-SHH",
+   "tissue": "CNS/Brain",
+   "mainType": "Medulloblastoma",
+   "parent": "MBL",
+   "level": 4
+  },
+  {
+   "code": "MBLWNT",
+   "name": "Medulloblastoma, WNT Subtype",
+   "tissue": "CNS/Brain",
+   "mainType": "Medulloblastoma",
+   "parent": "MBL",
+   "level": 4
+  },
+  {
+   "code": "IHG",
+   "name": "Infant-Type Hemispheric Glioma",
+   "tissue": "CNS/Brain",
+   "mainType": "Gliomas, Glioneuronal Tumors, and Neuronal Tumors",
+   "parent": "PDIFHG",
+   "level": 4
+  },
+  {
+   "code": "DHG",
+   "name": "Diffuse Hemispheric Glioma, H3 G34-Mutant",
+   "tissue": "CNS/Brain",
+   "mainType": "Gliomas, Glioneuronal Tumors, and Neuronal Tumors",
+   "parent": "PDIFHG",
+   "level": 4
+  },
+  {
+   "code": "DMG",
+   "name": "Diffuse Midline Glioma, H3 K27-Altered",
+   "tissue": "CNS/Brain",
+   "mainType": "Gliomas, Glioneuronal Tumors, and Neuronal Tumors",
+   "parent": "PDIFHG",
+   "level": 4
+  },
+  {
+   "code": "DPHGG",
+   "name": "Diffuse Pediatric-Type High-Grade Glioma, H3-Wildtype and IDH-Wildtype",
+   "tissue": "CNS/Brain",
+   "mainType": "Gliomas, Glioneuronal Tumors, and Neuronal Tumors",
+   "parent": "PDIFHG",
+   "level": 4
+  },
+  {
+   "code": "ANGL",
+   "name": "Angiocentric Glioma",
+   "tissue": "CNS/Brain",
+   "mainType": "Miscellaneous Neuroepithelial Tumor",
+   "parent": "PDIFLG",
+   "level": 4
+  },
+  {
+   "code": "DLGGMAPK",
+   "name": "Diffuse Low-Grade Glioma, MAPK Pathway-Altered",
+   "tissue": "CNS/Brain",
+   "mainType": "Gliomas, Glioneuronal Tumors, and Neuronal Tumors",
+   "parent": "PDIFLG",
+   "level": 4
+  },
+  {
+   "code": "DASTR",
+   "name": "Diffuse Astrocytoma, MYB- or MYBL1-Altered",
+   "tissue": "CNS/Brain",
+   "mainType": "Glioma",
+   "parent": "PDIFLG",
+   "level": 4
+  },
+  {
+   "code": "LGNET",
+   "name": "Polymorphous Low-Grade Neuroepithelial Tumor of the Young",
+   "tissue": "CNS/Brain",
+   "mainType": "Miscellaneous Brain Tumor",
+   "parent": "PDIFLG",
+   "level": 4
+  },
+  {
+   "code": "ASTR",
+   "name": "Astrocytoma, IDH-Mutant",
+   "tissue": "CNS/Brain",
+   "mainType": "Glioma",
+   "parent": "ADIFG",
+   "level": 4
+  },
+  {
+   "code": "ODG",
+   "name": "Oligodendroglioma, IDH-mutant, and 1p/19q-Codeleted",
+   "tissue": "CNS/Brain",
+   "mainType": "Glioma",
+   "parent": "ADIFG",
+   "level": 4
+  },
+  {
+   "code": "GB",
+   "name": "Glioblastoma, IDH-Wildtype",
+   "tissue": "CNS/Brain",
+   "mainType": "Glioma",
+   "parent": "ADIFG",
+   "level": 4
+  },
+  {
+   "code": "GBASC",
+   "name": "Adenosquamous Carcinoma of the Gallbladder",
+   "tissue": "Biliary Tract",
+   "mainType": "Hepatobiliary Cancer",
+   "parent": "GBC",
+   "level": 4
+  },
+  {
+   "code": "SCGBC",
+   "name": "Small Cell Gallbladder Carcinoma",
+   "tissue": "Biliary Tract",
+   "mainType": "Hepatobiliary Cancer",
+   "parent": "GBC",
+   "level": 4
+  },
+  {
+   "code": "GBAD",
+   "name": "Gallbladder Adenocarcinoma, NOS",
+   "tissue": "Biliary Tract",
+   "mainType": "Hepatobiliary Cancer",
+   "parent": "GBC",
+   "level": 4
+  },
+  {
+   "code": "EHCH",
+   "name": "Extrahepatic Cholangiocarcinoma",
+   "tissue": "Biliary Tract",
+   "mainType": "Hepatobiliary Cancer",
+   "parent": "CHOL",
+   "level": 4
+  },
+  {
+   "code": "PHCH",
+   "name": "Perihilar Cholangiocarcinoma",
+   "tissue": "Biliary Tract",
+   "mainType": "Hepatobiliary Cancer",
+   "parent": "CHOL",
+   "level": 4
+  },
+  {
+   "code": "IHCH",
+   "name": "Intrahepatic Cholangiocarcinoma",
+   "tissue": "Biliary Tract",
+   "mainType": "Hepatobiliary Cancer",
+   "parent": "CHOL",
+   "level": 4
+  },
+  {
+   "code": "SCEMU",
+   "name": "Signet Ring Mucinous Carcinoma",
+   "tissue": "Cervix",
+   "mainType": "Cervical Cancer",
+   "parent": "CEMU",
+   "level": 4
+  },
+  {
+   "code": "GCEMU",
+   "name": "Gastric Type Mucinous Carcinoma",
+   "tissue": "Cervix",
+   "mainType": "Cervical Cancer",
+   "parent": "CEMU",
+   "level": 4
+  },
+  {
+   "code": "ICEMU",
+   "name": "Intestinal Type Mucinous Carcinoma",
+   "tissue": "Cervix",
+   "mainType": "Cervical Cancer",
+   "parent": "CEMU",
+   "level": 4
+  },
+  {
+   "code": "CSCHW",
+   "name": "Cellular Schwannoma",
+   "tissue": "Peripheral Nervous System",
+   "mainType": "Nerve Sheath Tumor",
+   "parent": "SCHW",
+   "level": 4
+  },
+  {
+   "code": "MSCHW",
+   "name": "Melanotic Schwannoma",
+   "tissue": "Peripheral Nervous System",
+   "mainType": "Nerve Sheath Tumor",
+   "parent": "SCHW",
+   "level": 4
+  },
+  {
+   "code": "HGSOC",
+   "name": "High-Grade Serous Ovarian Cancer",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Ovarian Cancer",
+   "parent": "SOC",
+   "level": 4
+  },
+  {
+   "code": "LGSOC",
+   "name": "Low-Grade Serous Ovarian Cancer",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Ovarian Cancer",
+   "parent": "SOC",
+   "level": 4
+  },
+  {
+   "code": "BTBEOV",
+   "name": "Brenner Tumor, Benign",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Ovarian Cancer",
+   "parent": "BTOV",
+   "level": 4
+  },
+  {
+   "code": "BTBOV",
+   "name": "Brenner Tumor, Borderline",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Ovarian Cancer",
+   "parent": "BTOV",
+   "level": 4
+  },
+  {
+   "code": "BTMOV",
+   "name": "Brenner Tumor, Malignant",
+   "tissue": "Ovary/Fallopian Tube",
+   "mainType": "Ovarian Cancer",
+   "parent": "BTOV",
+   "level": 4
+  },
+  {
+   "code": "MPT",
+   "name": "Malignant Phyllodes Tumor of the Breast",
+   "tissue": "Breast",
+   "mainType": "Breast Sarcoma",
+   "parent": "PT",
+   "level": 4
+  },
+  {
+   "code": "BLPT",
+   "name": "Borderline Phyllodes Tumor of the Breast",
+   "tissue": "Breast",
+   "mainType": "Breast Sarcoma",
+   "parent": "PT",
+   "level": 4
+  },
+  {
+   "code": "BPT",
+   "name": "Benign Phyllodes Tumor of the Breast",
+   "tissue": "Breast",
+   "mainType": "Breast Sarcoma",
+   "parent": "PT",
+   "level": 4
+  },
+  {
+   "code": "COM",
+   "name": "Carcinoma with Osseous Metaplasia",
+   "tissue": "Breast",
+   "mainType": "Breast Cancer",
+   "parent": "MMBC",
+   "level": 4
+  },
+  {
+   "code": "MCS",
+   "name": "Metaplastic Carcinosarcoma",
+   "tissue": "Breast",
+   "mainType": "Breast Cancer",
+   "parent": "MMBC",
+   "level": 4
+  },
+  {
+   "code": "CCHM",
+   "name": "Carcinoma with Chondroid Metaplasia",
+   "tissue": "Breast",
+   "mainType": "Breast Cancer",
+   "parent": "MMBC",
+   "level": 4
+  },
+  {
+   "code": "MASCC",
+   "name": "Metaplastic Adenocarcinoma with Spindle Cell Differentiation",
+   "tissue": "Breast",
+   "mainType": "Breast Cancer",
+   "parent": "EMBC",
+   "level": 4
+  },
+  {
+   "code": "MSCC",
+   "name": "Metaplastic Squamous Cell Carcinoma",
+   "tissue": "Breast",
+   "mainType": "Breast Cancer",
+   "parent": "EMBC",
+   "level": 4
+  },
+  {
+   "code": "MASC",
+   "name": "Metaplastic Adenosquamous Carcinoma",
+   "tissue": "Breast",
+   "mainType": "Breast Cancer",
+   "parent": "EMBC",
+   "level": 4
+  },
+  {
+   "code": "ULM",
+   "name": "Uterine Leiomyoma",
+   "tissue": "Uterus",
+   "mainType": "Uterine Sarcoma",
+   "parent": "USMT",
+   "level": 4
+  },
+  {
+   "code": "USTUMP",
+   "name": "Uterine Smooth Muscle Tumor of Uncertain Malignant Potential",
+   "tissue": "Uterus",
+   "mainType": "Uterine Sarcoma",
+   "parent": "USMT",
+   "level": 4
+  },
+  {
+   "code": "ULMS",
+   "name": "Uterine Leiomyosarcoma",
+   "tissue": "Uterus",
+   "mainType": "Uterine Sarcoma",
+   "parent": "USMT",
+   "level": 4
+  },
+  {
+   "code": "UMLMS",
+   "name": "Uterine Myxoid Leiomyosarcoma",
+   "tissue": "Uterus",
+   "mainType": "Uterine Sarcoma",
+   "parent": "USMT",
+   "level": 4
+  },
+  {
+   "code": "UELMS",
+   "name": "Uterine Epithelioid Leiomyosarcoma",
+   "tissue": "Uterus",
+   "mainType": "Uterine Sarcoma",
+   "parent": "USMT",
+   "level": 4
+  },
+  {
+   "code": "LGESS",
+   "name": "Low-Grade Endometrial Stromal Sarcoma",
+   "tissue": "Uterus",
+   "mainType": "Uterine Sarcoma",
+   "parent": "ESS",
+   "level": 4
+  },
+  {
+   "code": "HGESS",
+   "name": "High-Grade Endometrial Stromal Sarcoma",
+   "tissue": "Uterus",
+   "mainType": "Uterine Sarcoma",
+   "parent": "ESS",
+   "level": 4
+  },
+  {
+   "code": "PHM",
+   "name": "Partial Hydatidiform Mole",
+   "tissue": "Uterus",
+   "mainType": "Gestational Trophoblastic Disease",
+   "parent": "MP",
+   "level": 4
+  },
+  {
+   "code": "CHM",
+   "name": "Complete Hydatidiform Mole",
+   "tissue": "Uterus",
+   "mainType": "Gestational Trophoblastic Disease",
+   "parent": "MP",
+   "level": 4
+  },
+  {
+   "code": "IHM",
+   "name": "Invasive Hydatidiform Mole",
+   "tissue": "Uterus",
+   "mainType": "Gestational Trophoblastic Disease",
+   "parent": "MP",
+   "level": 4
+  },
+  {
+   "code": "ROCY",
+   "name": "Renal Oncocytoma",
+   "tissue": "Kidney",
+   "mainType": "Renal Cell Carcinoma",
+   "parent": "NCCRCC",
+   "level": 4
+  },
+  {
+   "code": "TRCC",
+   "name": "Translocation-Associated Renal Cell Carcinoma",
+   "tissue": "Kidney",
+   "mainType": "Renal Cell Carcinoma",
+   "parent": "NCCRCC",
+   "level": 4
+  },
+  {
+   "code": "SRCC",
+   "name": "Sarcomatoid Renal Cell Carcinoma",
+   "tissue": "Kidney",
+   "mainType": "Renal Cell Carcinoma",
+   "parent": "NCCRCC",
+   "level": 4
+  },
+  {
+   "code": "MRC",
+   "name": "Renal Medullary Carcinoma",
+   "tissue": "Kidney",
+   "mainType": "Renal Cell Carcinoma",
+   "parent": "NCCRCC",
+   "level": 4
+  },
+  {
+   "code": "CHRCC",
+   "name": "Chromophobe Renal Cell Carcinoma",
+   "tissue": "Kidney",
+   "mainType": "Renal Cell Carcinoma",
+   "parent": "NCCRCC",
+   "level": 4
+  },
+  {
+   "code": "CDRCC",
+   "name": "Collecting Duct Renal Cell Carcinoma",
+   "tissue": "Kidney",
+   "mainType": "Renal Cell Carcinoma",
+   "parent": "NCCRCC",
+   "level": 4
+  },
+  {
+   "code": "RSCC",
+   "name": "Renal Small Cell Carcinoma",
+   "tissue": "Kidney",
+   "mainType": "Renal Cell Carcinoma",
+   "parent": "NCCRCC",
+   "level": 4
+  },
+  {
+   "code": "FHRCC",
+   "name": "FH-Deficient Renal Cell Carcinoma",
+   "tissue": "Kidney",
+   "mainType": "Renal Cell Carcinoma",
+   "parent": "NCCRCC",
+   "level": 4
+  },
+  {
+   "code": "CCPRC",
+   "name": "Clear Cell Papillary Renal Cell Carcinoma",
+   "tissue": "Kidney",
+   "mainType": "Renal Cell Carcinoma",
+   "parent": "NCCRCC",
+   "level": 4
+  },
+  {
+   "code": "URCC",
+   "name": "Unclassified Renal Cell Carcinoma",
+   "tissue": "Kidney",
+   "mainType": "Renal Cell Carcinoma",
+   "parent": "NCCRCC",
+   "level": 4
+  },
+  {
+   "code": "PRCC",
+   "name": "Papillary Renal Cell Carcinoma",
+   "tissue": "Kidney",
+   "mainType": "Renal Cell Carcinoma",
+   "parent": "NCCRCC",
+   "level": 4
+  },
+  {
+   "code": "RAML",
+   "name": "Renal Angiomyolipoma",
+   "tissue": "Kidney",
+   "mainType": "Renal Cell Carcinoma",
+   "parent": "NCCRCC",
+   "level": 4
+  },
+  {
+   "code": "MTSCC",
+   "name": "Renal Mucinous Tubular Spindle Cell Carcinoma",
+   "tissue": "Kidney",
+   "mainType": "Renal Cell Carcinoma",
+   "parent": "NCCRCC",
+   "level": 4
+  },
+  {
+   "code": "SCCRCC",
+   "name": "Renal Clear Cell Carcinoma with Sarcomatoid Features",
+   "tissue": "Kidney",
+   "mainType": "Renal Cell Carcinoma",
+   "parent": "CCRCC",
+   "level": 4
+  },
+  {
+   "code": "MBN",
+   "name": "Mature B-Cell Neoplasms",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "NHL",
+   "level": 4
+  },
+  {
+   "code": "MTNN",
+   "name": "Mature T and NK Neoplasms",
+   "tissue": "Lymphoid",
+   "mainType": "Mature T and NK Neoplasms",
+   "parent": "NHL",
+   "level": 4
+  },
+  {
+   "code": "NLPHL",
+   "name": "Nodular Lymphocyte-Predominant Hodgkin Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Hodgkin Lymphoma",
+   "parent": "HL",
+   "level": 4
+  },
+  {
+   "code": "CHL",
+   "name": "Classical Hodgkin Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Hodgkin Lymphoma",
+   "parent": "HL",
+   "level": 4
+  },
+  {
+   "code": "NKCLL",
+   "name": "Natural Killer (NK) Cell Lymphoblastic Leukemia/Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "T-Lymphoblastic Leukemia/Lymphoma",
+   "parent": "TLL",
+   "level": 4
+  },
+  {
+   "code": "ETPLL",
+   "name": "Early T-Cell Precursor Lymphoblastic Leukemia",
+   "tissue": "Lymphoid",
+   "mainType": "T-Lymphoblastic Leukemia/Lymphoma",
+   "parent": "TLL",
+   "level": 4
+  },
+  {
+   "code": "CHLPTLD",
+   "name": "Classical Hodgkin Lymphoma PTLD",
+   "tissue": "Lymphoid",
+   "mainType": "Posttransplant Lymphoproliferative Disorders",
+   "parent": "PTLD",
+   "level": 4
+  },
+  {
+   "code": "PPTLD",
+   "name": "Polymorphic PTLD",
+   "tissue": "Lymphoid",
+   "mainType": "Posttransplant Lymphoproliferative Disorders",
+   "parent": "PTLD",
+   "level": 4
+  },
+  {
+   "code": "FHPTLD",
+   "name": "Florid Follicular Hyperplasia PTLD",
+   "tissue": "Lymphoid",
+   "mainType": "Posttransplant Lymphoproliferative Disorders",
+   "parent": "PTLD",
+   "level": 4
+  },
+  {
+   "code": "MPTLD",
+   "name": "Monomorphic PTLD (B- and T-/NK-cell types)",
+   "tissue": "Lymphoid",
+   "mainType": "Posttransplant Lymphoproliferative Disorders",
+   "parent": "PTLD",
+   "level": 4
+  },
+  {
+   "code": "PHPTLD",
+   "name": "Plasmacytic Hyperplasia PTLD",
+   "tissue": "Lymphoid",
+   "mainType": "Posttransplant Lymphoproliferative Disorders",
+   "parent": "PTLD",
+   "level": 4
+  },
+  {
+   "code": "IMPTLD",
+   "name": "Infectious Mononucleosis PTLD",
+   "tissue": "Lymphoid",
+   "mainType": "Posttransplant Lymphoproliferative Disorders",
+   "parent": "PTLD",
+   "level": 4
+  },
+  {
+   "code": "BLLRGA",
+   "name": "B-Lymphoblastic Leukemia/Lymphoma with Recurrent Genetic Abnormalities",
+   "tissue": "Lymphoid",
+   "mainType": "B-Lymphoblastic Leukemia/Lymphoma",
+   "parent": "BLL",
+   "level": 4
+  },
+  {
+   "code": "BLLNOS",
+   "name": "B-Lymphoblastic Leukemia/Lymphoma, NOS",
+   "tissue": "Lymphoid",
+   "mainType": "B-Lymphoblastic Leukemia/Lymphoma",
+   "parent": "BLL",
+   "level": 4
+  },
+  {
+   "code": "LUMEC",
+   "name": "Mucoepidermoid Carcinoma of the Lung",
+   "tissue": "Lung",
+   "mainType": "Non-Small Cell Lung Cancer",
+   "parent": "SGTTL",
+   "level": 4
+  },
+  {
+   "code": "LUACC",
+   "name": "Adenoid Cystic Carcinoma of the Lung",
+   "tissue": "Lung",
+   "mainType": "Non-Small Cell Lung Cancer",
+   "parent": "SGTTL",
+   "level": 4
+  },
+  {
+   "code": "GCLC",
+   "name": "Giant Cell Carcinoma of the Lung",
+   "tissue": "Lung",
+   "mainType": "Non-Small Cell Lung Cancer",
+   "parent": "LCLC",
+   "level": 4
+  },
+  {
+   "code": "BLCLC",
+   "name": "Basaloid Large Cell Carcinoma of the Lung",
+   "tissue": "Lung",
+   "mainType": "Non-Small Cell Lung Cancer",
+   "parent": "LCLC",
+   "level": 4
+  },
+  {
+   "code": "LECLC",
+   "name": "Lymphoepithelioma-like Carcinoma of the Lung",
+   "tissue": "Lung",
+   "mainType": "Non-Small Cell Lung Cancer",
+   "parent": "LCLC",
+   "level": 4
+  },
+  {
+   "code": "RLCLC",
+   "name": "Large Cell Lung Carcinoma With Rhabdoid Phenotype",
+   "tissue": "Lung",
+   "mainType": "Non-Small Cell Lung Cancer",
+   "parent": "LCLC",
+   "level": 4
+  },
+  {
+   "code": "CCLC",
+   "name": "Clear Cell Carcinoma of the Lung",
+   "tissue": "Lung",
+   "mainType": "Non-Small Cell Lung Cancer",
+   "parent": "LCLC",
+   "level": 4
+  },
+  {
+   "code": "PSTAD",
+   "name": "Papillary Stomach Adenocarcinoma",
+   "tissue": "Esophagus/Stomach",
+   "mainType": "Esophagogastric Cancer",
+   "parent": "STAD",
+   "level": 4
+  },
+  {
+   "code": "MSTAD",
+   "name": "Mucinous Stomach Adenocarcinoma",
+   "tissue": "Esophagus/Stomach",
+   "mainType": "Esophagogastric Cancer",
+   "parent": "STAD",
+   "level": 4
+  },
+  {
+   "code": "DSTAD",
+   "name": "Diffuse Type Stomach Adenocarcinoma",
+   "tissue": "Esophagus/Stomach",
+   "mainType": "Esophagogastric Cancer",
+   "parent": "STAD",
+   "level": 4
+  },
+  {
+   "code": "ISTAD",
+   "name": "Intestinal Type Stomach Adenocarcinoma",
+   "tissue": "Esophagus/Stomach",
+   "mainType": "Esophagogastric Cancer",
+   "parent": "STAD",
+   "level": 4
+  },
+  {
+   "code": "TSTAD",
+   "name": "Tubular Stomach Adenocarcinoma",
+   "tissue": "Esophagus/Stomach",
+   "mainType": "Esophagogastric Cancer",
+   "parent": "STAD",
+   "level": 4
+  },
+  {
+   "code": "SSRCC",
+   "name": "Signet Ring Cell Carcinoma of the Stomach",
+   "tissue": "Esophagus/Stomach",
+   "mainType": "Esophagogastric Cancer",
+   "parent": "USTAD",
+   "level": 4
+  },
+  {
+   "code": "SPDAC",
+   "name": "Poorly Differentiated Carcinoma of the Stomach",
+   "tissue": "Esophagus/Stomach",
+   "mainType": "Esophagogastric Cancer",
+   "parent": "USTAD",
+   "level": 4
+  },
+  {
+   "code": "SSM",
+   "name": "Smoldering Systemic Mastocytosis",
+   "tissue": "Myeloid",
+   "mainType": "Mastocytosis",
+   "parent": "SM",
+   "level": 5
+  },
+  {
+   "code": "SMAHN",
+   "name": "Systemic Mastocytosis with an Associated Hematological Neoplasm",
+   "tissue": "Myeloid",
+   "mainType": "Mastocytosis",
+   "parent": "SM",
+   "level": 5
+  },
+  {
+   "code": "SMMCL",
+   "name": "Mast Cell Leukemia",
+   "tissue": "Myeloid",
+   "mainType": "Mastocytosis",
+   "parent": "SM",
+   "level": 5
+  },
+  {
+   "code": "ISM",
+   "name": "Indolent Systemic Mastocytosis",
+   "tissue": "Myeloid",
+   "mainType": "Mastocytosis",
+   "parent": "SM",
+   "level": 5
+  },
+  {
+   "code": "ASM",
+   "name": "Aggressive Systemic Mastocytosis",
+   "tissue": "Myeloid",
+   "mainType": "Mastocytosis",
+   "parent": "SM",
+   "level": 5
+  },
+  {
+   "code": "MDSRSSLD",
+   "name": "MDS with Ring Sideroblasts and Single Lineage Dysplasia",
+   "tissue": "Myeloid",
+   "mainType": "Myelodysplastic Syndromes",
+   "parent": "MDSRS",
+   "level": 5
+  },
+  {
+   "code": "MDSRSMD",
+   "name": "MDS with Ring Sideroblasts and Multilineage Dysplasia",
+   "tissue": "Myeloid",
+   "mainType": "Myelodysplastic Syndromes",
+   "parent": "MDSRS",
+   "level": 5
+  },
+  {
+   "code": "MDSEB1",
+   "name": "MDS with excess blasts-1",
+   "tissue": "Myeloid",
+   "mainType": "Myelodysplastic Syndromes",
+   "parent": "MDSEB",
+   "level": 5
+  },
+  {
+   "code": "MDSEB2",
+   "name": "MDS with excess blasts-2",
+   "tissue": "Myeloid",
+   "mainType": "Myelodysplastic Syndromes",
+   "parent": "MDSEB",
+   "level": 5
+  },
+  {
+   "code": "CMML1",
+   "name": "Chronic Myelomonocytic Leukemia-1",
+   "tissue": "Myeloid",
+   "mainType": "Myelodysplastic/Myeloproliferative Neoplasms",
+   "parent": "CMML",
+   "level": 5
+  },
+  {
+   "code": "CMML2",
+   "name": "Chronic Myelomonocytic Leukemia-2",
+   "tissue": "Myeloid",
+   "mainType": "Myelodysplastic/Myeloproliferative Neoplasms",
+   "parent": "CMML",
+   "level": 5
+  },
+  {
+   "code": "CMML0",
+   "name": "Chronic Myelomonocytic Leukemia-0",
+   "tissue": "Myeloid",
+   "mainType": "Myelodysplastic/Myeloproliferative Neoplasms",
+   "parent": "CMML",
+   "level": 5
+  },
+  {
+   "code": "CMLBCRABL1",
+   "name": "Chronic Myeloid Leukemia, BCR-ABL1+",
+   "tissue": "Myeloid",
+   "mainType": "Myeloproliferative Neoplasms",
+   "parent": "CML",
+   "level": 5
+  },
+  {
+   "code": "PVMF",
+   "name": "Polycythaemia Vera Myelofibrosis",
+   "tissue": "Myeloid",
+   "mainType": "Myeloproliferative Neoplasms",
+   "parent": "PV",
+   "level": 5
+  },
+  {
+   "code": "PMFPES",
+   "name": "Primary Myelofibrosis, Prefibrotic/Early Stage",
+   "tissue": "Myeloid",
+   "mainType": "Myeloproliferative Neoplasms",
+   "parent": "PMF",
+   "level": 5
+  },
+  {
+   "code": "PMFOFS",
+   "name": "Primary Myelofibrosis,Overt Fibrotic Stage",
+   "tissue": "Myeloid",
+   "mainType": "Myeloproliferative Neoplasms",
+   "parent": "PMF",
+   "level": 5
+  },
+  {
+   "code": "ETMF",
+   "name": "Essential Thrombocythemia Myelofibrosis",
+   "tissue": "Myeloid",
+   "mainType": "Myeloproliferative Neoplasms",
+   "parent": "ET",
+   "level": 5
+  },
+  {
+   "code": "AMKL",
+   "name": "Acute Megakaryoblastic Leukemia",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "AMLNOS",
+   "level": 5
+  },
+  {
+   "code": "APMF",
+   "name": "Acute Panmyelosis with Myelofibrosis",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "AMLNOS",
+   "level": 5
+  },
+  {
+   "code": "AWM",
+   "name": "AML without Maturation",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "AMLNOS",
+   "level": 5
+  },
+  {
+   "code": "ABL",
+   "name": "Acute Basophilic Leukemia",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "AMLNOS",
+   "level": 5
+  },
+  {
+   "code": "AMML",
+   "name": "Acute Myelomonocytic Leukemia",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "AMLNOS",
+   "level": 5
+  },
+  {
+   "code": "AMOL",
+   "name": "Acute Monoblastic/Monocytic Leukemia",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "AMLNOS",
+   "level": 5
+  },
+  {
+   "code": "PERL",
+   "name": "Pure Erythroid Leukemia",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "AMLNOS",
+   "level": 5
+  },
+  {
+   "code": "AM",
+   "name": "AML with Maturation",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "AMLNOS",
+   "level": 5
+  },
+  {
+   "code": "AMLMD",
+   "name": "AML with Minimal Differentiation",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "AMLNOS",
+   "level": 5
+  },
+  {
+   "code": "TAML",
+   "name": "Therapy-Related Acute Myeloid Leukemia",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "TMN",
+   "level": 5
+  },
+  {
+   "code": "TMDS",
+   "name": "Therapy-Related Myelodysplastic Syndrome",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "TMN",
+   "level": 5
+  },
+  {
+   "code": "TAM",
+   "name": "Transient Abnormal Myelopoiesis",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "MPRDS",
+   "level": 5
+  },
+  {
+   "code": "MLADS",
+   "name": "Myeloid Leukemia Associated with Down Syndrome",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "MPRDS",
+   "level": 5
+  },
+  {
+   "code": "AMLMLLT3KMT2A",
+   "name": "AML with t(9;11)(p21.3;q23.3);MLLT3-KMT2A",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "AMLRGA",
+   "level": 5
+  },
+  {
+   "code": "AMLNPM1",
+   "name": "AML with Mutated NPM1",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "AMLRGA",
+   "level": 5
+  },
+  {
+   "code": "AMLRUNX1RUNX1T1",
+   "name": "AML with t(8;21)(q22;q22.1);RUNX1-RUNX1T1",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "AMLRGA",
+   "level": 5
+  },
+  {
+   "code": "AMLCEBPA",
+   "name": "AML with Biallelic Mutations of CEBPA",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "AMLRGA",
+   "level": 5
+  },
+  {
+   "code": "AMLGATA2MECOM",
+   "name": "AML with inv(3)(q21.3q26.2) or t(3;3)(q21.3;q26.2); GATA2, MECOM",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "AMLRGA",
+   "level": 5
+  },
+  {
+   "code": "AMLBCRABL1",
+   "name": "AML with BCR-ABL1",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "AMLRGA",
+   "level": 5
+  },
+  {
+   "code": "AMLRARA",
+   "name": "AML with Variant RARA translocation",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "AMLRGA",
+   "level": 5
+  },
+  {
+   "code": "AMLRUNX1",
+   "name": "AML with Mutated RUNX1",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "AMLRGA",
+   "level": 5
+  },
+  {
+   "code": "AMLDEKNUP214",
+   "name": "AML with t(6;9)(p23;q34.1);DEK-NUP214",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "AMLRGA",
+   "level": 5
+  },
+  {
+   "code": "APLPMLRARA",
+   "name": "APL with PML-RARA",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "AMLRGA",
+   "level": 5
+  },
+  {
+   "code": "AMLCBFBMYH11",
+   "name": "AML with inv(16)(p13.1q22) or t(16;16)(p13.1;q22);CBFB-MYH11",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "AMLRGA",
+   "level": 5
+  },
+  {
+   "code": "AMLRBM15MKL1",
+   "name": "AML (megakaryoblastic) with t(1;22)(p13.3;q13.3);RBM15-MKL1",
+   "tissue": "Myeloid",
+   "mainType": "Leukemia",
+   "parent": "AMLRGA",
+   "level": 5
+  },
+  {
+   "code": "JXG",
+   "name": "Disseminated Juvenile Xanthogranuloma",
+   "tissue": "Myeloid",
+   "mainType": "Histiocytosis",
+   "parent": "XGA",
+   "level": 5
+  },
+  {
+   "code": "AMBLNWSG3",
+   "name": "Anaplastic Medulloblastoma, Group 3",
+   "tissue": "CNS/Brain",
+   "mainType": "Large Cell/Anaplastic Medulloblastoma",
+   "parent": "AMBLNWS",
+   "level": 5
+  },
+  {
+   "code": "AMBLNWSG4",
+   "name": "Anaplastic Medulloblastoma, Group 4",
+   "tissue": "CNS/Brain",
+   "mainType": "Large Cell/Anaplastic Medulloblastoma",
+   "parent": "AMBLNWS",
+   "level": 5
+  },
+  {
+   "code": "MBLG4",
+   "name": "Medulloblastoma, Group 4",
+   "tissue": "CNS/Brain",
+   "mainType": "Medulloblastoma",
+   "parent": "MBLNWS",
+   "level": 5
+  },
+  {
+   "code": "MBLG3",
+   "name": "Medulloblastoma, Group 3",
+   "tissue": "CNS/Brain",
+   "mainType": "Medulloblastoma",
+   "parent": "MBLNWS",
+   "level": 5
+  },
+  {
+   "code": "ASTR2",
+   "name": "Astrocytoma, IDH-Mutant, Grade 2",
+   "tissue": "CNS/Brain",
+   "mainType": "Gliomas, Glioneuronal Tumors, and Neuronal Tumors",
+   "parent": "ASTR",
+   "level": 5
+  },
+  {
+   "code": "ASTR3",
+   "name": "Astrocytoma, IDH-Mutant, Grade 3",
+   "tissue": "CNS/Brain",
+   "mainType": "Gliomas, Glioneuronal Tumors, and Neuronal Tumors",
+   "parent": "ASTR",
+   "level": 5
+  },
+  {
+   "code": "ASTR4",
+   "name": "Astrocytoma, IDH-Mutant, Grade 4",
+   "tissue": "CNS/Brain",
+   "mainType": "Gliomas, Glioneuronal Tumors, and Neuronal Tumors",
+   "parent": "ASTR",
+   "level": 5
+  },
+  {
+   "code": "ODG2",
+   "name": "Oligodendroglioma, IDH-mutant, and 1p/19q-Codeleted, Grade 2",
+   "tissue": "CNS/Brain",
+   "mainType": "Gliomas, Glioneuronal Tumors, and Neuronal Tumors",
+   "parent": "ODG",
+   "level": 5
+  },
+  {
+   "code": "ODG3",
+   "name": "Oligodendroglioma, IDH-mutant, and 1p/19q-Codeleted, Grade 3",
+   "tissue": "CNS/Brain",
+   "mainType": "Gliomas, Glioneuronal Tumors, and Neuronal Tumors",
+   "parent": "ODG",
+   "level": 5
+  },
+  {
+   "code": "GSARC",
+   "name": "Gliosarcoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Glioma",
+   "parent": "GB",
+   "level": 5
+  },
+  {
+   "code": "SCGBM",
+   "name": "Small Cell Glioblastoma",
+   "tissue": "CNS/Brain",
+   "mainType": "Glioma",
+   "parent": "GB",
+   "level": 5
+  },
+  {
+   "code": "EP",
+   "name": "Extraosseous Plasmacytoma",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "SBLU",
+   "name": "Splenic B-Cell Lymphoma/Leukemia, Unclassifiable",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "PMBL",
+   "name": "Primary Mediastinal (Thymic) Large B-Cell Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "EBVDLBCLNOS",
+   "name": "EBV Positive DLBCL, NOS",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "PEL",
+   "name": "Primary Effusion Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "MCL",
+   "name": "Mantle Cell Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "SPB",
+   "name": "Solitary Plasmacytoma of Bone",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "CLLSLL",
+   "name": "Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "LBLIRF4",
+   "name": "Large B-Cell Lymphoma with IRF4 Rearrangement",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "PCM",
+   "name": "Plasma Cell Myeloma",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "PCNSL",
+   "name": "Primary DLBCL of the central nervous system",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "HCL",
+   "name": "Hairy Cell Leukemia",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "HGBCLMYCBCL2",
+   "name": "High-Grade B-Cell Lymphoma, with MYC and BCL2 and/or BCL6 Rearrangements",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "BL",
+   "name": "Burkitt Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "PCLBCLLT",
+   "name": "Primary Cutaneous DLBCL, Leg Type",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "MCBCL",
+   "name": "Monoclonal B-Cell Lymphocytosis",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "LPL",
+   "name": "Lymphoplasmacytic Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "BCLU",
+   "name": "B-Cell Lymphoma, Unclassifiable, with Features Intermediate between DLBCL and Classical Hodgkin lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "BLL11Q",
+   "name": "Burkitt-Like Lymphoma with 11q Aberration",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "GHCD",
+   "name": "Gamma Heavy-Chain Disease",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "PTFL",
+   "name": "Pediatric-Type Follicular Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "MZL",
+   "name": "Marginal Zone Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "DLBCLCI",
+   "name": "DLBCL Associated with Chronic Inflammation",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "AHCD",
+   "name": "Alpha Heavy-Chain Disease",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "MGUS",
+   "name": "Monoclonal Gammopathy of Undetermined Significance",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "HHV8DLBCL",
+   "name": "HHV8 Positive DLBCL, NOS",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "THRLBCL",
+   "name": "T-Cell/Histiocyte-Rich Large B-Cell Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "IVBCL",
+   "name": "Intravascular Large B-Cell Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "BPLL",
+   "name": "B-Cell Prolymphocytic Leukemia",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "HGBCL",
+   "name": "High-Grade B-Cell Lymphoma, NOS",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "DLBCLNOS",
+   "name": "Diffuse Large B-Cell Lymphoma, NOS",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "ALKLBCL",
+   "name": "ALK Positive Large B-Cell Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "MIDD",
+   "name": "Monoclonal Immunoglobulin Deposition Diseases",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "FL",
+   "name": "Follicular Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "EBVMCU",
+   "name": "EBV Positive Mucocutaneous Ulcer",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "MHCD",
+   "name": "Mu Heavy-Chain Disease",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "PCFCL",
+   "name": "Primary Cutaneous Follicle Center Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "LYG",
+   "name": "Lymphomatoid Granulomatosis",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "PLBL",
+   "name": "Plasmablastic Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MBN",
+   "level": 5
+  },
+  {
+   "code": "PCGDTCL",
+   "name": "Primary Cutaneous Gamma Delta T-Cell Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Mature T and NK Neoplasms",
+   "parent": "MTNN",
+   "level": 5
+  },
+  {
+   "code": "EATL",
+   "name": "Enteropathy-Associated T-Cell Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Mature T and NK Neoplasms",
+   "parent": "MTNN",
+   "level": 5
+  },
+  {
+   "code": "TLGL",
+   "name": "T-Cell Large Granular Lymphocytic Leukemia",
+   "tissue": "Lymphoid",
+   "mainType": "Mature T and NK Neoplasms",
+   "parent": "MTNN",
+   "level": 5
+  },
+  {
+   "code": "ALCL",
+   "name": "Anaplastic Large Cell Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Mature T and NK Neoplasms",
+   "parent": "MTNN",
+   "level": 5
+  },
+  {
+   "code": "TPLL",
+   "name": "T-Cell Prolymphocytic Leukemia",
+   "tissue": "Lymphoid",
+   "mainType": "Mature T and NK Neoplasms",
+   "parent": "MTNN",
+   "level": 5
+  },
+  {
+   "code": "SS",
+   "name": "Sezary Syndrome",
+   "tissue": "Lymphoid",
+   "mainType": "Mature T and NK Neoplasms",
+   "parent": "MTNN",
+   "level": 5
+  },
+  {
+   "code": "PCSMTPLD",
+   "name": "Primary Cutaneous CD4 Positive Small/Medium T-Cell Lymphoproliferative Disorder",
+   "tissue": "Lymphoid",
+   "mainType": "Mature T and NK Neoplasms",
+   "parent": "MTNN",
+   "level": 5
+  },
+  {
+   "code": "ENKL",
+   "name": "Extranodal NK-/T-Cell Lymphoma, Nasal Type",
+   "tissue": "Lymphoid",
+   "mainType": "Mature T and NK Neoplasms",
+   "parent": "MTNN",
+   "level": 5
+  },
+  {
+   "code": "NPTLTFH",
+   "name": "Nodal Peripheral T-Cell Lymphoma with TFH Phenotype",
+   "tissue": "Lymphoid",
+   "mainType": "Mature T and NK Neoplasms",
+   "parent": "MTNN",
+   "level": 5
+  },
+  {
+   "code": "MEITL",
+   "name": "Monomorphic Epitheliotropic Intestinal T-Cell Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Mature T and NK Neoplasms",
+   "parent": "MTNN",
+   "level": 5
+  },
+  {
+   "code": "ITLPDGI",
+   "name": "Indolent T-Cell Lymphoproliferative Disorder of the GI Tract",
+   "tissue": "Lymphoid",
+   "mainType": "Mature T and NK Neoplasms",
+   "parent": "MTNN",
+   "level": 5
+  },
+  {
+   "code": "PCAECTCL",
+   "name": "Primary Cutaneous CD8 Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Mature T and NK Neoplasms",
+   "parent": "MTNN",
+   "level": 5
+  },
+  {
+   "code": "FTCL",
+   "name": "Follicular T-Cell Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Mature T and NK Neoplasms",
+   "parent": "MTNN",
+   "level": 5
+  },
+  {
+   "code": "PCLPD",
+   "name": "Primary Cutaneous CD30 Positive T-Cell Lymphoproliferative Disorders",
+   "tissue": "Lymphoid",
+   "mainType": "Mature T and NK Neoplasms",
+   "parent": "MTNN",
+   "level": 5
+  },
+  {
+   "code": "ATLL",
+   "name": "Adult T-Cell Leukemia/Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Mature T and NK Neoplasms",
+   "parent": "MTNN",
+   "level": 5
+  },
+  {
+   "code": "CLPDNK",
+   "name": "Chronic Lymphoproliferative Disorder of NK Cells",
+   "tissue": "Lymphoid",
+   "mainType": "Mature T and NK Neoplasms",
+   "parent": "MTNN",
+   "level": 5
+  },
+  {
+   "code": "SPTCL",
+   "name": "Subcutaneous Panniculitis-Like T-Cell Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Mature T and NK Neoplasms",
+   "parent": "MTNN",
+   "level": 5
+  },
+  {
+   "code": "ANKL",
+   "name": "Aggressive NK-Cell Leukemia",
+   "tissue": "Lymphoid",
+   "mainType": "Mature T and NK Neoplasms",
+   "parent": "MTNN",
+   "level": 5
+  },
+  {
+   "code": "PCATCL",
+   "name": "Primary Cutaneous Acral CD8 Positive T-Cell Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Mature T and NK Neoplasms",
+   "parent": "MTNN",
+   "level": 5
+  },
+  {
+   "code": "MYCF",
+   "name": "Mycosis Fungoides",
+   "tissue": "Lymphoid",
+   "mainType": "Mature T and NK Neoplasms",
+   "parent": "MTNN",
+   "level": 5
+  },
+  {
+   "code": "HVLL",
+   "name": "Hydroa Vacciniforme Like Lymphoproliferative Disorder",
+   "tissue": "Lymphoid",
+   "mainType": "Mature T and NK Neoplasms",
+   "parent": "MTNN",
+   "level": 5
+  },
+  {
+   "code": "AITL",
+   "name": "Angioimmunoblastic T-Cell Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Mature T and NK Neoplasms",
+   "parent": "MTNN",
+   "level": 5
+  },
+  {
+   "code": "PTCL",
+   "name": "Peripheral T-Cell lymphoma, NOS",
+   "tissue": "Lymphoid",
+   "mainType": "Mature T and NK Neoplasms",
+   "parent": "MTNN",
+   "level": 5
+  },
+  {
+   "code": "SEBVTLC",
+   "name": "Systemic EBV Positive T-Cell Lymphoma of Childhood",
+   "tissue": "Lymphoid",
+   "mainType": "Mature T and NK Neoplasms",
+   "parent": "MTNN",
+   "level": 5
+  },
+  {
+   "code": "HSTCL",
+   "name": "Hepatosplenic T-cell Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Mature T and NK Neoplasms",
+   "parent": "MTNN",
+   "level": 5
+  },
+  {
+   "code": "NSCHL",
+   "name": "Nodular Sclerosis Classical Hodgkin Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Hodgkin Lymphoma",
+   "parent": "CHL",
+   "level": 5
+  },
+  {
+   "code": "LRCHL",
+   "name": "Lymphocyte-Rich Classical Hodgkin Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Hodgkin Lymphoma",
+   "parent": "CHL",
+   "level": 5
+  },
+  {
+   "code": "MCCHL",
+   "name": "Mixed Cellularity Classical Hodgkin Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Hodgkin Lymphoma",
+   "parent": "CHL",
+   "level": 5
+  },
+  {
+   "code": "LDCHL",
+   "name": "Lymphocyte-Depleted Classical Hodgkin Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Hodgkin Lymphoma",
+   "parent": "CHL",
+   "level": 5
+  },
+  {
+   "code": "BLLIAMP21",
+   "name": "B-Lymphoblastic Leukemia/Lymphoma with iAMP21",
+   "tissue": "Lymphoid",
+   "mainType": "B-Lymphoblastic Leukemia/Lymphoma",
+   "parent": "BLLRGA",
+   "level": 5
+  },
+  {
+   "code": "BLLBCRABL1",
+   "name": "B-Lymphoblastic Leukemia/Lymphoma with t(9;22)(q34.1;q11.2);BCR-ABL1",
+   "tissue": "Lymphoid",
+   "mainType": "B-Lymphoblastic Leukemia/Lymphoma",
+   "parent": "BLLRGA",
+   "level": 5
+  },
+  {
+   "code": "BLLTCF3PBX1",
+   "name": "B-Lymphoblastic Leukemia/Lymphoma with t(1;19)(q23;p13.3);TCF3-PBX1",
+   "tissue": "Lymphoid",
+   "mainType": "B-Lymphoblastic Leukemia/Lymphoma",
+   "parent": "BLLRGA",
+   "level": 5
+  },
+  {
+   "code": "BLLIL3IGH",
+   "name": "B-Lymphoblastic Leukemia/Lymphoma with t(5;14)(q31.1;q32.3) IL3-IGH",
+   "tissue": "Lymphoid",
+   "mainType": "B-Lymphoblastic Leukemia/Lymphoma",
+   "parent": "BLLRGA",
+   "level": 5
+  },
+  {
+   "code": "BLLHYPER",
+   "name": "B-Lymphoblastic Leukemia/Lymphoma with Hyperdiploidy",
+   "tissue": "Lymphoid",
+   "mainType": "B-Lymphoblastic Leukemia/Lymphoma",
+   "parent": "BLLRGA",
+   "level": 5
+  },
+  {
+   "code": "BLLHYPO",
+   "name": "B-Lymphoblastic Leukemia/Lymphoma with Hypodiploidy",
+   "tissue": "Lymphoid",
+   "mainType": "B-Lymphoblastic Leukemia/Lymphoma",
+   "parent": "BLLRGA",
+   "level": 5
+  },
+  {
+   "code": "BLLETV6RUNX1",
+   "name": "B-Lymphoblastic Leukemia/Lymphoma with t(12;21)(p13.2;q22.1); ETV6-RUNX1",
+   "tissue": "Lymphoid",
+   "mainType": "B-Lymphoblastic Leukemia/Lymphoma",
+   "parent": "BLLRGA",
+   "level": 5
+  },
+  {
+   "code": "BLLBCRABL1L",
+   "name": "B-Lymphoblastic Leukemia/Lymphoma, BCR-ABL1 Like",
+   "tissue": "Lymphoid",
+   "mainType": "B-Lymphoblastic Leukemia/Lymphoma",
+   "parent": "BLLRGA",
+   "level": 5
+  },
+  {
+   "code": "BLLKMT2A",
+   "name": "B-Lymphoblastic Leukemia/Lymphoma with t(v;11q23.3);KMT2A Rearranged",
+   "tissue": "Lymphoid",
+   "mainType": "B-Lymphoblastic Leukemia/Lymphoma",
+   "parent": "BLLRGA",
+   "level": 5
+  },
+  {
+   "code": "HCL-V",
+   "name": "Hairy Cell Leukemia-Variant",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "SBLU",
+   "level": 6
+  },
+  {
+   "code": "SDRPL",
+   "name": "Splenic Diffuse Red Pulp Small B-Cell Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "SBLU",
+   "level": 6
+  },
+  {
+   "code": "ISMCL",
+   "name": "In Situ Mantle Cell Neoplasia",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MCL",
+   "level": 6
+  },
+  {
+   "code": "WM",
+   "name": "Waldenstrom Macroglobulinemia",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "LPL",
+   "level": 6
+  },
+  {
+   "code": "NMZL",
+   "name": "Nodal Marginal Zone Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MZL",
+   "level": 6
+  },
+  {
+   "code": "SMZL",
+   "name": "Splenic Marginal Zone Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MZL",
+   "level": 6
+  },
+  {
+   "code": "EMALT",
+   "name": "Extranodal Marginal Zone Lymphoma of Mucosa-Associated Lymphoid Tissue (MALT lymphoma)",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MZL",
+   "level": 6
+  },
+  {
+   "code": "MGUSIGM",
+   "name": "IgM",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MGUS",
+   "level": 6
+  },
+  {
+   "code": "MGUSIGG",
+   "name": "IgG",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MGUS",
+   "level": 6
+  },
+  {
+   "code": "MGUSIGA",
+   "name": "IgA",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MGUS",
+   "level": 6
+  },
+  {
+   "code": "ABC",
+   "name": "Activated B-cell Type",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "DLBCLNOS",
+   "level": 6
+  },
+  {
+   "code": "GCB",
+   "name": "Germinal Center B-Cell Type",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "DLBCLNOS",
+   "level": 6
+  },
+  {
+   "code": "MIDDO",
+   "name": "Monoclonal Immunoglobulin Deposition Diseases, Other",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MIDD",
+   "level": 6
+  },
+  {
+   "code": "MIDDA",
+   "name": "Amyloidosis",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "MIDD",
+   "level": 6
+  },
+  {
+   "code": "DFL",
+   "name": "Duodenal-Type Follicular Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "FL",
+   "level": 6
+  },
+  {
+   "code": "ISFN",
+   "name": "In Situ Follicular Neoplasia",
+   "tissue": "Lymphoid",
+   "mainType": "Mature B-Cell Neoplasms",
+   "parent": "FL",
+   "level": 6
+  },
+  {
+   "code": "BIALCL",
+   "name": "Breast Implant-Associated Anaplastic Large-Cell Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Mature T and NK Neoplasms",
+   "parent": "ALCL",
+   "level": 6
+  },
+  {
+   "code": "ALCLALKP",
+   "name": "Anaplastic Large-Cell Lymphoma ALK Positive",
+   "tissue": "Lymphoid",
+   "mainType": "Mature T and NK Neoplasms",
+   "parent": "ALCL",
+   "level": 6
+  },
+  {
+   "code": "ALCLALKN",
+   "name": "Anaplastic Large-Cell Lymphoma ALK Negative",
+   "tissue": "Lymphoid",
+   "mainType": "Mature T and NK Neoplasms",
+   "parent": "ALCL",
+   "level": 6
+  },
+  {
+   "code": "PCALCL",
+   "name": "Primary Cutaneous Anaplastic Large Cell Lymphoma",
+   "tissue": "Lymphoid",
+   "mainType": "Mature T and NK Neoplasms",
+   "parent": "PCLPD",
+   "level": 6
+  },
+  {
+   "code": "LYP",
+   "name": "Lymphomatoid Papulosis",
+   "tissue": "Lymphoid",
+   "mainType": "Mature T and NK Neoplasms",
+   "parent": "PCLPD",
+   "level": 6
+  }
+ ]
+}

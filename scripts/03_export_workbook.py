@@ -37,10 +37,29 @@ SHEET_NAMES = {
     "17_api_export_validation": "17 API export validation",
 }
 
+# GENIE-derived tables go to a separate workbook that is never committed: the
+# GENIE data-use agreement forbids redistribution (see .gitignore).
+GENIE_OUT = RESULTS / "genie_o4_analysis.xlsx"
+GENIE_SHEET_NAMES = {
+    "18_genie_cohort_composition": "18 GENIE cohort composition",
+    "18b_genie_haem_cancer_types": "18b GENIE haem cancer types",
+    "18c_genie_isoform_offsets": "18c GENIE isoform offsets",
+    "19_genie_headline_summary": "19 GENIE headline",
+    "20_genie_o4_o7_crosstab": "20 GENIE O4 x O7",
+    "21_genie_points_impact_of_cap": "21 GENIE cap impact",
+    "22_genie_variants_dropping_8_to_4": "22 GENIE 8 to 4",
+    "23_genie_leave_msk_out_transitions": "23 GENIE leave-MSK-out",
+    "24_genie_correlations": "24 GENIE correlations",
+    "25_genie_haem_named_variants": "25 GENIE haem variants",
+    "26_genie_per_change_o4_o7_points": "26 GENIE points per change",
+    "27_genie_vs_cosmic_o4_tiers": "27 GENIE vs COSMIC O4",
+    "28_genie_on_target_lineage_o4": "28 GENIE on-target lineage O4",
+}
 
-def main():
-    with pd.ExcelWriter(OUT, engine="openpyxl") as writer:
-        for stem, sheet in SHEET_NAMES.items():
+
+def write_workbook(out, sheet_names):
+    with pd.ExcelWriter(out, engine="openpyxl") as writer:
+        for stem, sheet in sheet_names.items():
             path = RESULTS / f"{stem}.tsv"
             if not path.exists():
                 print(f"  skipped (missing): {path.name}")
@@ -53,7 +72,13 @@ def main():
                 width = max(len(str(col)), df[col].astype(str).str.len().max() if len(df) else 0)
                 ws.column_dimensions[ws.cell(row=1, column=i).column_letter].width = min(width + 2, 60)
             ws.freeze_panes = "A2"
-    print(f"wrote {OUT}")
+    print(f"wrote {out}")
+
+
+def main():
+    write_workbook(OUT, SHEET_NAMES)
+    if any((RESULTS / f"{stem}.tsv").exists() for stem in GENIE_SHEET_NAMES):
+        write_workbook(GENIE_OUT, GENIE_SHEET_NAMES)
 
 
 if __name__ == "__main__":
