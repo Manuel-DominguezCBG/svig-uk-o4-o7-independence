@@ -13,11 +13,15 @@ adopting the cap.
 
 Inputs:
   data/raw/svig_uk_canonical_variants.tsv   (gene, transcript, HGVSp_Short, assessment)
-  results/14_per_change_o4_o7_points.tsv
+  results/14_per_change_o4_o7_points.tsv    (COSMIC-derived; local only)
 
 Outputs:
   results/15_canonical_list_overlap.tsv       every hotspot change, with O1 status
   results/16_variants_materially_affected.tsv changes losing the full +4, ranked
+
+Both outputs are public, so neither carries a COSMIC column: COSMIC's licence permits
+use, not redistribution. The COSMIC counts and tiers stay in results/14, which is
+gitignored.
 """
 
 import re
@@ -52,7 +56,13 @@ def main():
 
     merged = changes.merge(canonical, on=KEYS, how="left")
     merged["on_svig_uk_canonical_list"] = merged["svig_uk_assessment"].notna()
-    merged.to_csv(RESULTS / "15_canonical_list_overlap.tsv", sep="\t", index=False)
+    public_cols = KEYS + [
+        "change_count", "position_total_count", "n_unique_changes", "o7_strength",
+        "o7_points", "independent_positional_evidence", "recommended_o4_o7_handling",
+        "msk_fraction", "transcript", "HGVSp_Short", "svig_uk_assessment",
+        "on_svig_uk_canonical_list",
+    ]
+    merged[public_cols].to_csv(RESULTS / "15_canonical_list_overlap.tsv", sep="\t", index=False)
 
     # Changes where the cap removes the full 4 points, i.e. +8 becomes +4.
     affected = merged[
@@ -62,8 +72,7 @@ def main():
     affected["protected_by_O1"] = affected["on_svig_uk_canonical_list"]
     cols = KEYS + [
         "change_count", "position_total_count", "n_unique_changes",
-        "cosmic_samples_mutated", "msk_fraction", "o7_strength",
-        "o4_strength__genie_literal", "svig_uk_assessment", "protected_by_O1",
+        "msk_fraction", "o7_strength", "svig_uk_assessment", "protected_by_O1",
     ]
     affected = affected[cols].sort_values("change_count", ascending=False)
     affected.to_csv(RESULTS / "16_variants_materially_affected.tsv", sep="\t", index=False)

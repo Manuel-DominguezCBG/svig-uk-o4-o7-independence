@@ -154,6 +154,9 @@ actual substitutions and their individual counts).*
 > **Update, 11 September 2026.** This section used COSMIC because GENIE was not then
 > available. Section 11 repeats it on GENIE v20 itself, counting unique patients; the
 > coupling is tighter there (197 of 198 rather than 195 of 198).
+>
+> The COSMIC tables cited below (`results/11`–`14`) are generated locally and are not in
+> the public repository: COSMIC's licence permits use, not redistribution.
 
 The argument so far is structural. It can be tested. SVIG-UK permits COSMIC as an
 alternative to GENIE for O4, and the COSMIC Cancer Mutation Census (CMC v104) gives a

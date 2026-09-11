@@ -21,6 +21,12 @@ scratch/
 # use but not redistribution. Regenerate with scripts/04_extract_cosmic_cmc.py from
 # a licensed CMC download, or ask the author for the derived table.
 data/interim/cosmic_cmc_hotspot_genes.tsv
+# ... and every result table derived from it, plus the COSMIC workbook. Tables 15
+# and 16 stay public because script 06 writes them without COSMIC columns.
+results/*cosmic*
+results/12_o4_o7_correlation.tsv
+results/13_points_impact_of_cap.tsv
+results/14_per_change_o4_o7_points.tsv
 
 # The SVIG-UK v1.1 guideline PDFs and their extracted text are ACGS documents and
 # are not republished here. Download them from the ACGS best-practice guidelines

@@ -24,7 +24,8 @@ they never reach the cap.
 
 Inputs:
   results/05_o4_o7_double_counting.tsv     O7 tier and independence test per change
-  results/15_canonical_list_overlap.tsv    O1 status and the COSMIC O4 tier
+  results/15_canonical_list_overlap.tsv    O1 status
+  results/14_per_change_o4_o7_points.tsv   COSMIC O4 tier (local only)
   data/interim/genie_hotspot_counts.tsv    from script 09
 
 Outputs:
@@ -85,9 +86,11 @@ def load():
     dtype = {k: str for k in KEYS}
     o7 = pd.read_csv(RESULTS / "05_o4_o7_double_counting.tsv", sep="\t", dtype=dtype)
     o1 = pd.read_csv(RESULTS / "15_canonical_list_overlap.tsv", sep="\t", dtype=dtype,
-                     usecols=KEYS + ["cosmic_samples_mutated", "o4_strength__genie_literal",
-                                     "svig_uk_assessment", "on_svig_uk_canonical_list"])
-    o1 = o1.rename(columns={"o4_strength__genie_literal": "o4_strength__cosmic"})
+                     usecols=KEYS + ["svig_uk_assessment", "on_svig_uk_canonical_list"])
+    cosmic = pd.read_csv(RESULTS / "14_per_change_o4_o7_points.tsv", sep="\t", dtype=dtype,
+                         usecols=KEYS + ["cosmic_samples_mutated", "o4_strength__genie_literal"])
+    o1 = o1.merge(cosmic.rename(columns={"o4_strength__genie_literal": "o4_strength__cosmic"}),
+                  on=KEYS, how="left", validate="one_to_one")
     genie = pd.read_csv(INTERIM / "genie_hotspot_counts.tsv", sep="\t", dtype=dtype)
 
     df = o7.merge(genie, on=KEYS, how="left", validate="one_to_one")

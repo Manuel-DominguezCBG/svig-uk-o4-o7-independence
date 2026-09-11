@@ -182,12 +182,13 @@ Two inputs are used by the analysis but are **not redistributable**, and are git
 
 | | Why | How to obtain |
 |---|---|---|
-| **COSMIC Cancer Mutation Census v104** and the derived per-substitution counts (`data/interim/cosmic_cmc_hotspot_genes.tsv`) | COSMIC's academic licence permits use but not redistribution | Download CMC under your own licence and run `scripts/04_extract_cosmic_cmc.py`, which regenerates the derived table. The author holds the file and can supply it directly on request |
+| **COSMIC Cancer Mutation Census v104** and **everything derived from it** — the per-substitution counts (`data/interim/cosmic_cmc_hotspot_genes.tsv`), `results/11`–`14` and `results/cosmic_o4_analysis.xlsx` | COSMIC's academic licence permits use but not redistribution | Download CMC under your own licence and run scripts 04–06, which regenerate every COSMIC table locally. The author holds the files and can supply them on request |
 | **SVIG-UK v1.1 guideline PDFs** (`docs/svig-uk/`) | ACGS documents; not republished here | Download from the ACGS best-practice guidelines page. Every passage the analysis depends on is quoted verbatim, with page references, in [docs/svig-uk_o4_o7_extracts.md](docs/svig-uk_o4_o7_extracts.md) |
 
 | **AACR Project GENIE v20** (`data_mutations_extended.txt`, `data_clinical_sample.txt`) and **everything derived from them** — the per-change counts, `results/18`–`28` and `results/genie_o4_analysis.xlsx` | Released under a data-use agreement that forbids redistribution | Register at Synapse (`syn7222066`), accept the terms, point `GENIE_DIR` at the release and run scripts 09–10, which regenerate every GENIE table locally |
 
-Everything else needed to reproduce scripts 01–03 and 06 is in the repository.
+Everything else needed to reproduce scripts 01–03 is in the repository; scripts 05–06 also
+need COSMIC, and scripts 09–10 need GENIE.
 
 ## Running the analysis
 
@@ -198,7 +199,7 @@ python3 -m venv .venv
 .venv/bin/python scripts/01_merge_hotspots.py               # -> data/interim/
 .venv/bin/python scripts/02_position_analysis.py            # -> results/01..10
 .venv/bin/python scripts/04_extract_cosmic_cmc.py           # -> data/interim/  (needs COSMIC)
-.venv/bin/python scripts/05_o4_proxy_crosstab.py            # -> results/11..14
+.venv/bin/python scripts/05_o4_proxy_crosstab.py            # -> results/11..14 (gitignored)
 .venv/bin/python scripts/06_canonical_list_overlap.py       # -> results/15..16
 .venv/bin/python scripts/07_validate_against_api_export.py  # -> results/17     (needs the API export)
 .venv/bin/python scripts/09_extract_genie.py                # -> results/18, 25 (needs GENIE; gitignored)
@@ -236,16 +237,26 @@ locations can be overridden with environment variables:
 | `08_version_comparison.tsv` | CancerHotspots v1 vs v2 residue overlap |
 | `09_worked_examples.tsv` | Familiar variants worked through the proposed rule |
 | `10_haematology_coverage_check.tsv` | Coverage of well-known haematological hotspots |
-| `11_cosmic_o4_o7_crosstab.tsv` | O4 (COSMIC proxy) × O7 cross-tabulation, two threshold schemes |
-| `12_o4_o7_correlation.tsv` | Correlation between the CancerHotspots and COSMIC recurrence counts |
-| `13_points_impact_of_cap.tsv` | What the proposed cap costs, in changes affected and points lost |
-| `14_per_change_o4_o7_points.tsv` | Per-change O4 and O7 points, capped and uncapped |
-| `15_canonical_list_overlap.tsv` | Every change, flagged against the SVIG-UK Canonical Variants List (O1) |
+| `15_canonical_list_overlap.tsv` | Every change, flagged against the SVIG-UK Canonical Variants List (O1) (COSMIC columns kept local) |
 | `16_variants_materially_affected.tsv` | The changes that drop from +8 to +4, and whether O1 already protects them |
 | `17_api_export_validation.tsv` | Workbook vs live cancerhotspots.org API export (100% agreement, 3,004/3,004) |
 
 Also provided as a single combined Excel workbook,
 `results/cancerhotspots_o7_analysis.xlsx`.
+
+### COSMIC tables — generated locally, not in the repository
+
+COSMIC's licence permits use but not redistribution, and these tables are derived from it,
+so they are gitignored. Anyone with a COSMIC licence regenerates them with scripts 04–05.
+Tables 15 and 16 above stay public because they are written without COSMIC columns.
+
+| File | Contents |
+|---|---|
+| `11_cosmic_o4_o7_crosstab.tsv` | O4 (COSMIC proxy) × O7 cross-tabulation, two threshold schemes |
+| `12_o4_o7_correlation.tsv` | Correlation between the CancerHotspots and COSMIC recurrence counts |
+| `13_points_impact_of_cap.tsv` | What the proposed cap costs, in changes affected and points lost |
+| `14_per_change_o4_o7_points.tsv` | Per-change O4 and O7 points, capped and uncapped |
+| `cosmic_o4_analysis.xlsx` | All of the above as one workbook |
 
 ### GENIE tables — generated locally, not in the repository
 
