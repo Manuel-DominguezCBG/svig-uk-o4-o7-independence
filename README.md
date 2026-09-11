@@ -19,6 +19,10 @@ Laboratory Service, Salisbury). Analysis by **Manuel Dominguez Becerra**.
 · [docs/report.html](docs/report.html) (source) · [docs/findings.md](docs/findings.md)
 (the long-form written answer, with every table referenced)
 
+📦 **Deliverables for Kevin:** [deliverables/](deliverables/) — one dated folder per delivery,
+with a handover note, figures and the shareable tables. Latest:
+[2026-09-11 — GENIE v20 re-run](deliverables/2026-09-11_genie-v20/).
+
 ---
 
 ## The short answer
@@ -80,7 +84,7 @@ same 197 changes still score +8, so the +8 is not produced by the shared cohort.
 counting is definitional — O4 and O7 both reward recurrence of the same amino-acid change —
 so no cohort exclusion can remove it, and only a cap addresses it.
 
-**Haematological representation.** GENIE v20 is 88.8% solid tumour by patient: **4.9%
+**Haematological representation.** GENIE v20 is 88.7% solid tumour by patient: **4.9%
 myeloid** (12,018 patients) and **5.4% lymphoid** (13,131). Haematological patients
 contribute more samples each — 1.98 per myeloid patient against 1.12 per solid-tumour
 patient, and 3.1 per myeloid patient at MSK — so de-duplication matters most exactly where
@@ -157,6 +161,8 @@ docs/            The report (report.html, built to index.html for Pages), the wr
                  findings, and verbatim guideline extracts
 scripts/         Analysis pipeline (numbered, run in order)
 results/         Deliverable tables (TSV) + a single combined Excel workbook
+figures/         Static figures (PNG and SVG), each with a TSV of the values plotted
+deliverables/    Dated snapshots of what was sent to Kevin, and what went by email instead
 ```
 
 ## Source data
@@ -197,6 +203,7 @@ python3 -m venv .venv
 .venv/bin/python scripts/07_validate_against_api_export.py  # -> results/17     (needs the API export)
 .venv/bin/python scripts/09_extract_genie.py                # -> results/18, 25 (needs GENIE; gitignored)
 .venv/bin/python scripts/10_genie_o4_o7.py                  # -> results/19..28 (gitignored)
+.venv/bin/python scripts/11_figures.py                      # -> figures/ (GENIE figures need 09-10)
 .venv/bin/python scripts/03_export_workbook.py              # -> results/cancerhotspots_o7_analysis.xlsx
 ```
 
