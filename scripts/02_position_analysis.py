@@ -53,9 +53,11 @@ def o7_applicable(reference_aa, variant_aa):
     """O7 is reserved for missense and small in-frame insertion/deletion variants
     (SVIG-UK Supplementary Figure 1, notes 4 and 13). A nonsense change is O2
     territory and O2 + O7 is not a permitted combination; a stop-loss change is
-    O9 territory. Both are excluded from O7 scoring here, though their counts
-    still contribute to the published position total, as they do on the website."""
-    return variant_aa != "*" and reference_aa != "*"
+    O9 territory; a synonymous change alters no amino acid, so a hotspot at the
+    residue says nothing about it (it is assessed for splicing instead). All three
+    are excluded from O7 scoring here, though their counts still contribute to the
+    published position total, as they do on the website."""
+    return variant_aa != "*" and reference_aa != "*" and variant_aa != reference_aa
 
 
 def o7_tier(change_count, position_total):
@@ -139,7 +141,7 @@ def build_allele_table(alleles, pos):
         o7_applicable(r, v) for r, v in zip(df["reference_aa"], df["variant_aa"])
     ]
     tiers = [
-        o7_tier(c, t) if ok else ("Not applicable (nonsense/stop-loss)", 0)
+        o7_tier(c, t) if ok else ("Not applicable (nonsense/stop-loss/synonymous)", 0)
         for c, t, ok in zip(df["change_count"], df["position_total_count"],
                             df["o7_applicable"])
     ]
@@ -381,7 +383,7 @@ def main():
         ("Amino-acid changes reaching O7_moderate (+2)", int((scored_all["o7_strength"] == "Moderate").sum())),
         ("Amino-acid changes reaching O7_supporting (+1)", int((scored_all["o7_strength"] == "Supporting").sum())),
         ("Amino-acid changes not meeting any O7 tier", int((scored_all["o7_strength"] == "Not met").sum())),
-        ("Amino-acid changes ineligible for O7 (nonsense/stop-loss)", int((~scored_all["o7_applicable"]).sum())),
+        ("Amino-acid changes ineligible for O7 (nonsense/stop-loss/synonymous)", int((~scored_all["o7_applicable"]).sum())),
         ("O7-scoring changes with independent positional evidence", int(scored_all.loc[scored_all["o7_points"] > 0, "independent_positional_evidence"].sum())),
         ("O7-scoring changes recommended for a +4 cap", int((~scored_all.loc[scored_all["o7_points"] > 0, "independent_positional_evidence"]).sum())),
         ("O7-scoring changes independent under the strict test", int(scored_all.loc[scored_all["o7_points"] > 0, "independent_positional_evidence_strict"].sum())),
