@@ -21,7 +21,7 @@ Laboratory Service, Salisbury). Analysis by **Manuel Dominguez Becerra**.
 
 📦 **Deliverables for Kevin:** [deliverables/](deliverables/) — one dated folder per delivery,
 with a handover note, figures and the shareable tables. Latest:
-[2026-09-11 — GENIE v20 re-run](deliverables/2026-09-11_genie-v20/).
+[2026-09-16 — points per change on GENIE, both criteria](deliverables/2026-09-16_points-per-change/).
 
 ---
 
@@ -204,6 +204,7 @@ python3 -m venv .venv
 .venv/bin/python scripts/07_validate_against_api_export.py  # -> results/17     (needs the API export)
 .venv/bin/python scripts/09_extract_genie.py                # -> results/18, 25 (needs GENIE; gitignored)
 .venv/bin/python scripts/10_genie_o4_o7.py                  # -> results/19..28 (gitignored)
+.venv/bin/python scripts/12_genie_points_per_change.py     # -> results/29..32 (gitignored)
 .venv/bin/python scripts/11_figures.py                      # -> figures/ (GENIE figures need 09-10)
 .venv/bin/python scripts/03_export_workbook.py              # -> results/cancerhotspots_o7_analysis.xlsx
 ```
@@ -280,7 +281,12 @@ report quote summary figures only.
 | `26_genie_per_change_o4_o7_points.tsv` | **Per change: GENIE samples, patients, non-MSK and per-lineage patients, O4 tier, capped and uncapped points** |
 | `27_genie_vs_cosmic_o4_tiers.tsv` | Agreement between the GENIE and COSMIC O4 tiers |
 | `28_genie_on_target_lineage_o4.tsv` | O4 counted on solid, haematological, myeloid or lymphoid patients only |
-| `genie_o4_analysis.xlsx` | All of the above as one workbook |
+| `genie_o4_analysis.xlsx` | Tables 18–28 as one workbook |
+| `29_genie_points_per_change.tsv` | **Points per change on GENIE**: O7, O4 (unique patients), and the O4 / O7 handling with resulting points under both the permissive and strict criteria |
+| `30_genie_cap_impact_by_criterion.tsv` | What the cap costs under each criterion |
+| `31_genie_o1_canonical_impact.tsv` | Changes on the O1 canonical list, with both outcomes |
+| `32_genie_materially_affected.tsv` | Changes dropping from +8 to +4 under either criterion |
+| `genie_points_per_change.xlsx` | Tables 02, 02b, 03 and 29–32 as one workbook |
 
 ## Correction (11 September 2026)
 
