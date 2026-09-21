@@ -1,0 +1,5 @@
+hugo_symbol	amino_acid_position	reference_aa	variant_aa	change_count	position_total_count	same_change_fraction	n_unique_changes	substitutions	residual_count	residual_n_changes	residual_max_change_count	hotspot_character	o7_applicable	o7_strength	o7_points	independent_positional_evidence	recommended_o4_o7_handling	independent_positional_evidence_strict	recommended_o4_o7_handling_strict	n_msk	n_retro	msk_fraction
+BRAF	600	V	E	833	897	0.9287	6	E:833|M:29|K:24|R:4|V:4|G:3	64	5	29	mutation-specific	True	Strong	4	True	O4 + O7 may be combined (max +8)	True	O4 + O7 may be combined (max +8)	287	610	0.32
+TP53	237	M	I	55	64	0.8594	3	I:55|K:5|V:4	9	2	5	mutation-specific	True	Strong	4	False	Cap combined O4 + O7 at +4	False	Cap combined O4 + O7 at +4	28	36	0.4375
+TP53	237	M	K	5	64	0.0781	3	I:55|K:5|V:4	59	2	55	mutation-specific	True	Supporting	1	True	O4 + O7 may be combined (max +8)	True	O4 + O7 may be combined (max +8)	28	36	0.4375
+TP53	237	M	V	4	64	0.0625	3	I:55|K:5|V:4	60	2	55	mutation-specific	True	Supporting	1	True	O4 + O7 may be combined (max +8)	True	O4 + O7 may be combined (max +8)	28	36	0.4375

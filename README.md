@@ -21,7 +21,7 @@ Laboratory Service, Salisbury). Analysis by **Manuel Dominguez Becerra**.
 
 📦 **Deliverables for Kevin:** [deliverables/](deliverables/) — one dated folder per delivery,
 with a handover note, figures and the shareable tables. Latest:
-[2026-09-16 — points per change on GENIE, both criteria](deliverables/2026-09-16_points-per-change/).
+[2026-09-21 — how the residue-independence test works](deliverables/2026-09-21_independence-test/).
 
 ---
 

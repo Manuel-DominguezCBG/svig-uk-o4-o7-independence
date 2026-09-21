@@ -21,6 +21,7 @@ Every delivery note says which files are in its folder and which were sent separ
 
 | Date | Folder | In the repository | Sent by email |
 |---|---|---|---|
+| 2026-09-21 | [2026-09-21_independence-test](2026-09-21_independence-test/) | How the permissive and strict residue-independence criteria work, with TP53 p.M237I and BRAF p.V600E worked through | — |
 | 2026-09-16 | [2026-09-16_points-per-change](2026-09-16_points-per-change/) | Handover note; gene × position table and distribution of changes per hotspot | `genie_points_per_change.xlsx` — points per change on GENIE with O7, O4 and the O4 / O7 handling under both criteria; O1 canonical impact; materially affected |
 | 2026-09-11 | [2026-09-11_genie-v20](2026-09-11_genie-v20/) | GENIE v20 re-run: handover note, four figures, corrected O7 table, positional table | `genie_o4_analysis.xlsx` — the GENIE tables 18–28, including per-variant patient counts |
 | 2026-09-04 | — (sent as links) | Report v1.1; `results/03_gene_position_table.tsv` and `results/04_per_allele_o7_tiers.tsv` (O7 weighting per variant — **superseded** by the corrected version in 2026-09-11) | — |

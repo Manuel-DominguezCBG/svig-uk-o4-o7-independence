@@ -284,6 +284,23 @@ recomputed from the published tables, so "would this still be a significant hots
 without the VUA?" is approximated by residual recurrence rather than re-run
 statistically. Any position passing the test would very likely retain significance.
 
+**How the test reads in table 05** (clarified for Kevin Baker, 21 September 2026). For
+each change, `residual_count` is the residue total minus the change's own count, and
+`residual_max_change_count` is the count of the largest *other* change at the residue.
+Permissive: `residual_count` ≥ 10 and `residual_max_change_count` ≥ 2. Strict:
+`residual_max_change_count` ≥ 10 (which implies `residual_count` ≥ 10). Two points
+follow:
+
+* **Dominance plays no part.** `hotspot_character` (mutation-specific when the commonest
+  change is ≥ 80% of the residue) is descriptive only; neither criterion reads it. TP53
+  p.M237I (I:55 | K:5 | V:4) is capped under both criteria because its residual is 9,
+  one short of 10, and its largest other change is 5 — not because the residue is 86%
+  M237I. BRAF p.V600E is 93% of its residue and combines under both.
+* **The test is asymmetric by design.** A minor change at a residue dominated by another
+  inherits the dominant change's positional evidence: M237K and M237V count as
+  independent (residuals 59 and 60, largest other change 55), while M237I does not. The
+  practical effect is small, since such minor changes rarely exceed O7 supporting (+1).
+
 ### Worked examples
 
 | Variant | Count / position total | Distinct changes at position | Residual | MSK fraction | O7 | Recommendation |
