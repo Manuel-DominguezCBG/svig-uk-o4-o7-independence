@@ -1,0 +1,9 @@
+metric	value
+v1 (Chang 2016) hotspot positions	459
+v2 (Chang 2018) SNV hotspot positions (non-splice)	1024
+Positions present in both versions	252
+Positions only in v1	207
+Positions only in v2	772
+v3 SNV hotspot positions new in this release	164
+v3 positions also in v2	0
+v3 positions also in v1	0

@@ -29,9 +29,11 @@ from pathlib import Path
 
 import pandas as pd
 
+import paths
+
 ROOT = Path(__file__).resolve().parents[1]
 RAW = ROOT / "data" / "raw"
-RESULTS = ROOT / "results"
+RESULTS = paths.RESULTS
 
 SUBSTITUTION = re.compile(r"^p\.([A-Z*])(\d+)([A-Z*])$")
 KEYS = ["hugo_symbol", "amino_acid_position", "reference_aa", "variant_aa"]

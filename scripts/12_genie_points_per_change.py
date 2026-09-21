@@ -37,9 +37,12 @@ from pathlib import Path
 
 import pandas as pd
 
+import paths
+
 ROOT = Path(__file__).resolve().parents[1]
-RESULTS = ROOT / "results"
+RESULTS = paths.RESULTS
 KEYS = ["hugo_symbol", "amino_acid_position", "reference_aa", "variant_aa"]
+VERSION = ["hotspot_version"] if paths.ANALYSIS == "v3" else []
 CRITERIA = {"permissive": "", "strict": "_strict"}
 COMBINE = "O4 + O7 may be combined (max +8)"
 CAP = "Cap combined O4 + O7 at +4"
@@ -52,7 +55,7 @@ def truthy(s):
 def load():
     dtype = {k: str for k in KEYS}
     pos = pd.read_csv(RESULTS / "04_per_allele_o7_tiers.tsv", sep="\t", dtype=dtype,
-                      usecols=KEYS + ["same_change_fraction", "substitutions", "top_change",
+                      usecols=KEYS + VERSION + ["same_change_fraction", "substitutions", "top_change",
                                       "top_change_count", "top_change_fraction"])
     test = pd.read_csv(RESULTS / "05_o4_o7_double_counting.tsv", sep="\t", dtype=dtype,
                        usecols=KEYS + ["residual_count", "residual_n_changes",
@@ -87,7 +90,7 @@ def score(df):
     return df
 
 
-PER_CHANGE = KEYS + [
+PER_CHANGE = KEYS + VERSION + [
     # CancerHotspots positional data
     "substitutions", "n_unique_changes", "change_count", "position_total_count",
     "same_change_fraction", "top_change", "top_change_count", "top_change_fraction",
@@ -147,7 +150,7 @@ def main():
     drop_any["drops_8_to_4__permissive"] = drop_any["o4_o7_points__permissive"] == 4
     drop_any["drops_8_to_4__strict"] = drop_any["o4_o7_points__strict"] == 4
     drop_any["protected_by_o1"] = drop_any["on_svig_uk_canonical_list"]
-    drop_cols = KEYS + ["substitutions", "n_unique_changes", "change_count",
+    drop_cols = KEYS + VERSION + ["substitutions", "n_unique_changes", "change_count",
                         "position_total_count", "residual_count", "residual_max_change_count",
                         "genie_patients", "genie_patients_non_msk", "msk_fraction",
                         "drops_8_to_4__permissive", "drops_8_to_4__strict",

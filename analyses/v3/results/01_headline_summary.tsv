@@ -1,0 +1,23 @@
+metric	value
+Hotspot positions analysed (v2 + v3 SNV, non-splice)	1188.0
+Distinct amino-acid changes across those positions	3446.0
+Mean unique amino-acid changes per position	2.9
+Median unique amino-acid changes per position	3.0
+Positions with a single amino-acid change	226.0
+Positions with a single amino-acid change (%)	19.0
+Mean fraction from the most common substitution	0.695
+Median fraction from the most common substitution	0.6667
+Positions classed mutation-specific (top change >= 80%)	462.0
+Positions classed mixed (50-80%)	495.0
+Positions classed position-specific (top change < 50%)	231.0
+Positions meeting the >=50 count threshold for O7_strong	96.0
+Amino-acid changes reaching O7_strong (+4)	200.0
+Amino-acid changes reaching O7_moderate (+2)	261.0
+Amino-acid changes reaching O7_supporting (+1)	1509.0
+Amino-acid changes not meeting any O7 tier	1004.0
+Amino-acid changes ineligible for O7 (nonsense/stop-loss/synonymous)	472.0
+O7-scoring changes with independent positional evidence	849.0
+O7-scoring changes recommended for a +4 cap	1121.0
+O7-scoring changes independent under the strict test	635.0
+O7-scoring changes recommended for a +4 cap (strict test)	1335.0
+Overall MSK-IMPACT fraction of hotspot evidence	0.4682

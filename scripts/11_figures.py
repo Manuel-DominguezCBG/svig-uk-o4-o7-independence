@@ -29,12 +29,14 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 import pandas as pd  # noqa: E402
+
+import paths  # noqa: E402
 from matplotlib.patches import Patch, PathPatch  # noqa: E402
 from matplotlib.path import Path as MPath  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
-RESULTS = ROOT / "results"
-FIGURES = ROOT / "figures"
+RESULTS = paths.RESULTS
+FIGURES = paths.FIGURES
 
 # Reference palette, light mode.
 SURFACE, INK, INK2, MUTED = "#fcfcfb", "#0b0b0b", "#52514e", "#898781"
@@ -55,8 +57,10 @@ plt.rcParams.update({
     "savefig.facecolor": SURFACE,
 })
 
-CH_SOURCE = "Source: Chang et al., Cancer Discov 2018 (cancerhotspots.org v2)."
-GENIE_SOURCE = "Source: AACR Project GENIE v20.0-public (summary figures only); CancerHotspots v2."
+RELEASE = "v2" if paths.ANALYSIS == "v2" else "v2 + v3"
+CH_SOURCE = ("Source: Chang et al., Cancer Discov 2018 (cancerhotspots.org v2)." if paths.ANALYSIS == "v2"
+             else "Source: cancerhotspots.org v2 (Chang et al., Cancer Discov 2018) and v3.")
+GENIE_SOURCE = f"Source: AACR Project GENIE v20.0-public (summary figures only); CancerHotspots {RELEASE}."
 
 
 # ---------------------------------------------------------------- drawing kit
@@ -158,26 +162,31 @@ def fig1_changes_per_residue():
     cats = ["1 change", "2 changes", "3 changes", "4 or more"]
     counts = (pd.cut(pos["n_unique_changes"], [0, 1, 2, 3, 10 ** 6], labels=cats)
               .value_counts().reindex(cats))
-    assert counts.tolist() == [213, 293, 231, 287], counts.tolist()
+    if paths.ANALYSIS == "v2":
+        assert counts.tolist() == [213, 293, 231, 287], counts.tolist()
     total = counts.sum()
     emphasis_chart(
         "fig1_changes_per_residue", cats, counts.tolist(),
         [f"{v:,} ({100 * v / total:.1f}%)" for v in counts],
         {"1 change"},
-        "One hotspot residue in five carries a single amino-acid change",
-        f"CancerHotspots v2 protein-coding hotspot residues (n = {total:,}), by the number of distinct\n"
+        ("One hotspot residue in five carries a single amino-acid change" if paths.ANALYSIS == "v2"
+         else f"{100 * counts.iloc[0] / total:.0f}% of hotspot residues carry a single amino-acid change"),
+        f"CancerHotspots {RELEASE} protein-coding hotspot residues (n = {total:,}), by the number of distinct\n"
         "amino-acid changes seen there. Where there is only one, O7 and O4 measure the same thing.",
         CH_SOURCE + " Table: results/03_gene_position_table.tsv.",
-        xmax=330,
+        xmax=330 if paths.ANALYSIS == "v2" else round(counts.max() * 1.25),
     )
 
 
 def fig2_msk_share_per_residue():
     pos = pd.read_csv(RESULTS / "03_gene_position_table.tsv", sep="\t")
     cats = ["0–25%", "25–50%", "50–75%", "75–100%"]
+    # Only residues with an MSK / retrospective split (all of them in v2; v3 has none).
+    pos = pos[pos["msk_fraction"].notna()]
     counts = (pd.cut(pos["msk_fraction"], [0, 0.25, 0.5, 0.75, 1.000001], right=False,
                      labels=cats).value_counts().reindex(cats))
-    assert counts.tolist() == [180, 412, 344, 88], counts.tolist()
+    if paths.ANALYSIS == "v2":
+        assert counts.tolist() == [180, 412, 344, 88], counts.tolist()
     total = counts.sum()
     emphasis_chart(
         "fig2_msk_share_per_residue", cats, counts.tolist(),
@@ -199,7 +208,8 @@ def fig3_genie_leave_msk_out():
     for tier in tiers:
         r = lmo[(lmo["o7_strength"] == tier) & (lmo["o4_all_patients"] == "Strong")].iloc[0]
         rows.append((f"O7 {tier.lower()}", int(r[excl_cols].sum()), int(r["o4_excl_msk_Strong"])))
-    assert rows[0][1:] == (197, 197), rows[0]
+    if paths.ANALYSIS == "v2":
+        assert rows[0][1:] == (197, 197), rows[0]
     cats = [r[0] for r in rows]
     n = len(cats)
     header_in, bottom_in = 1.3, 0.5
@@ -220,9 +230,13 @@ def fig3_genie_leave_msk_out():
               loc="lower left", bbox_to_anchor=(0, 1.02), ncol=2, frameon=False,
               fontsize=9, labelcolor=INK2, handlelength=0.9, handleheight=0.9,
               borderaxespad=0, columnspacing=1.6)
-    c.header("Excluding MSK-IMPACT does not remove a single O4 + O7 double count",
+    impact = pd.read_csv(RESULTS / "21_genie_points_impact_of_cap.tsv", sep="\t").set_index("o4_count_source")
+    full_all = int(impact.loc["genie_patients", "changes_scoring_the_full_8_points"])
+    full_excl = int(impact.loc["genie_patients_excluding_msk", "changes_scoring_the_full_8_points"])
+    c.header("Excluding MSK-IMPACT does not remove a single O4 + O7 double count" if full_all == full_excl
+             else f"Excluding MSK-IMPACT removes {full_all - full_excl} of {full_all} O4 + O7 double counts",
              "Changes reaching O4_strong in GENIE (unique patients), by their O7 tier, with and without\n"
-             "MSK-IMPACT. Changes scoring the full +8: 197 with MSK, 197 without.")
+             f"MSK-IMPACT. Changes scoring the full +8: {full_all} with MSK, {full_excl} without.")
     c.source(GENIE_SOURCE)
     c.save("fig3_genie_leave_msk_out")
     write_twin("fig3_genie_leave_msk_out", pd.DataFrame(
@@ -282,8 +296,12 @@ def fig4_genie_lineage():
 
 def main():
     fig1_changes_per_residue()
-    fig2_msk_share_per_residue()
-    print("wrote fig1, fig2")
+    print("wrote fig1")
+    # The MSK split exists for v2 residues only, so in the v3 analysis figure 2 would
+    # repeat the v2 figure exactly; it is drawn in the v2 analysis alone.
+    if paths.ANALYSIS == "v2":
+        fig2_msk_share_per_residue()
+        print("wrote fig2")
     if (RESULTS / "23_genie_leave_msk_out_transitions.tsv").exists():
         fig3_genie_leave_msk_out()
         fig4_genie_lineage()

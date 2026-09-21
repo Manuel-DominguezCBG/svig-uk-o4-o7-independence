@@ -23,9 +23,11 @@ from pathlib import Path
 
 import pandas as pd
 
+import paths
+
 ROOT = Path(__file__).resolve().parents[1]
-INTERIM = ROOT / "data" / "interim"
-RESULTS = ROOT / "results"
+INTERIM = paths.INTERIM
+RESULTS = paths.RESULTS
 
 DEFAULT_JSON = ("/Users/monkiky/Documents/external/refs/CancerHotSpots/"
                 "cancerhotspots_counts.json")

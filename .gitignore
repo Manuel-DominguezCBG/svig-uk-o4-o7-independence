@@ -44,3 +44,13 @@ GENIE*.zip
 data/external/
 data/interim/genie_*
 results/*genie*
+
+# Parallel analyses (analyses/<release>/, see scripts/paths.py) follow the same rules
+# as the main one: nothing derived from GENIE or COSMIC per variant is tracked.
+analyses/*/interim/genie_*
+analyses/*/interim/cosmic_*
+analyses/*/results/*genie*
+analyses/*/results/*cosmic*
+analyses/*/results/12_o4_o7_correlation.tsv
+analyses/*/results/13_points_impact_of_cap.tsv
+analyses/*/results/14_per_change_o4_o7_points.tsv

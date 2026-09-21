@@ -163,7 +163,15 @@ scripts/         Analysis pipeline (numbered, run in order)
 results/         Deliverable tables (TSV) + a single combined Excel workbook
 figures/         Static figures (PNG and SVG), each with a TSV of the values plotted
 deliverables/    Dated snapshots of what was sent to Kevin, and what went by email instead
+analyses/v3/     The same pipeline with the 528 changes new in CancerHotspots v3 added
 ```
+
+### Parallel analyses
+
+`scripts/paths.py` decides where every script reads and writes. By default that is
+`data/interim/`, `results/` and `figures/`, exactly as before. With `ANALYSIS=v3`, the whole
+pipeline runs on CancerHotspots v2 + v3 and writes to `analyses/v3/` instead, leaving the v2
+analysis untouched. See [analyses/v3/README.md](analyses/v3/README.md) for the results.
 
 ## Source data
 
@@ -171,6 +179,7 @@ deliverables/    Dated snapshots of what was sent to Kevin, and what went by ema
 |---|---|---|---|
 | `data/raw/cancerhotspots_v1_chang2016.xls` | Chang et al., *Nat Biotechnol* 2016 | `Per Residue`, `Per Allele` | 459 hotspot residues (1,170 residue/change rows) |
 | `data/raw/cancerhotspots_v2_chang2018.xls` | Chang et al., *Cancer Discov* 2018 | `SNV-hotspots`, `INDEL-hotspots` | 1,110 SNV residues (incl. 86 splice) + 55 indel regions; 24,592 tumours |
+| `data/raw/hotspots_v3.xlsx` | CancerHotspots v3 export | `SNV_Variants`, `INDEL_Variants`, `Hotspot_Residues` | The v2 changes plus 528 changes new in v3, and per-cohort counts (MSK / non-MSK GENIE / TCGA) for the 164 new residues. Used only by the v3 analysis |
 | `data/raw/svig_uk_canonical_variants.tsv` | SVIG-UK Supplementary Table 3 | — | 158 canonical (O1) variants, reproduced for reproducibility of script 06 |
 
 CancerHotspots data are made available under the ODC Open Database License (ODbL); see

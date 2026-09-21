@@ -1,0 +1,10 @@
+metric	value
+API export records (positions/regions)	1165.0
+API single-residue amino-acid changes	3004.0
+Workbook v2 SNV amino-acid changes	3004.0
+Changes present in both	3004.0
+Changes only in the workbook	0.0
+Changes only in the API export	0.0
+Per-change counts identical	3004.0
+Position totals identical	3004.0
+Per-change agreement (%)	100.0

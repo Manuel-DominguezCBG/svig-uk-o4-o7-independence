@@ -32,9 +32,11 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+import paths
+
 ROOT = Path(__file__).resolve().parents[1]
-INTERIM = ROOT / "data" / "interim"
-RESULTS = ROOT / "results"
+INTERIM = paths.INTERIM
+RESULTS = paths.RESULTS
 
 # SVIG-UK Figure 1C: classification categories and exponent sums.
 BANDS = [(10, "Oncogenic"), (6, "Likely oncogenic"), (0, "VUS"),

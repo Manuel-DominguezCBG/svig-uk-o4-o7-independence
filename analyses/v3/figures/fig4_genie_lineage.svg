@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="720pt" height="257.76pt" viewBox="0 0 720 257.76" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-21T15:20:46.187400</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 257.76 
+L 720 257.76 
+L 720 0 
+L 0 0 
+z
+" style="fill: #fcfcfb"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 93.6 221.76 
+L 262.8 221.76 
+L 262.8 100.8 
+L 93.6 100.8 
+z
+" style="fill: #fcfcfb"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="fill: #52514e; font: 9.5px 'Helvetica Neue', 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="85.6" y="119.311797" transform="rotate(-0 85.6 119.311797)">Solid tumour</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="fill: #52514e; font: 9.5px 'Helvetica Neue', 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="85.6" y="149.551797" transform="rotate(-0 85.6 149.551797)">Lymphoid</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_3"/>
+     <g id="text_3">
+      <text style="fill: #52514e; font: 9.5px 'Helvetica Neue', 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="85.6" y="179.791797" transform="rotate(-0 85.6 179.791797)">Myeloid</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_4"/>
+     <g id="text_4">
+      <text style="fill: #52514e; font: 9.5px 'Helvetica Neue', 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="85.6" y="210.031797" transform="rotate(-0 85.6 210.031797)">Unknown</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 93.6 122.67 
+L 178.584 122.67 
+Q 181.584 122.67 181.584 119.67 
+L 181.584 112.17 
+Q 181.584 109.17 178.584 109.17 
+L 93.6 109.17 
+z
+" clip-path="url(#pd8e9aefffa)" style="fill: #c3c2b7"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 93.6 152.91 
+L 96.280055 152.91 
+Q 98.960109 152.91 98.960109 149.91 
+L 98.960109 142.41 
+Q 98.960109 139.41 96.280055 139.41 
+L 93.6 139.41 
+z
+" clip-path="url(#pd8e9aefffa)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 93.6 183.15 
+L 96.05289 183.15 
+Q 98.505779 183.15 98.505779 180.15 
+L 98.505779 172.65 
+Q 98.505779 169.65 96.05289 169.65 
+L 93.6 169.65 
+z
+" clip-path="url(#pd8e9aefffa)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 93.6 213.39 
+L 94.713577 213.39 
+Q 95.827154 213.39 95.827154 210.39 
+L 95.827154 202.89 
+Q 95.827154 199.89 94.713577 199.89 
+L 93.6 199.89 
+z
+" clip-path="url(#pd8e9aefffa)" style="fill: #c3c2b7"/>
+   </g>
+   <g id="text_5">
+    <text style="fill: #52514e; font: 600 9.5px 'Helvetica Neue', 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="93.6" y="90.8" transform="rotate(-0 93.6 90.8)">Patients</text>
+   </g>
+   <g id="line2d_5">
+    <path d="M 93.6 221.76 
+L 93.6 100.8 
+" clip-path="url(#pd8e9aefffa)" style="fill: none; stroke: #c3c2b7; stroke-width: 0.75; stroke-linecap: square"/>
+   </g>
+   <g id="text_6">
+    <text style="fill: #52514e; font: 9px 'Helvetica Neue', 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="186.084" y="118.322578" transform="rotate(-0 186.084 118.322578)">215,540 (88.7%)</text>
+   </g>
+   <g id="text_7">
+    <text style="fill: #52514e; font: 9px 'Helvetica Neue', 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="103.460109" y="148.562578" transform="rotate(-0 103.460109 148.562578)">13,131 (5.4%)</text>
+   </g>
+   <g id="text_8">
+    <text style="fill: #52514e; font: 9px 'Helvetica Neue', 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="103.005779" y="178.802578" transform="rotate(-0 103.005779 178.802578)">12,018 (4.9%)</text>
+   </g>
+   <g id="text_9">
+    <text style="fill: #52514e; font: 9px 'Helvetica Neue', 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="100.327154" y="209.042578" transform="rotate(-0 100.327154 209.042578)">5,456 (2.2%)</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_7">
+    <path d="M 295.2 221.76 
+L 464.4 221.76 
+L 464.4 100.8 
+L 295.2 100.8 
+z
+" style="fill: #fcfcfb"/>
+   </g>
+   <g id="matplotlib.axis_3"/>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_5">
+     <g id="line2d_6"/>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_7"/>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_8"/>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_9"/>
+    </g>
+   </g>
+   <g id="patch_8">
+    <path d="M 295.2 122.67 
+L 360.929338 122.67 
+Q 363.929338 122.67 363.929338 119.67 
+L 363.929338 112.17 
+Q 363.929338 109.17 360.929338 109.17 
+L 295.2 109.17 
+z
+" clip-path="url(#p61061121cf)" style="fill: #c3c2b7"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 295.2 152.91 
+L 378.776759 152.91 
+Q 381.776759 152.91 381.776759 149.91 
+L 381.776759 142.41 
+Q 381.776759 139.41 378.776759 139.41 
+L 295.2 139.41 
+z
+" clip-path="url(#p61061121cf)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 295.2 183.15 
+L 413.734026 183.15 
+Q 416.734026 183.15 416.734026 180.15 
+L 416.734026 172.65 
+Q 416.734026 169.65 413.734026 169.65 
+L 295.2 169.65 
+z
+" clip-path="url(#p61061121cf)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 295.2 213.39 
+L 369.819541 213.39 
+Q 372.819541 213.39 372.819541 210.39 
+L 372.819541 202.89 
+Q 372.819541 199.89 369.819541 199.89 
+L 295.2 199.89 
+z
+" clip-path="url(#p61061121cf)" style="fill: #c3c2b7"/>
+   </g>
+   <g id="text_10">
+    <text style="fill: #52514e; font: 600 9.5px 'Helvetica Neue', 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="295.2" y="90.8" transform="rotate(-0 295.2 90.8)">Samples per patient</text>
+   </g>
+   <g id="line2d_10">
+    <path d="M 295.2 221.76 
+L 295.2 100.8 
+" clip-path="url(#p61061121cf)" style="fill: none; stroke: #c3c2b7; stroke-width: 0.75; stroke-linecap: square"/>
+   </g>
+   <g id="text_11">
+    <text style="fill: #52514e; font: 9px 'Helvetica Neue', 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="368.429338" y="118.246641" transform="rotate(-0 368.429338 118.246641)">1.12</text>
+   </g>
+   <g id="text_12">
+    <text style="fill: #52514e; font: 9px 'Helvetica Neue', 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="386.276759" y="148.486641" transform="rotate(-0 386.276759 148.486641)">1.41</text>
+   </g>
+   <g id="text_13">
+    <text style="fill: #52514e; font: 9px 'Helvetica Neue', 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="421.234026" y="178.726641" transform="rotate(-0 421.234026 178.726641)">1.98</text>
+   </g>
+   <g id="text_14">
+    <text style="fill: #52514e; font: 9px 'Helvetica Neue', 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="377.319541" y="208.966641" transform="rotate(-0 377.319541 208.966641)">1.26</text>
+   </g>
+  </g>
+  <g id="axes_3">
+   <g id="patch_12">
+    <path d="M 496.8 221.76 
+L 666 221.76 
+L 666 100.8 
+L 496.8 100.8 
+z
+" style="fill: #fcfcfb"/>
+   </g>
+   <g id="matplotlib.axis_5"/>
+   <g id="matplotlib.axis_6">
+    <g id="ytick_9">
+     <g id="line2d_11"/>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_12"/>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_13"/>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_14"/>
+    </g>
+   </g>
+   <g id="patch_13">
+    <path d="M 496.8 122.67 
+L 542.324789 122.67 
+Q 545.324789 122.67 545.324789 119.67 
+L 545.324789 112.17 
+Q 545.324789 109.17 542.324789 109.17 
+L 496.8 109.17 
+z
+" clip-path="url(#pf7b4b8e8c9)" style="fill: #c3c2b7"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 496.8 152.91 
+L 589.727875 152.91 
+Q 592.727875 152.91 592.727875 149.91 
+L 592.727875 142.41 
+Q 592.727875 139.41 589.727875 139.41 
+L 496.8 139.41 
+z
+" clip-path="url(#pf7b4b8e8c9)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 496.8 183.15 
+L 549.389923 183.15 
+Q 552.389923 183.15 552.389923 180.15 
+L 552.389923 172.65 
+Q 552.389923 169.65 549.389923 169.65 
+L 496.8 169.65 
+z
+" clip-path="url(#pf7b4b8e8c9)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 496.8 213.39 
+L 607.350643 213.39 
+Q 610.350643 213.39 610.350643 210.39 
+L 610.350643 202.89 
+Q 610.350643 199.89 607.350643 199.89 
+L 496.8 199.89 
+z
+" clip-path="url(#pf7b4b8e8c9)" style="fill: #c3c2b7"/>
+   </g>
+   <g id="text_15">
+    <text style="fill: #52514e; font: 600 9.5px 'Helvetica Neue', 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="496.8" y="90.8" transform="rotate(-0 496.8 90.8)">Share of patients from MSK-IMPACT</text>
+   </g>
+   <g id="line2d_15">
+    <path d="M 496.8 221.76 
+L 496.8 100.8 
+" clip-path="url(#pf7b4b8e8c9)" style="fill: none; stroke: #c3c2b7; stroke-width: 0.75; stroke-linecap: square"/>
+   </g>
+   <g id="text_16">
+    <text style="fill: #52514e; font: 9px 'Helvetica Neue', 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="549.824789" y="118.246641" transform="rotate(-0 549.824789 118.246641)">37.3%</text>
+   </g>
+   <g id="text_17">
+    <text style="fill: #52514e; font: 9px 'Helvetica Neue', 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="597.227875" y="148.486641" transform="rotate(-0 597.227875 148.486641)">73.7%</text>
+   </g>
+   <g id="text_18">
+    <text style="fill: #52514e; font: 9px 'Helvetica Neue', 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="556.889923" y="178.726641" transform="rotate(-0 556.889923 178.726641)">42.7%</text>
+   </g>
+   <g id="text_19">
+    <text style="fill: #52514e; font: 9px 'Helvetica Neue', 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="614.850643" y="208.966641" transform="rotate(-0 614.850643 208.966641)">87.2%</text>
+   </g>
+  </g>
+  <g id="text_20">
+   <text style="fill: #0b0b0b; font: 600 12.5px 'Helvetica Neue', 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="21.6" y="23.536719" transform="rotate(-0 21.6 23.536719)">Haematological neoplasms are a tenth of GENIE, sampled more often, and disproportionately from MSK</text>
+  </g>
+  <g id="text_21">
+   <text style="fill: #52514e; font: 9.5px 'Helvetica Neue', 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif" transform="translate(21.6 42.943906)">AACR Project GENIE v20 by lineage. Samples per patient is why de-duplication matters most in</text>
+   <text style="fill: #52514e; font: 9.5px 'Helvetica Neue', 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif" transform="translate(21.6 54.87598)">haematology. 3,146 patients have samples in more than one lineage, so rows sum to over 100%.</text>
+  </g>
+  <g id="text_22">
+   <text style="fill: #898781; font: 8px 'Helvetica Neue', 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="21.6" y="246.0075" transform="rotate(-0 21.6 246.0075)">Source: AACR Project GENIE v20.0-public (summary figures only); CancerHotspots v2 + v3. Lineage from OncoTree tissue.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pd8e9aefffa">
+   <rect x="93.6" y="100.8" width="169.2" height="120.96"/>
+  </clipPath>
+  <clipPath id="p61061121cf">
+   <rect x="295.2" y="100.8" width="169.2" height="120.96"/>
+  </clipPath>
+  <clipPath id="pf7b4b8e8c9">
+   <rect x="496.8" y="100.8" width="169.2" height="120.96"/>
+  </clipPath>
+ </defs>
+</svg>

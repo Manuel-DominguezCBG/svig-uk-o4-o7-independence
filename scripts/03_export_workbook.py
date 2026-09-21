@@ -10,8 +10,10 @@ from pathlib import Path
 
 import pandas as pd
 
+import paths
+
 ROOT = Path(__file__).resolve().parents[1]
-RESULTS = ROOT / "results"
+RESULTS = paths.RESULTS
 OUT = RESULTS / "cancerhotspots_o7_analysis.xlsx"
 
 # Excel sheet names are capped at 31 characters.

@@ -1,0 +1,5 @@
+lineage	patients	pct_patients	samples_per_patient	msk_share
+Solid tumour	215540	88.75	1.12	0.373
+Lymphoid	13131	5.41	1.41	0.737
+Myeloid	12018	4.95	1.98	0.427
+Unknown	5456	2.25	1.26	0.872

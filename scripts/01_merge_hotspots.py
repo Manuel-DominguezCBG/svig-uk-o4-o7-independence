@@ -26,12 +26,15 @@ from pathlib import Path
 
 import pandas as pd
 
+import paths
+
 ROOT = Path(__file__).resolve().parents[1]
 RAW = ROOT / "data" / "raw"
-INTERIM = ROOT / "data" / "interim"
+INTERIM = paths.INTERIM
 
 V1 = RAW / "cancerhotspots_v1_chang2016.xls"
 V2 = RAW / "cancerhotspots_v2_chang2018.xls"
+V3 = RAW / "hotspots_v3.xlsx"   # CancerHotspots v3 export; used when ANALYSIS=v3
 
 # Columns of the harmonised output, in order.
 OUT_COLS = [
@@ -199,6 +202,52 @@ def load_v1_per_allele():
     return out
 
 
+def load_v3():
+    """The changes new in CancerHotspots v3 (Hotspot_Version == "v3").
+
+    The v3 export carries one count per change and no MSK / retrospective split, so
+    n_msk and n_retro stay empty. The residue total is the sum of the listed changes,
+    the same rule as for v2 (it differs from the export's own tumour-type total at one
+    residue, PTEN p.H123: 14 against 15). The q-value comes from the residue sheet.
+    """
+    snv = pd.read_excel(V3, sheet_name="SNV_Variants")
+    residues = pd.read_excel(V3, sheet_name="Hotspot_Residues")
+    v3 = snv[snv["Hotspot_Version"] == "v3"].copy()
+    v3["position"] = v3["Codon_Position"].astype(int).astype(str)
+    residues["position"] = residues["Codon_Position"].astype(int).astype(str)
+    q = residues.set_index(["Hugo_Symbol", "position"])["Q value"]
+    totals = v3.groupby(["Hugo_Symbol", "position"])["Mutation_Count"].transform("sum")
+    return pd.DataFrame({
+        "source": "v3:SNV-hotspots",
+        "variant_class": "snv",
+        "hugo_symbol": v3["Hugo_Symbol"].values,
+        "amino_acid_position": v3["position"].values,
+        "reference_aa": v3["Reference_Amino_Acid"].values,
+        "variant_aa": v3["Variant_Amino_Acid"].values,
+        "change_count": v3["Mutation_Count"].values,
+        "position_total_count": totals.values,
+        "qvalue": [q.get((g, p)) for g, p in zip(v3["Hugo_Symbol"], v3["position"])],
+        "n_msk": None,
+        "n_retro": None,
+        "total_samples": None,
+        "tumour_type_composition": v3["Samples"].values,
+    })
+
+
+def check_v3_matches_v2(merged):
+    """The v3 export repeats the v2 SNV changes; they must equal the v2 workbook."""
+    snv = pd.read_excel(V3, sheet_name="SNV_Variants")
+    v2_in_v3 = snv[(snv["Hotspot_Version"] == "v2") & (snv["Variant_Amino_Acid"] != "sp")]
+    ours = merged[(merged["source"] == "v2:SNV-hotspots") & (merged["variant_class"] == "snv")]
+    a = {(g, str(int(p)), v): int(c) for g, p, v, c in zip(
+        v2_in_v3["Hugo_Symbol"], v2_in_v3["Codon_Position"],
+        v2_in_v3["Variant_Amino_Acid"], v2_in_v3["Mutation_Count"])}
+    b = {(g, str(p), v): int(c) for g, p, v, c in zip(
+        ours["hugo_symbol"], ours["amino_acid_position"], ours["variant_aa"], ours["change_count"])}
+    assert a == b, "v3 export's v2 changes differ from the v2 workbook"
+    return len(a)
+
+
 def main():
     INTERIM.mkdir(parents=True, exist_ok=True)
 
@@ -208,6 +257,8 @@ def main():
         load_v1_per_residue(),
         load_v1_per_allele(),
     ]
+    if paths.ANALYSIS == "v3":
+        parts.append(load_v3())
     # Give the count columns a consistent nullable dtype before concatenating:
     # v1 sheets carry no MSK split, so those columns are all-NA in some parts.
     numeric = ["change_count", "position_total_count", "qvalue",
@@ -227,6 +278,10 @@ def main():
         "v2 SNV: per-allele counts do not sum to the stated position total"
     assert (per_pos["msk"] + per_pos["retro"] == per_pos["stated"]).all(), \
         "v2 SNV: n_MSK + n_Retro does not reconstitute the position total"
+
+    if paths.ANALYSIS == "v3":
+        n = check_v3_matches_v2(merged)
+        print(f"v3 export: its {n:,} v2 SNV changes match the v2 workbook exactly")
 
     out = INTERIM / "hotspots_merged_per_allele.tsv"
     merged.to_csv(out, sep="\t", index=False)

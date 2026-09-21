@@ -46,10 +46,12 @@ from pathlib import Path
 
 import pandas as pd
 
+import paths
+
 ROOT = Path(__file__).resolve().parents[1]
 GENIE_DIR = Path(os.environ.get("GENIE_DIR", ROOT / "data" / "external" / "genie_v20"))
-INTERIM = ROOT / "data" / "interim"
-RESULTS = ROOT / "results"
+INTERIM = paths.INTERIM
+RESULTS = paths.RESULTS
 ONCOTREE = ROOT / "data" / "reference" / "oncotree_2025_10_03.json"
 
 KEYS = ["hugo_symbol", "amino_acid_position", "reference_aa", "variant_aa"]

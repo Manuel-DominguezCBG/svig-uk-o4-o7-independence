@@ -34,9 +34,11 @@ from pathlib import Path
 
 import pandas as pd
 
+import paths
+
 ROOT = Path(__file__).resolve().parents[1]
-RESULTS = ROOT / "results"
-INTERIM = ROOT / "data" / "interim"
+RESULTS = paths.RESULTS
+INTERIM = paths.INTERIM
 
 DEFAULT_TAR = ("/Users/monkiky/Documents/external/refs/COSMIC/"
                "CancerMutationCensus_AllData_Tsv_v104_GRCh37.tar")

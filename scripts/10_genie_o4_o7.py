@@ -45,9 +45,11 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+import paths
+
 ROOT = Path(__file__).resolve().parents[1]
-INTERIM = ROOT / "data" / "interim"
-RESULTS = ROOT / "results"
+INTERIM = paths.INTERIM
+RESULTS = paths.RESULTS
 
 KEYS = ["hugo_symbol", "amino_acid_position", "reference_aa", "variant_aa"]
 O7_ORDER = ["Strong", "Moderate", "Supporting", "Not met",
@@ -197,6 +199,10 @@ def correlations(df):
                 gene_in_genie=("gene_in_genie", "first"))
            .reset_index())
     res = res[res["gene_in_genie"]]
+    # v3 residues carry no MSK / retrospective split; the cohort comparisons use the
+    # residues that do (all of them in the v2 analysis).
+    split = res.dropna(subset=["n_msk", "n_retro"]).copy()
+    split[["n_msk", "n_retro"]] = split[["n_msk", "n_retro"]].apply(pd.to_numeric)
 
     rows = [
         ("Changes in the analysis set", len(df)),
@@ -212,10 +218,10 @@ def correlations(df):
         ("Residues with the gene sequenced in GENIE", len(res)),
         ("Spearman rho, residue: CancerHotspots MSK count vs GENIE MSK patients "
          "(same cohort; sanity check)",
-         spearman(res["n_msk"], res["genie_msk"])),
+         spearman(split["n_msk"], split["genie_msk"])),
         ("Spearman rho, residue: CancerHotspots retrospective count vs GENIE "
          "non-MSK patients (disjoint cohorts)",
-         spearman(res["n_retro"], res["genie_non_msk"])),
+         spearman(split["n_retro"], split["genie_non_msk"])),
     ]
     return pd.DataFrame(rows, columns=["metric", "value"])
 

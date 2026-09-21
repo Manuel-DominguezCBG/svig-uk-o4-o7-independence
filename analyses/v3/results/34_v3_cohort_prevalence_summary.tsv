@@ -1,0 +1,14 @@
+metric	value
+Residues new in CancerHotspots v3	164.0
+Genes	53.0
+Mutations behind the v3 hotspot calls (per-change counts, as scored for O7)	2221.0
+Mutations at these residues in MSK-IMPACT	2641.0
+Mutations at these residues in GENIE excluding MSK	3937.0
+Mutations at these residues in TCGA	408.0
+Share of the three cohorts' mutations that are in GENIE (MSK + non-MSK)	0.9416
+Share that are in MSK-IMPACT	0.378
+Share that are in TCGA (not in GENIE)	0.0584
+Median per-residue share in GENIE	0.9423
+Residues where MSK and non-MSK GENIE prevalence differ (adjusted p < 0.05)	3.0
+Residues where MSK and TCGA prevalence differ (adjusted p < 0.05)	1.0
+Residues with a change reaching O7 moderate or strong	55.0

@@ -30,9 +30,11 @@ from pathlib import Path
 
 import pandas as pd
 
+import paths
+
 ROOT = Path(__file__).resolve().parents[1]
-INTERIM = ROOT / "data" / "interim"
-RESULTS = ROOT / "results"
+INTERIM = paths.INTERIM
+RESULTS = paths.RESULTS
 
 # --- SVIG-UK O7 thresholds (Supplementary Table 1) -------------------------
 O7_POSITION_STRONG = 50     # mutations at the same amino-acid position
@@ -89,6 +91,8 @@ def build_position_table(alleles):
         detail = "|".join(f"{r.variant_aa}:{int(r.change_count)}" for r in g.itertuples())
         top_count = int(g["change_count"].max())
         n_msk = g["n_msk"].iloc[0]
+        # v3 residues have no MSK / retrospective split.
+        has_split = pd.notna(n_msk)
         return pd.Series(
             {
                 "reference_aa": g["reference_aa"].iloc[0],
@@ -101,9 +105,9 @@ def build_position_table(alleles):
                 "n_changes_ge10": int((g["change_count"] >= O7_CHANGE_HIGH).sum()),
                 "n_changes_ge2": int((g["change_count"] >= O7_CHANGE_SUPPORTING).sum()),
                 "n_singleton_changes": int((g["change_count"] == 1).sum()),
-                "n_msk": int(n_msk),
-                "n_retro": int(g["n_retro"].iloc[0]),
-                "msk_fraction": round(n_msk / total, 4),
+                "n_msk": int(n_msk) if has_split else None,
+                "n_retro": int(g["n_retro"].iloc[0]) if has_split else None,
+                "msk_fraction": round(n_msk / total, 4) if has_split else None,
                 "qvalue": g["qvalue"].iloc[0],
             }
         )
@@ -134,8 +138,10 @@ def build_allele_table(alleles, pos):
 
     df["change_count"] = df["change_count"].astype(int)
     df["position_total_count"] = df["position_total_count"].astype(int)
-    df["n_msk"] = df["n_msk"].astype(int)
-    df["n_retro"] = df["n_retro"].astype(int)
+    # v3 changes have no MSK / retrospective split; keep those cells empty.
+    split_type = int if df["n_msk"].notna().all() else "Int64"
+    df["n_msk"] = df["n_msk"].astype(split_type)
+    df["n_retro"] = df["n_retro"].astype(split_type)
 
     df["o7_applicable"] = [
         o7_applicable(r, v) for r, v in zip(df["reference_aa"], df["variant_aa"])
@@ -197,15 +203,29 @@ def main():
     RESULTS.mkdir(parents=True, exist_ok=True)
     merged = pd.read_csv(INTERIM / "hotspots_merged_per_allele.tsv", sep="\t")
 
-    snv = merged[(merged["source"] == "v2:SNV-hotspots")
+    snv = merged[(merged["source"].isin(paths.SNV_SOURCES))
                  & (merged["variant_class"] == "snv")].copy()
 
     pos = build_position_table(snv)
     alleles = build_allele_table(snv, pos)
 
+    # In the v3 analysis every row says which release it comes from.
+    version = ["hotspot_version"] if paths.ANALYSIS == "v3" else []
+    if version:
+        snv["hotspot_version"] = snv["source"].str.split(":").str[0]
+        alleles["hotspot_version"] = alleles["source"].str.split(":").str[0]
+        pos = pos.merge(snv.groupby(["hugo_symbol", "amino_acid_position"])["hotspot_version"]
+                        .first().reset_index(), on=["hugo_symbol", "amino_acid_position"])
+    set_label = "v2 SNV, non-splice" if paths.ANALYSIS == "v2" else "v2 + v3 SNV, non-splice"
+    # MSK statistics use the residues that carry the MSK / retrospective split: all of
+    # them in v2, only the v2 residues in the v3 analysis.
+    split = pos[pos["n_msk"].notna()].copy()
+    for c in ("n_msk", "n_retro", "msk_fraction"):
+        split[c] = pd.to_numeric(split[c])
+
     # ---- 03 complete gene x position table --------------------------------
     pos_out = pos[[
-        "hugo_symbol", "amino_acid_position", "reference_aa", "n_unique_changes",
+        "hugo_symbol", "amino_acid_position", *version, "reference_aa", "n_unique_changes",
         "substitutions", "position_total_count", "top_change", "top_change_count",
         "top_change_fraction", "hotspot_character", "n_changes_ge10", "n_changes_ge2",
         "n_singleton_changes", "position_reaches_o7_strong_threshold",
@@ -234,7 +254,7 @@ def main():
     # change, so this one file answers both "how positional is the residue?"
     # and "what does O7 award this variant?" without a join.
     allele_out = alleles[[
-        "hugo_symbol", "amino_acid_position", "reference_aa", "variant_aa",
+        "hugo_symbol", "amino_acid_position", *version, "reference_aa", "variant_aa",
         "change_count", "position_total_count", "same_change_fraction",
         "n_unique_changes", "substitutions", "top_change", "top_change_count",
         "top_change_fraction", "hotspot_character",
@@ -245,7 +265,7 @@ def main():
 
     # ---- 05 double-counting / cap recommendation --------------------------
     dc = alleles[[
-        "hugo_symbol", "amino_acid_position", "reference_aa", "variant_aa",
+        "hugo_symbol", "amino_acid_position", *version, "reference_aa", "variant_aa",
         "change_count", "position_total_count", "same_change_fraction",
         "n_unique_changes", "substitutions", "residual_count", "residual_n_changes",
         "residual_max_change_count", "hotspot_character", "o7_applicable",
@@ -258,23 +278,25 @@ def main():
 
     # ---- 06 MSK overlap ----------------------------------------------------
     msk_rows = [
-        ("Hotspot positions analysed (v2 SNV, non-splice)", len(pos)),
-        ("Total mutations underpinning those positions", int(pos["position_total_count"].sum())),
-        ("Mutations contributed by MSK-IMPACT (n_MSK)", int(pos["n_msk"].sum())),
-        ("Mutations contributed by retrospective/public cohorts (n_Retro)", int(pos["n_retro"].sum())),
-        ("Overall MSK fraction of hotspot evidence", round(pos["n_msk"].sum() / pos["position_total_count"].sum(), 4)),
-        ("Median per-position MSK fraction", round(pos["msk_fraction"].median(), 4)),
-        ("Positions where MSK contributes >= 50% of the evidence", int((pos["msk_fraction"] >= 0.5).sum())),
-        ("Positions where MSK contributes >= 75% of the evidence", int((pos["msk_fraction"] >= 0.75).sum())),
-        ("Positions where MSK contributes 100% of the evidence", int((pos["msk_fraction"] >= 1.0).sum())),
+        (f"Hotspot positions analysed ({set_label})", len(pos)),
+        *([("Positions with an MSK / retrospective split (v2 residues; v3 has none)", len(split))]
+          if len(split) != len(pos) else []),
+        ("Total mutations underpinning those positions", int(split["position_total_count"].sum())),
+        ("Mutations contributed by MSK-IMPACT (n_MSK)", int(split["n_msk"].sum())),
+        ("Mutations contributed by retrospective/public cohorts (n_Retro)", int(split["n_retro"].sum())),
+        ("Overall MSK fraction of hotspot evidence", round(split["n_msk"].sum() / split["position_total_count"].sum(), 4)),
+        ("Median per-position MSK fraction", round(split["msk_fraction"].median(), 4)),
+        ("Positions where MSK contributes >= 50% of the evidence", int((split["msk_fraction"] >= 0.5).sum())),
+        ("Positions where MSK contributes >= 75% of the evidence", int((split["msk_fraction"] >= 0.75).sum())),
+        ("Positions where MSK contributes 100% of the evidence", int((split["msk_fraction"] >= 1.0).sum())),
     ]
     # Left-closed bands, so the band counts reconcile exactly with the ">= 50%"
     # and ">= 75%" figures quoted alongside them.
-    msk_band = pd.cut(pos["msk_fraction"], [0, .25, .5, .75, 1.0001], right=False,
+    msk_band = pd.cut(split["msk_fraction"], [0, .25, .5, .75, 1.0001], right=False,
                       labels=["0-25%", "25-50%", "50-75%", "75-100%"])
     msk_dist = (msk_band.value_counts().sort_index()
                 .rename_axis("msk_fraction_band").reset_index(name="n_positions"))
-    msk_dist["pct_of_positions"] = (100 * msk_dist["n_positions"] / len(pos)).round(1)
+    msk_dist["pct_of_positions"] = (100 * msk_dist["n_positions"] / len(split)).round(1)
     pd.DataFrame(msk_rows, columns=["metric", "value"]).to_csv(
         RESULTS / "06_msk_overlap_summary.tsv", sep="\t", index=False)
     msk_dist.to_csv(RESULTS / "06b_msk_fraction_distribution.tsv", sep="\t", index=False)
@@ -301,7 +323,7 @@ def main():
     def pos_key(df):
         return set(zip(df["hugo_symbol"], df["amino_acid_position"].astype(str)))
     v1 = merged[merged["source"] == "v1:Per Residue"]
-    v1_pos, v2_pos = pos_key(v1), pos_key(snv)
+    v1_pos, v2_pos = pos_key(v1), pos_key(snv[snv["source"] == "v2:SNV-hotspots"])
     comparison = pd.DataFrame([
         ("v1 (Chang 2016) hotspot positions", len(v1_pos)),
         ("v2 (Chang 2018) SNV hotspot positions (non-splice)", len(v2_pos)),
@@ -309,6 +331,13 @@ def main():
         ("Positions only in v1", len(v1_pos - v2_pos)),
         ("Positions only in v2", len(v2_pos - v1_pos)),
     ], columns=["metric", "value"])
+    if paths.ANALYSIS == "v3":
+        v3_pos = pos_key(snv[snv["source"] == "v3:SNV-hotspots"])
+        comparison = pd.concat([comparison, pd.DataFrame([
+            ("v3 SNV hotspot positions new in this release", len(v3_pos - v2_pos)),
+            ("v3 positions also in v2", len(v3_pos & v2_pos)),
+            ("v3 positions also in v1", len(v3_pos & v1_pos)),
+        ], columns=["metric", "value"])])
     comparison.to_csv(RESULTS / "08_version_comparison.tsv", sep="\t", index=False)
 
     # ---- 09 worked examples -------------------------------------------------
@@ -359,7 +388,8 @@ def main():
             "positions_listed_for_this_gene": gene_positions,
             "position_total_count": int(sub["position_total_count"].iloc[0]) if len(sub) else 0,
             "n_unique_changes": int(sub["n_unique_changes"].iloc[0]) if len(sub) else 0,
-            "msk_fraction": float(sub["msk_fraction"].iloc[0]) if len(sub) else None,
+            "msk_fraction": (float(sub["msk_fraction"].iloc[0])
+                             if len(sub) and pd.notna(sub["msk_fraction"].iloc[0]) else None),
         })
     pd.DataFrame(rows).to_csv(RESULTS / "10_haematology_coverage_check.tsv",
                               sep="\t", index=False)
@@ -367,7 +397,7 @@ def main():
     # ---- 01 headline summary ------------------------------------------------
     scored_all = alleles
     headline = pd.DataFrame([
-        ("Hotspot positions analysed (v2 SNV, non-splice)", len(pos)),
+        (f"Hotspot positions analysed ({set_label})", len(pos)),
         ("Distinct amino-acid changes across those positions", len(alleles)),
         ("Mean unique amino-acid changes per position", round(pos["n_unique_changes"].mean(), 2)),
         ("Median unique amino-acid changes per position", int(pos["n_unique_changes"].median())),
@@ -388,14 +418,14 @@ def main():
         ("O7-scoring changes recommended for a +4 cap", int((~scored_all.loc[scored_all["o7_points"] > 0, "independent_positional_evidence"]).sum())),
         ("O7-scoring changes independent under the strict test", int(scored_all.loc[scored_all["o7_points"] > 0, "independent_positional_evidence_strict"].sum())),
         ("O7-scoring changes recommended for a +4 cap (strict test)", int((~scored_all.loc[scored_all["o7_points"] > 0, "independent_positional_evidence_strict"]).sum())),
-        ("Overall MSK-IMPACT fraction of hotspot evidence", round(pos["n_msk"].sum() / pos["position_total_count"].sum(), 4)),
+        ("Overall MSK-IMPACT fraction of hotspot evidence", round(split["n_msk"].sum() / split["position_total_count"].sum(), 4)),
     ], columns=["metric", "value"])
     headline.to_csv(RESULTS / "01_headline_summary.tsv", sep="\t", index=False)
 
     print(headline.to_string(index=False))
     print("\nDistribution of unique changes per hotspot position:")
     print(dist.to_string(index=False))
-    print("\nWrote", len(list(RESULTS.glob("*.tsv"))), "tables to results/")
+    print("\nWrote", len(list(RESULTS.glob("*.tsv"))), "tables to", RESULTS)
 
 
 if __name__ == "__main__":
