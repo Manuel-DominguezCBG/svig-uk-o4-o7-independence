@@ -21,6 +21,7 @@ Every delivery note says which files are in its folder and which were sent separ
 
 | Date | Folder | In the repository | Sent by email |
 |---|---|---|---|
+| 2026-09-30 | [2026-09-30_o7-weighting-options](2026-09-30_o7-weighting-options/) | Summary report on weighting O7 for uncapped changes (Options 1–4, with the audit of what drives each difference) and the counts behind it | `genie_o4_o7_expanded.xlsx` (from `analyses/v3/results/`) — the expanded per-change table (v2 + v3, GENIE v20 O4, O1 overlap, both handlings) and every uncapped change under Options 1–4 |
 | 2026-09-21 | [2026-09-21_cancerhotspots-v3](2026-09-21_cancerhotspots-v3/) | CancerHotspots v3 added (analysis in `analyses/v3/`): handover note, two figures, O7 and cap per change for v2 + v3, cohort split at the v3 residues | `genie_points_per_change.xlsx` (from `analyses/v3/results/`) — points per change on GENIE for v2 + v3 |
 | 2026-09-21 | [2026-09-21_independence-test](2026-09-21_independence-test/) | How the permissive and strict residue-independence criteria work, with TP53 p.M237I and BRAF p.V600E worked through | — |
 | 2026-09-16 | [2026-09-16_points-per-change](2026-09-16_points-per-change/) | Handover note; gene × position table and distribution of changes per hotspot | `genie_points_per_change.xlsx` — points per change on GENIE with O7, O4 and the O4 / O7 handling under both criteria; O1 canonical impact; materially affected |

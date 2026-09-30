@@ -1,0 +1,64 @@
+set	metric	value
+context	Changes in the analysis set	3446.0
+context	Changes where both O4 and O7 apply	1800.0
+context	... uncapped under the permissive criterion	805.0
+context	... uncapped under the strict criterion	609.0
+uncapped under the permissive criterion	Changes in this set	805.0
+uncapped under the permissive criterion	option1: O7 Strong	189.0
+uncapped under the permissive criterion	option1: O7 Moderate	88.0
+uncapped under the permissive criterion	option1: O7 Supporting	528.0
+uncapped under the permissive criterion	option1: O7 Not met	0.0
+uncapped under the permissive criterion	option1: mean O7 points	1.81
+uncapped under the permissive criterion	option1: changes reaching the full +8	189.0
+uncapped under the permissive criterion	option2: O7 Strong	281.0
+uncapped under the permissive criterion	option2: O7 Moderate	328.0
+uncapped under the permissive criterion	option2: O7 Supporting	196.0
+uncapped under the permissive criterion	option2: O7 Not met	0.0
+uncapped under the permissive criterion	option2: mean O7 points	2.45
+uncapped under the permissive criterion	option2: changes reaching the full +8	278.0
+uncapped under the permissive criterion	option4_vua_count_residual_total: O7 Strong	119.0
+uncapped under the permissive criterion	option4_vua_count_residual_total: O7 Moderate	158.0
+uncapped under the permissive criterion	option4_vua_count_residual_total: O7 Supporting	528.0
+uncapped under the permissive criterion	option4_vua_count_residual_total: O7 Not met	0.0
+uncapped under the permissive criterion	option4_vua_count_residual_total: mean O7 points	1.64
+uncapped under the permissive criterion	option4: changes reaching the full +8	119.0
+uncapped under the permissive criterion	option3 (lesser of 1 and 2): mean O7 points	1.58
+uncapped under the permissive criterion	option3 (lesser of 1 and 2): changes reaching the full +8	119.0
+uncapped under the permissive criterion	O7 tier differs between the options	480.0
+uncapped under the permissive criterion	Mean points lost by using Option 2 instead of Option 1	-0.64
+uncapped under the permissive criterion	Changes losing 3 points under Option 2 (Strong -> Supporting)	12.0
+uncapped under the permissive criterion	Changes losing 2 points under Option 2	58.0
+uncapped under the permissive criterion	Changes losing 1 point under Option 2	33.0
+uncapped under the permissive criterion	Changes unchanged between the options	325.0
+uncapped under the permissive criterion	Changes scoring MORE under Option 2	377.0
+uncapped under the strict criterion	Changes in this set	609.0
+uncapped under the strict criterion	option1: O7 Strong	177.0
+uncapped under the strict criterion	option1: O7 Moderate	55.0
+uncapped under the strict criterion	option1: O7 Supporting	377.0
+uncapped under the strict criterion	option1: O7 Not met	0.0
+uncapped under the strict criterion	option1: mean O7 points	1.96
+uncapped under the strict criterion	option1: changes reaching the full +8	177.0
+uncapped under the strict criterion	option2: O7 Strong	281.0
+uncapped under the strict criterion	option2: O7 Moderate	328.0
+uncapped under the strict criterion	option2: O7 Supporting	0.0
+uncapped under the strict criterion	option2: O7 Not met	0.0
+uncapped under the strict criterion	option2: mean O7 points	2.92
+uncapped under the strict criterion	option2: changes reaching the full +8	278.0
+uncapped under the strict criterion	option4_vua_count_residual_total: O7 Strong	119.0
+uncapped under the strict criterion	option4_vua_count_residual_total: O7 Moderate	113.0
+uncapped under the strict criterion	option4_vua_count_residual_total: O7 Supporting	377.0
+uncapped under the strict criterion	option4_vua_count_residual_total: O7 Not met	0.0
+uncapped under the strict criterion	option4_vua_count_residual_total: mean O7 points	1.77
+uncapped under the strict criterion	option4: changes reaching the full +8	119.0
+uncapped under the strict criterion	option3 (lesser of 1 and 2): mean O7 points	1.77
+uncapped under the strict criterion	option3 (lesser of 1 and 2): changes reaching the full +8	119.0
+uncapped under the strict criterion	O7 tier differs between the options	435.0
+uncapped under the strict criterion	Mean points lost by using Option 2 instead of Option 1	-0.96
+uncapped under the strict criterion	Changes losing 3 points under Option 2 (Strong -> Supporting)	0.0
+uncapped under the strict criterion	Changes losing 2 points under Option 2	58.0
+uncapped under the strict criterion	Changes losing 1 point under Option 2	0.0
+uncapped under the strict criterion	Changes unchanged between the options	174.0
+uncapped under the strict criterion	Changes scoring MORE under Option 2	377.0
+all uncapped changes	Tier difference driven by: same-change threshold (>= 10)	398.0
+all uncapped changes	Tier difference driven by: residue-total threshold (>= 50)	58.0
+all uncapped changes	Tier difference driven by: same-change threshold (>= 10) + residue-total threshold (>= 50)	24.0

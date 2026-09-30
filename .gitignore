@@ -54,3 +54,8 @@ analyses/*/results/*cosmic*
 analyses/*/results/12_o4_o7_correlation.tsv
 analyses/*/results/13_points_impact_of_cap.tsv
 analyses/*/results/14_per_change_o4_o7_points.tsv
+
+# Files dropped in the repository root for reference (e.g. a GENIE table emailed
+# back to us) are never tracked.
+/*genie*.tsv
+/*genie*.xlsx
